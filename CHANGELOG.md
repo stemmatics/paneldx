@@ -6,7 +6,9 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
-No changes yet.
+### Documentation
+
+- Added the research and validation roadmap.
 
 ## [0.4.0] - 2026-08-25
 
