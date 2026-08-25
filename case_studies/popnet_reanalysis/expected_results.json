@@ -1,0 +1,20 @@
+{
+  "source": "Summary results from a post-publication paneldx 0.3.1 audit of the authorised PopNet workbook. These results were not reported in the 2025 paper and are not corrected PopNet results. Run the audit again with the current paneldx version before citing them.",
+  "positional_key": {
+    "columns": ["positional_id"],
+    "status": "fail",
+    "columns_explained": "2 of 30",
+    "evidence_fraction": 0.07
+  },
+  "recovered_key": {
+    "columns": ["Disease", "Opening time"],
+    "status": "pass",
+    "columns_explained": "13 of 29",
+    "evidence_fraction": 0.45
+  },
+  "target_reconstruction_r2": 0.923,
+  "persistence": {
+    "positional": {"mae": 0.4717, "r2": 0.191},
+    "recovered": {"mae": 0.0320, "r2": 0.971}
+  }
+}

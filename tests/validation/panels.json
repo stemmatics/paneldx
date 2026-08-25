@@ -1,0 +1,50 @@
+[
+  {
+    "name": "grunfeld",
+    "file": "Grunfeld.csv",
+    "source_url": "https://vincentarelbundock.github.io/Rdatasets/csv/plm/Grunfeld.csv",
+    "source": "Grunfeld (1958) investment data, via R package plm (Rdatasets mirror)",
+    "drop_columns": ["rownames"],
+    "key": ["firm"],
+    "time": "year",
+    "expected_status": "inconclusive",
+    "expected_entities": 10,
+    "note": "Balanced, 10 firms x 20 years. Below the 20-entity minimum, so no verdict is issued."
+  },
+  {
+    "name": "emplUK",
+    "file": "EmplUK.csv",
+    "source_url": "https://vincentarelbundock.github.io/Rdatasets/csv/plm/EmplUK.csv",
+    "source": "Arellano and Bond (1991) UK firm panel, via R package plm (Rdatasets mirror)",
+    "drop_columns": ["rownames"],
+    "key": ["firm"],
+    "time": "year",
+    "expected_status": "warn",
+    "expected_entities": 140,
+    "note": "Unbalanced, 140 firms. Only `sector` is invariant (1 of 5 usable columns), so the documented key scores weak."
+  },
+  {
+    "name": "produc",
+    "file": "Produc.csv",
+    "source_url": "https://vincentarelbundock.github.io/Rdatasets/csv/plm/Produc.csv",
+    "source": "Munnell (1990) US state productivity panel, via R package plm (Rdatasets mirror)",
+    "drop_columns": ["rownames"],
+    "key": ["state"],
+    "time": "year",
+    "expected_status": "fail",
+    "expected_entities": 48,
+    "note": "Known false negative. The documented key is correct (48 states x 17 years), but only `region` is invariant, 1 of 9 usable columns, below the weak threshold of 0.15. Kept as a calibration marker."
+  },
+  {
+    "name": "gasoline",
+    "file": "Gasoline.csv",
+    "source_url": "https://vincentarelbundock.github.io/Rdatasets/csv/plm/Gasoline.csv",
+    "source": "Baltagi and Griffin (1983) OECD gasoline panel, via R package plm (Rdatasets mirror)",
+    "drop_columns": ["rownames"],
+    "key": ["country"],
+    "time": "year",
+    "expected_status": "inconclusive",
+    "expected_entities": 18,
+    "note": "Balanced, 18 countries x 19 years. Below the 20-entity minimum."
+  }
+]

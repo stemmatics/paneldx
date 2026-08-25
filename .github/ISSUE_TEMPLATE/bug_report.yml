@@ -1,0 +1,46 @@
+name: Bug report
+description: paneldx crashed, or reported something that looks wrong
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you ran, and what came back.
+      placeholder: |
+        paneldx audit panel.csv --time quarter --key patient_id
+        ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction
+      description: >
+        A synthetic frame that triggers it is far more useful than a description
+        of a private one. Please do not attach real data.
+      render: python
+    validations:
+      required: true
+
+  - type: input
+    id: shape
+    attributes:
+      label: Frame shape
+      placeholder: 24000 rows x 31 columns, 4 periods
+
+  - type: input
+    id: versions
+    attributes:
+      label: Versions
+      placeholder: paneldx 0.3.0, pandas 2.2.3, Python 3.11
+    validations:
+      required: true

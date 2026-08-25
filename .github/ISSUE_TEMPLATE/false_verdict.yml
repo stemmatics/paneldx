@@ -1,0 +1,43 @@
+name: Wrong verdict
+description: A key you know is correct was rejected, or a bad one was accepted
+labels: [verdict]
+body:
+  - type: markdown
+    attributes:
+      value: >
+        False positives are bugs. If paneldx rejects a key you know is right,
+        that is worth reporting.
+
+  - type: dropdown
+    id: direction
+    attributes:
+      label: Which way
+      options:
+        - A correct key was rejected
+        - An incorrect key was accepted
+    validations:
+      required: true
+
+  - type: textarea
+    id: report
+    attributes:
+      label: The full KeyReport
+      description: Paste the output of print(validate_key(...)).
+      render: text
+    validations:
+      required: true
+
+  - type: textarea
+    id: why
+    attributes:
+      label: How do you know the true answer
+      description: What makes this key correct, or incorrect, in your data.
+    validations:
+      required: true
+
+  - type: textarea
+    id: panel
+    attributes:
+      label: A panel that reproduces it
+      description: Synthetic or anonymised. Never real personal data.
+      render: python

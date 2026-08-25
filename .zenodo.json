@@ -1,0 +1,33 @@
+{
+  "title": "paneldx: structural validation for longitudinal datasets",
+  "description": "<p>paneldx checks whether rows in a panel dataset are linked to the same entity over time. It compares patterns found under a candidate entity key with patterns found after shuffling the entity labels. It also checks cumulative features, target leakage and the carry-forward baseline.</p>",
+  "upload_type": "software",
+  "version": "0.4.0",
+  "license": "Apache-2.0",
+  "access_right": "open",
+  "creators": [
+    {
+      "name": "Imran, Muhammad Umer"
+    }
+  ],
+  "keywords": [
+    "panel data",
+    "longitudinal data",
+    "data leakage",
+    "entity resolution",
+    "research reproducibility",
+    "data validation"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/stemmatics/paneldx",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://pypi.org/project/paneldx/0.4.0/",
+      "relation": "isIdenticalTo",
+      "scheme": "url"
+    }
+  ]
+}

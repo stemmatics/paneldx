@@ -1,0 +1,38 @@
+cff-version: 1.2.0
+title: "paneldx: structural validation for longitudinal datasets"
+message: "If you use this software in research, please cite it."
+type: software
+authors:
+  - family-names: Imran
+    given-names: Muhammad Umer
+
+repository-code: "https://github.com/stemmatics/paneldx"
+url: "https://github.com/stemmatics/paneldx"
+license: Apache-2.0
+version: 0.4.0
+abstract: >-
+  paneldx checks whether rows in a panel dataset are linked to the same entity
+  over time. It compares patterns found under a candidate entity key with
+  patterns found after shuffling the entity labels. It also checks cumulative
+  features, target leakage and the carry-forward baseline.
+keywords:
+  - panel data
+  - longitudinal data
+  - data leakage
+  - entity resolution
+  - research reproducibility
+  - data validation
+references:
+  - type: article
+    title: >-
+      Leakage and the reproducibility crisis in machine-learning-based science
+    authors:
+      - family-names: Kapoor
+        given-names: Sayash
+      - family-names: Narayanan
+        given-names: Arvind
+    journal: Patterns
+    volume: 4
+    issue: 9
+    year: 2023
+    doi: 10.1016/j.patter.2023.100804
