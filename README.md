@@ -213,14 +213,9 @@ for sorting. A supported entity key should explain a larger share of the data.
 
 ## Roadmap
 
-- [x] Panel key discovery and validation
-- [x] Cumulative-counter detection
-- [x] Target-composition leakage
-- [x] Naive-baseline harness
-- [x] One-command HTML report
-- [x] CLI
-- [ ] Look-ahead detection in sequence construction
-- [ ] Faster key search on wide tables
+The next work will focus on reproducible validation, clearer evidence rules,
+key-discovery testing and an independently evaluated publication candidate.
+See the [development roadmap](ROADMAP.md) for the planned stages.
 
 ---
 
@@ -230,6 +225,7 @@ for sorting. A supported entity key should explain a larger share of the data.
 - [How it works](docs/how-it-works.md)
 - [Interpreting results](docs/interpreting-results.md)
 - [API reference](docs/api.md)
+- [Development roadmap](ROADMAP.md)
 
 ## Contributing
 
