@@ -87,7 +87,7 @@ def _monotonicity_rates(df, entity, time, cols, min_steps):
     for c in cols:
         if not pd.api.types.is_numeric_dtype(df[c]):
             continue
-        v = df[c].values[order].astype("float64")
+        v = df[c].to_numpy(dtype="float64", na_value=np.nan)[order]
         if np.nanmin(v) < 0:
             continue
         step = np.diff(v)
