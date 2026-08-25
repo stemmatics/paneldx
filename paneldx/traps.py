@@ -78,7 +78,7 @@ def detect_counters(
     for col in df.columns:
         if col in skip or not pd.api.types.is_numeric_dtype(df[col]):
             continue
-        v = df[col].values[order].astype("float64")
+        v = df[col].to_numpy(dtype="float64", na_value=np.nan)[order]
         if not np.isfinite(v).any() or np.nanmin(v) < 0:
             continue
         step = np.diff(v)
