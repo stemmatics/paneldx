@@ -4,6 +4,18 @@ on:
   push:
     branches: [main]
   pull_request:
+  # Lets release.yml run this entire file rather than maintaining a second,
+  # always-slightly-different copy of the same checks.
+  workflow_call:
+
+# Least privilege: no job here writes to the repository.
+permissions:
+  contents: read
+
+# Superseded pushes to the same branch stop wasting runners.
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   lint:
@@ -30,7 +42,8 @@ jobs:
           python-version: ${{ matrix.python-version }}
       - run: pip install -e ".[dev,excel,parquet]"
       - run: python scripts/fetch_validation_data.py
-      - run: pytest -q
+      # fail_under lives in pyproject.toml [tool.coverage.report].
+      - run: pytest -q --cov=paneldx --cov-report=term-missing
 
   typecheck:
     runs-on: ubuntu-latest
@@ -38,8 +51,13 @@ jobs:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7
         with:
-          python-version: "3.12"
-      - run: pip install -e ".[dev]" mypy pandas-stubs
+          # Mypy targets the project's minimum supported Python version
+          # (configured in pyproject.toml), so install dependencies under that
+          # same interpreter rather than parsing newer NumPy stubs as Python 3.9.
+          python-version: "3.9"
+      # mypy and pandas-stubs are in [dev] now, so this job is reproducible
+      # locally instead of pulling whatever released most recently.
+      - run: pip install -e ".[dev]"
       - run: mypy paneldx
 
   build:
@@ -49,11 +67,52 @@ jobs:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7
         with:
           python-version: "3.12"
-      - run: pip install build
+      - run: pip install build twine
       - run: python -m build
+      - name: Check distribution metadata renders on PyPI
+        run: twine check dist/*
       - name: Install the wheel in a clean environment
         run: |
           python -m venv "$RUNNER_TEMP/clean"
           "$RUNNER_TEMP/clean/bin/pip" install dist/*.whl
           "$RUNNER_TEMP/clean/bin/paneldx" --help
           "$RUNNER_TEMP/clean/bin/python" -c "import paneldx; print(paneldx.__version__)"
+
+  # pyproject.toml claims numpy>=1.21 and pandas>=1.3. The matrix above only
+  # ever proves that recent releases work, so this job installs the declared
+  # floors and holds them there. If it fails, the fix is to raise the lower
+  # bound in pyproject.toml, not to delete this job.
+  lower-bounds:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7
+        with:
+          python-version: "3.9"
+      - run: pip install -e . pytest
+      - name: Pin the declared minimum runtime dependencies
+        run: pip install "numpy==1.21.*" "pandas==1.3.*"
+      - name: Show what is actually installed
+        run: pip list | grep -E "numpy|pandas"
+      # Validation data is not fetched here: these tests are about the
+      # dependency floor, and the public panels are covered by `test`.
+      - run: pytest -q tests/unit tests/regression
+
+  # Dependency security. audit_dependencies.py narrows the audit to the
+  # closure of the runtime dependencies and the shipped extras: auditing the
+  # whole environment instead reports vulnerabilities in tooling that never
+  # reaches a user, and a gate that cries wolf gets bypassed.
+  security:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7
+        with:
+          python-version: "3.12"
+      # Extras included: the audit covers what a user can install, and
+      # pyarrow/openpyxl ship to users even though they are optional.
+      - run: pip install -e ".[excel,parquet]" pip-audit
+      - name: Check for conflicting dependency versions
+        run: pip check
+      - name: Audit shipped dependencies for known vulnerabilities
+        run: python scripts/audit_dependencies.py

@@ -1,3 +1,7 @@
+# `pre-commit install` wires both stages in one go, so contributors cannot end
+# up with the fast checks but not the slow ones.
+default_install_hook_types: [pre-commit, pre-push]
+
 repos:
   - repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v5.0.0
@@ -9,6 +13,10 @@ repos:
       - id: check-merge-conflict
       - id: check-added-large-files
         args: [--maxkb=200]
+      # Cheap, offline, no baseline file to drift. The authoritative secret
+      # gate is GitHub push protection plus the scan in security.yml; this
+      # catches the one case that is unrecoverable once pushed.
+      - id: detect-private-key
 
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.9.4
@@ -16,3 +24,57 @@ repos:
       - id: ruff
         args: [--fix]
       - id: ruff-format
+
+  # Pre-push only. These run in the active environment, so install the dev
+  # extras first: pip install -e ".[dev,excel,parquet]"
+  #
+  # Order matters: the data fetch has to precede pytest, or the validation
+  # tests skip and the coverage gate measures less than it claims to.
+  - repo: local
+    hooks:
+      - id: validation-data
+        name: fetch and verify validation panels (sha256)
+        entry: python3 scripts/fetch_validation_data.py
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-push]
+
+      - id: pytest
+        name: pytest with branch coverage
+        entry: python3 -m pytest -q --cov=paneldx --cov-report=term-missing
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-push]
+
+      - id: mypy
+        name: mypy
+        # Avoid a stale local .mypy_cache masking or crashing a push-time check.
+        entry: python3 -m mypy --no-incremental
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-push]
+
+      # Builds into a temporary directory so a stale dist/ from an older
+      # version can never be what twine ends up checking.
+      - id: dist-check
+        name: build the wheel and sdist, then twine check
+        entry: bash -c 'd=$(mktemp -d); python3 -m build --outdir "$d" >/dev/null && python3 -m twine check "$d"/*; rc=$?; rm -rf -- "$d"; exit "$rc"'
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-push]
+
+      # Audits only what a user installs: runtime dependencies plus the
+      # excel/parquet extras. Auditing the whole dev environment instead
+      # reports pytest, pip and setuptools, and a gate that fails for reasons
+      # unrelated to the push is one people learn to skip. Needs network.
+      - id: pip-audit
+        name: pip-audit (shipped dependencies)
+        entry: python3 scripts/audit_dependencies.py
+        language: system
+        pass_filenames: false
+        always_run: true
+        stages: [pre-push]

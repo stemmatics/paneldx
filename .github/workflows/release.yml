@@ -4,22 +4,68 @@ on:
   push:
     tags: ["v*"]
 
+permissions:
+  contents: read
+
 jobs:
-  build:
+  # A tag can be pushed from any commit, including one that never went through
+  # a pull request. This runs before anything else so an off-main tag cannot
+  # consume the rest of the pipeline.
+  guard:
     runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7
+        with:
+          fetch-depth: 0
+      - name: Refuse to publish a tag that is not on main
+        run: |
+          if ! git merge-base --is-ancestor "$GITHUB_SHA" origin/main; then
+            echo "::error::$GITHUB_REF_NAME ($GITHUB_SHA) is not an ancestor of main."
+            exit 1
+          fi
+          echo "$GITHUB_REF_NAME is on main."
+
+  # The whole of CI, not a subset of it. Calling the workflow instead of
+  # copying its steps is what keeps release parity true as CI changes: lint,
+  # typecheck, the 3.9/3.11/3.13 matrix with coverage, the clean-wheel build,
+  # the dependency floor and the security audit all run here.
+  ci:
+    needs: guard
+    uses: ./.github/workflows/ci.yml
+    permissions:
+      contents: read
+
+  build:
+    needs: ci
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      # Required to attest what was built.
+      id-token: write
+      attestations: write
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7
         with:
           python-version: "3.12"
-      - run: pip install -e ".[dev]" build
-      - run: pytest -q
+      - run: pip install build twine
       - run: python -m build
+      - name: Check distribution metadata renders on PyPI
+        run: twine check dist/*
       - name: Install the wheel in a clean environment
         run: |
           python -m venv "$RUNNER_TEMP/clean"
           "$RUNNER_TEMP/clean/bin/pip" install dist/*.whl
           "$RUNNER_TEMP/clean/bin/paneldx" --help
+          "$RUNNER_TEMP/clean/bin/python" -c "import paneldx; print(paneldx.__version__)"
+
+      # Binds each artifact to this workflow, commit and runner, so a wheel
+      # claiming to be this release can be checked with `gh attestation verify`.
+      - name: Attest build provenance
+        uses: actions/attest-build-provenance@96b4a1ef7235a096b17240c259729fdd70c83d45  # v2
+        with:
+          subject-path: dist/*
+
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02  # v4
         with:
           name: dist
@@ -36,4 +82,6 @@ jobs:
         with:
           name: dist
           path: dist/
+      # Trusted publishing. This also emits PEP 740 attestations on PyPI,
+      # which is a separate record from the GitHub attestation above.
       - uses: pypa/gh-action-pypi-publish@dc37677b2e1c63e2034f94d8a5b11f265b73ba33  # v1.14.2

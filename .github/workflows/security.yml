@@ -1,0 +1,63 @@
+name: Security
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  # Advisories are published against code that has not changed, so the audit
+  # has to run on a clock, not only on a diff.
+  schedule:
+    - cron: "17 5 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: security-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # Static analysis. CodeQL needs code scanning enabled on the repository;
+  # until it is, this job reports its findings but has nowhere to upload them.
+  codeql:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      actions: read
+      security-events: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7
+      - uses: github/codeql-action/init@6d786de4d6f3531a740e445b53a42b622bbbace8  # v3
+        with:
+          languages: python
+          queries: security-and-quality
+      - uses: github/codeql-action/analyze@6d786de4d6f3531a740e445b53a42b622bbbace8  # v3
+        with:
+          category: "/language:python"
+
+  # Second line behind GitHub push protection, which is the gate that actually
+  # stops a secret reaching the remote. This catches what is already in history.
+  secrets:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7
+        with:
+          fetch-depth: 0
+      - name: Scan history for verified secrets
+        uses: trufflesecurity/trufflehog@bc2cd3e45e3aa4a6c627bd0c424580f86dde1855  # v3.90.10
+        with:
+          extra_args: --results=verified,unknown
+
+  # Same scoping as the `security` job in ci.yml: the runtime closure only.
+  # Repeated here so the weekly schedule re-audits released dependencies.
+  dependencies:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7
+        with:
+          python-version: "3.12"
+      - run: pip install -e ".[excel,parquet]" pip-audit
+      - name: Audit shipped dependencies for known vulnerabilities
+        run: python scripts/audit_dependencies.py

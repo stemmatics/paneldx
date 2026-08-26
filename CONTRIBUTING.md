@@ -7,9 +7,34 @@ Bug reports, new checks and better heuristics are all welcome.
 ```bash
 git clone https://github.com/stemmatics/paneldx.git
 cd paneldx
-pip install -e ".[dev]"
-pytest
+python3 -m pip install -e ".[dev,excel,parquet]"
+python3 -m pre_commit install --install-hooks
+python3 -m pre_commit run --all-files
 ```
+
+The hooks are not optional infrastructure: a clone without them has no local
+gate at all. `pre-commit install` reads `default_install_hook_types` and wires
+both stages in one command. To confirm:
+
+```bash
+ls -l .git/hooks/pre-commit .git/hooks/pre-push
+```
+
+Commit is kept fast: whitespace, YAML/TOML, private-key detection, Ruff lint
+and format. Push runs the local quality gate: validation-data checksums,
+`pytest` with branch coverage, `mypy`, a wheel and sdist build with `twine
+check`, and `pip-audit`. CI additionally runs the Python-version matrix,
+dependency-floor checks, CodeQL, secret scanning and scheduled dependency
+auditing. Expect the first push after a clone to take a minute. To run the
+local gate by hand:
+
+```bash
+python3 -m pre_commit run --hook-stage pre-push --all-files
+```
+
+`pip-audit` needs network access. It audits PanelDX's runtime dependency
+closure, including the optional Excel and Parquet extras, rather than unrelated
+development tools installed on your machine.
 
 Python 3.9+. Runtime dependencies are `numpy` and `pandas` only, and that is
 deliberate: this is a tool people run *before* choosing a modelling stack, so it

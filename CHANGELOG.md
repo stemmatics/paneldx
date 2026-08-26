@@ -6,6 +6,11 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+### Changed
+
+- Parquet and Feather input support now requires Python 3.10+ because supported
+  PyArrow releases no longer support Python 3.9.
+
 ### Documentation
 
 - Added the research and validation roadmap.

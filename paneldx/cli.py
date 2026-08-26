@@ -28,6 +28,7 @@ _LOADERS: dict[str, Callable[[Path], pd.DataFrame]] = {
     ".json": pd.read_json,
 }
 _EXCEL = {".xlsx"}
+_PARQUET = {".parquet", ".feather"}
 
 # Exhaustive on purpose: an unknown status must crash in development, not
 # silently exit 0 from a gate.
@@ -56,6 +57,11 @@ def _period_step(value: str) -> int | float | str:
 
 def _load(path: Path, sheet: str | int | None) -> pd.DataFrame:
     suffix = path.suffix.lower()
+    if suffix in _PARQUET and sys.version_info < (3, 10):
+        raise SystemExit(
+            "paneldx: Parquet and Feather support requires Python 3.10+ "
+            "because supported PyArrow releases no longer support Python 3.9"
+        )
     if suffix in _EXCEL:
         return pd.read_excel(path, sheet_name=sheet if sheet is not None else 0)
     loader = _LOADERS.get(suffix)
