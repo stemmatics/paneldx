@@ -139,7 +139,8 @@ result = audit(df, "quarter", key="patient_id", target="risk_score")
 open("report.html", "w").write(to_html(result))
 ```
 
-The CLI reads CSV, TSV, Excel, Parquet, Feather and JSON:
+The CLI reads CSV, TSV, Excel and JSON. Parquet and Feather support require
+`pip install "paneldx[parquet]"` and Python 3.10+:
 
 ```bash
 paneldx audit panel.xlsx --time t --key site_id patient_id --target outcome

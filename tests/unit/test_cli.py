@@ -1,3 +1,5 @@
+import sys
+
 import pytest
 from factories import make_panel
 
@@ -24,9 +26,21 @@ def write(df, path, fmt):
 
 @pytest.mark.parametrize("fmt", ["csv", "tsv", "json", "parquet", "feather", "xlsx"])
 def test_each_loader_round_trips(tmp_path, fmt):
+    if fmt in {"parquet", "feather"} and sys.version_info < (3, 10):
+        pytest.skip("Parquet and Feather require Python 3.10+")
     path = tmp_path / f"panel.{fmt}"
     write(make_panel(), path, fmt)
     assert main(["audit", str(path), "--time", "period", "--key", "uid", "--quiet"]) == 0
+
+
+@pytest.mark.skipif(sys.version_info >= (3, 10), reason="Python 3.10+ supports Parquet")
+@pytest.mark.parametrize("suffix", [".parquet", ".feather"])
+def test_parquet_and_feather_are_rejected_on_python_39(tmp_path, suffix):
+    path = tmp_path / f"panel{suffix}"
+    path.write_text("not a dataset")
+
+    with pytest.raises(SystemExit, match="requires Python 3.10"):
+        main(["audit", str(path), "--time", "period"])
 
 
 def test_html_is_written(tmp_path):
