@@ -39,7 +39,7 @@ dev = [
     # Pinned to match the rev in .pre-commit-config.yaml: the formatter's output
     # changes between releases, so a floating range lets locally-formatted code
     # fail `ruff format --check` in CI.
-    "ruff==0.9.4",
+    "ruff==0.16.5",
     # Bounded so a major release cannot change the typecheck gate underneath a
     # pull request. pandas-stubs is left open: pinning it up would drop the
     # Python 3.9 dev install, which this project still supports.
