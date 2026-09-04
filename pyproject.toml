@@ -43,7 +43,7 @@ dev = [
     # Bounded so a major release cannot change the typecheck gate underneath a
     # pull request. pandas-stubs is left open: pinning it up would drop the
     # Python 3.9 dev install, which this project still supports.
-    "mypy>=1.11,<2",
+    "mypy>=1.11,<3",
     "pandas-stubs",
     "pre-commit",
     "build",
