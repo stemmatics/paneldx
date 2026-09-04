@@ -1,0 +1,40 @@
+{
+  "profile": "development",
+  "protocol_version": "2.0.0",
+  "manifest_version": "1.1.0",
+  "paneldx_version": "0.5.0",
+  "policy": {
+    "invariant_violation_rate": 0.02,
+    "monotone_violation_rate": 0.05,
+    "duplicate_cell_rate": 0.01,
+    "minimum_null_gap": 0.1,
+    "supported_evidence_fraction": 0.4,
+    "weak_evidence_fraction": 0.15,
+    "minimum_entities": 20,
+    "minimum_periods_per_entity": 2,
+    "minimum_steps": 20
+  },
+  "held_out_excluded": [
+    "airfare",
+    "jtrain",
+    "males",
+    "municipalities",
+    "murder",
+    "usseatbelts"
+  ],
+  "datasets": [
+    "grunfeld",
+    "emplUK",
+    "produc",
+    "gasoline",
+    "cigar",
+    "crime",
+    "laborsupply",
+    "parity",
+    "snmesp",
+    "sumhes"
+  ],
+  "cases": 3480,
+  "cases_excluded_no_effect": 23,
+  "elapsed_seconds": 266.4
+}

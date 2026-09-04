@@ -2,9 +2,9 @@
 
 import numpy as np
 import pytest
-from factories import make_panel
 
 from paneldx import detect_counters, persistence_baseline, validate_key
+from tests.factories import make_panel
 
 
 def test_missing_key_rows_are_excluded_from_validation():

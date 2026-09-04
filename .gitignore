@@ -23,7 +23,6 @@ env/
 .mypy_cache/
 .coverage
 htmlcov/
-.slopconfig.yaml
 .githooks-local/
 .idea/
 .vscode/
@@ -33,3 +32,12 @@ htmlcov/
 .env.*
 !.env.example
 tests/validation/data/
+
+# Benchmark output is evidence, not data: it is committed on purpose. The
+# per-case records are gzipped because they are the only files that grow with
+# the run; csv and pandas both read them directly.
+!validation/results/
+!validation/results/*.csv
+!validation/results/**/*.csv
+!validation/results/*.csv.gz
+!validation/results/**/*.csv.gz

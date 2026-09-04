@@ -1,0 +1,414 @@
+{
+  "protocol_version": "2.0.0",
+  "status": "frozen",
+  "drafted_on": "2026-09-04",
+  "frozen_on": "2026-09-04",
+  "freeze_rule": "Version 1.0.0 was drafted, reviewed against protocol.md and frozen on 2026-09-04, before the calibration ran. frozen_on records that date and is not rewritten by later amendments, which are listed under `amendments`. scripts.check_validation_setup fails if protocol.md and protocol.json disagree about version, status, freeze date or baseline release.",
+  "document": "validation/protocol/protocol.md",
+  "dataset_manifest": "validation/manifests/datasets.json",
+  "regression_expectations": "tests/validation/expected_results.json",
+  "baseline": {
+    "release": "0.4.0",
+    "description": "0.4.0 is the behavioural baseline every later run is compared against. 0.4.1 changed no threshold and no verdict. 0.5.0 changes the meaning of the verdicts and one threshold, and validation/results/development/v0.5.0/comparison.md records every case whose verdict moved.",
+    "thresholds": "paneldx.policy.KeyValidationPolicy and TrapPolicy. Unchanged from 0.4.0 except minimum_null_gap, raised from 0.05 to 0.10 by the calibration recorded below."
+  },
+  "splits": {
+    "development": [
+      "grunfeld",
+      "emplUK",
+      "produc",
+      "gasoline"
+    ],
+    "calibration": [
+      "cigar",
+      "crime",
+      "laborsupply",
+      "parity",
+      "snmesp",
+      "sumhes"
+    ],
+    "held_out": [
+      "males",
+      "usseatbelts",
+      "municipalities",
+      "airfare",
+      "jtrain",
+      "murder"
+    ],
+    "external": [],
+    "case_study": [
+      "popnet"
+    ]
+  },
+  "split_rules": {
+    "held_out_may_be_used_for_tuning": false,
+    "held_out_opened_at": null,
+    "calibration_is_the_only_split_thresholds_may_be_fitted_on": true,
+    "case_studies_count_towards_metrics": false,
+    "development_results_are_evidence_of_accuracy": false,
+    "a_family_may_not_span_two_splits": true,
+    "held_out_requires_an_explicit_flag_to_fetch": "--include-held-out",
+    "held_out_verdicts_may_be_inspected_before_freeze": false,
+    "held_out_structure_has_been_recorded": true,
+    "held_out_structure_note": "Each held-out file was downloaded once and its row count, column count, entity count, period range and sha256 recorded, and it was checked for duplicate entity-period pairs. That is structural inspection, and it is what makes the registration verifiable. paneldx has not been run on any of them and no verdict exists. The split is 'not evaluated', not 'untouched'.",
+    "held_out_status": "registered and not evaluated"
+  },
+  "seeds": {
+    "validate_key_random_state": 0,
+    "discover_keys_random_state": 0,
+    "target_leakage_random_state": 0,
+    "synthetic_generator_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "corruption_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ]
+  },
+  "shuffle_counts": {
+    "library_default_validate_key": 3,
+    "library_default_discover_keys": 2,
+    "regression_suite": 3,
+    "publication": 200,
+    "note": "The library defaults are a cheap sanity reference. Every recorded result was produced at n_shuffles = 3 and is a development diagnostic, not a validation estimate. A number published as a validation result must come from the publication profile at n_shuffles = 200, which has not been run.",
+    "recorded_results_used": 3,
+    "publication_profile_has_been_run": false
+  },
+  "primary_metrics": [
+    {
+      "id": "false_rejection_rate",
+      "applies_to": "key validation",
+      "definition": "Share of datasets with a known-correct entity key for which paneldx reports `fail`.",
+      "unit": "proportion",
+      "interval": "Wilson 95% where each family gives one binary outcome, else bootstrap",
+      "direction": "lower is better",
+      "unit_of_analysis": "family",
+      "aggregation": "one binary outcome per dataset, then one value per family"
+    },
+    {
+      "id": "false_acceptance_rate",
+      "applies_to": "key validation",
+      "definition": "Procedure-weighted proportion of deliberately corrupted keys reported `pass` or `warn`, averaged within datasets and then across families. Both are unsafe acceptance: they hand back a key the user may proceed with. `fail` and `inconclusive` are the safe outcomes.",
+      "unit": "proportion",
+      "interval": "family-level (cluster) bootstrap 95%; Wilson is not valid here",
+      "direction": "lower is better",
+      "unit_of_analysis": "family",
+      "aggregation": "mean over levels and seeds within each corruption procedure, then over procedures within each dataset, then over datasets within each family, then across families"
+    },
+    {
+      "id": "inconclusive_rate",
+      "applies_to": "key validation",
+      "definition": "Procedure-weighted proportion of evaluated outcomes reported inconclusive, averaged within datasets and then across families. Reported alongside the error rates because a tool can reduce errors by declining to answer.",
+      "unit": "proportion",
+      "interval": "family-level (cluster) bootstrap 95%; Wilson is not valid here",
+      "direction": "reported, not optimised",
+      "unit_of_analysis": "family",
+      "aggregation": "mean over levels and seeds within each corruption procedure, then over procedures within each dataset, then over datasets within each family, then across families"
+    },
+    {
+      "id": "top_1_key_recovery",
+      "applies_to": "key discovery",
+      "definition": "Share of datasets whose known-correct key is ranked first by `discover_keys`.",
+      "unit": "proportion",
+      "interval": "Wilson 95% where each family gives one binary outcome, else bootstrap",
+      "direction": "higher is better",
+      "status": "planned for 0.6.x",
+      "unit_of_analysis": "family",
+      "aggregation": "one binary outcome per dataset, then one value per family"
+    },
+    {
+      "id": "top_3_key_recovery",
+      "applies_to": "key discovery",
+      "definition": "Share of datasets whose known-correct key appears in the top three candidates from `discover_keys`.",
+      "unit": "proportion",
+      "interval": "Wilson 95% where each family gives one binary outcome, else bootstrap",
+      "direction": "higher is better",
+      "status": "planned for 0.6.x",
+      "unit_of_analysis": "family",
+      "aggregation": "one binary outcome per dataset, then one value per family"
+    },
+    {
+      "id": "equivalent_partition_recovery",
+      "applies_to": "key discovery",
+      "definition": "As top-1 recovery, but crediting any candidate key that induces the same entity partition as the documented key.",
+      "unit": "proportion",
+      "interval": "Wilson 95% where each family gives one binary outcome, else bootstrap",
+      "direction": "higher is better",
+      "status": "planned for 0.6.x",
+      "unit_of_analysis": "family",
+      "aggregation": "one binary outcome per dataset, then one value per family"
+    }
+  ],
+  "corruption_tests": [
+    {
+      "id": "positional_rekey",
+      "description": "Sort each period by a value column and key on within-period row position.",
+      "levels": [
+        1.0
+      ],
+      "safe_outcome": "fail or inconclusive (a safe stop). `fail` is reserved for a structural contradiction; a positional key produces an absence of evidence, not a contradiction. pass or warn is a miss."
+    },
+    {
+      "id": "within_period_shuffle",
+      "description": "Permute entity labels independently within each period.",
+      "levels": [
+        1.0
+      ],
+      "safe_outcome": "fail or inconclusive (a safe stop). pass or warn is a miss."
+    },
+    {
+      "id": "entity_merge",
+      "description": "Collapse pairs of distinct entities onto one label.",
+      "levels": [
+        0.01,
+        0.05,
+        0.1
+      ],
+      "safe_outcome": "fail or inconclusive"
+    },
+    {
+      "id": "entity_split",
+      "description": "Split an entity's rows across two labels at a random period.",
+      "levels": [
+        0.01,
+        0.05,
+        0.1
+      ],
+      "safe_outcome": "fail or inconclusive"
+    },
+    {
+      "id": "partial_corruption",
+      "description": "Apply within-period shuffling to a fraction of entities.",
+      "levels": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.5
+      ],
+      "safe_outcome": "fail or inconclusive at every level, and satisfying corruption_outcome_rule.sensitivity_requirement"
+    },
+    {
+      "id": "duplicate_entity_periods",
+      "description": "Duplicate a share of entity-period rows.",
+      "levels": [
+        0.005,
+        0.01,
+        0.02,
+        0.05,
+        0.1
+      ],
+      "safe_outcome": "fail above the duplicate_cell_rate threshold; unchanged below it. Duplicate cells are a structural contradiction, not an absence of evidence."
+    },
+    {
+      "id": "missing_entity_keys",
+      "description": "Blank the entity key on a share of rows.",
+      "levels": [
+        0.005,
+        0.01,
+        0.02,
+        0.05,
+        0.1
+      ],
+      "safe_outcome": "verdict unchanged, or inconclusive once too few entities or transitions remain"
+    },
+    {
+      "id": "missing_time_values",
+      "description": "Blank the time column on a share of rows.",
+      "levels": [
+        0.005,
+        0.01,
+        0.02,
+        0.05,
+        0.1
+      ],
+      "safe_outcome": "verdict unchanged, or inconclusive once too few entities or transitions remain"
+    },
+    {
+      "id": "panel_attrition",
+      "description": "Drop entities out of the panel from a random period onwards.",
+      "levels": [
+        0.05,
+        0.1,
+        0.2
+      ],
+      "safe_outcome": "verdict unchanged, or inconclusive once too few transitions remain"
+    },
+    {
+      "id": "period_gaps",
+      "description": "Delete rows to open gaps in entity histories.",
+      "levels": [
+        0.05,
+        0.1,
+        0.2
+      ],
+      "safe_outcome": "verdict unchanged, or inconclusive once too few transitions remain"
+    },
+    {
+      "id": "invariant_column_removal",
+      "description": "Drop the columns that are invariant within an entity, one at a time.",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "safe_outcome": "never fail: the key stays correct and only the evidence for it is removed, so a fail is a false rejection."
+    },
+    {
+      "id": "feature_poor_panel",
+      "description": "Keep the correct key but reduce the panel to a few time-varying columns.",
+      "levels": [
+        1,
+        2,
+        3
+      ],
+      "safe_outcome": "never fail: the key is correct, so pass, warn or inconclusive are all acceptable and fail is a false rejection"
+    }
+  ],
+  "environment": {
+    "python": "3.12",
+    "requirements": "validation/requirements.txt",
+    "check_command": "python scripts/check_validation_setup.py"
+  },
+  "reporting_rules": {
+    "no_accuracy_rate_may_be_published_before": "a held-out split exists and the method is frozen",
+    "development_results_must_be_labelled_development": true,
+    "failures_and_inconclusive_cases_must_be_reported": true,
+    "popnet_is_a_case_study_not_validation_evidence": true
+  },
+  "statistical_unit": {
+    "unit": "family",
+    "rationale": "Corruptions and seeds from one panel are reruns on the same table, and two panels from one survey are not independent. Counting either as independent datasets reports an interval narrower than the evidence supports.",
+    "rules": [
+      "Within a dataset, average each corruption procedure's cases first, then average the procedures. Weighting cases equally makes the rate depend on how many levels a procedure declares.",
+      "Combine datasets by family: a family contributes one value, the mean of its datasets.",
+      "Compute intervals by resampling families, not datasets, procedures or runs.",
+      "Use a Wilson interval only where each family contributes exactly one independent binary outcome; otherwise bootstrap.",
+      "Publish every rate as a count over a denominator, naming the number of families k and the runs behind it, and publish the per-procedure and per-level breakdown beside it."
+    ],
+    "prohibited": "Reporting 10 corruptions x 10 seeds x 4 panels as an error rate over 400 with an interval computed as if n = 400. The real n is 4.",
+    "note": "Every family in datasets.json currently holds exactly one dataset, so family and dataset resampling coincide. The rule is stated on families because that is what stays correct when a second panel from an existing source is added.",
+    "case_weighted_figure": "Also reported, for reconciliation with the raw counts. It is not the primary figure and must not be quoted as a rate.",
+    "aggregation": "mean over levels and seeds within each corruption procedure, then over procedures within each dataset, then over datasets within each family, then across families"
+  },
+  "corruption_outcome_rule": {
+    "safe_stop": [
+      "fail",
+      "inconclusive"
+    ],
+    "unsafe_acceptance": [
+      "pass",
+      "warn"
+    ],
+    "note": "`warn` counts as unsafe acceptance on a known-broken key: it means 'weak, inspect by hand', which is an invitation to proceed rather than a stop.",
+    "no_ordinal_ranking": "Statuses are never mapped to a severity scale. `inconclusive` is a refusal to judge, not a level between `warn` and `fail`, so ranking them would invent an ordering the tool does not have and any mean of those ranks would mean nothing.",
+    "reported_per_level": [
+      "pass_count",
+      "warn_count",
+      "inconclusive_count",
+      "fail_count",
+      "unsafe_acceptance_rate",
+      "safe_stop_rate"
+    ],
+    "rate_definitions": {
+      "unsafe_acceptance_rate": "(pass + warn) / runs at that level",
+      "safe_stop_rate": "(fail + inconclusive) / runs at that level"
+    },
+    "counts_always_published": "The two rates never appear without the four counts. A rate alone cannot distinguish a tool that rejected a broken key from one that declined to look.",
+    "sensitivity_requirement": "Across the declared corrupted fractions in increasing order, a dataset's unsafe_acceptance_rate must be non-increasing, and strictly lower at the largest fraction than at the smallest. A flat curve is a reported sensitivity failure, not a pass. Assessed per dataset; never pooled across datasets."
+  },
+  "versioning": {
+    "scheme": "semantic",
+    "patch": "Wording, typos and clarifications that change no rule.",
+    "minor": "Additions that cannot invalidate an existing result: a new corruption test, a new dataset in an empty split, a new secondary metric, a change to the declared corruption levels before any result has been produced from them.",
+    "major": "Anything that changes a split, a primary metric, a seed, the publication shuffle count, or the definition of a correct answer.",
+    "after_held_out_is_opened": "A major change invalidates the held-out result and requires a new held-out split.",
+    "amendments_recorded_in": "CHANGELOG.md"
+  },
+  "amendments": [
+    {
+      "version": "1.1.0",
+      "date": "2026-09-04",
+      "kind": "minor",
+      "changes": [
+        "Populated the calibration and held-out splits, which section 9 classes as a minor change because both were empty.",
+        "Recorded family_id per dataset and made the statistical unit the family rather than the dataset. This is a clarification while every family holds one dataset, and it is the rule that keeps two panels from one survey out of separate splits.",
+        "Expanded corruption_tests from 8 to the 12 the benchmark implements, with explicit levels.",
+        "Corrected the safe outcome for duplicate_entity_periods from inconclusive to fail: duplicate entity-period cells are a structural contradiction, which is what validate_key already reports.",
+        "Stated the safe outcome for positional_rekey and within_period_shuffle as a safe stop (fail or inconclusive) rather than fail specifically, and for invariant_column_removal as never-fail. Naming an exact status was stricter than the safety framework in sections 1 and 4, which judges whether a broken key was stopped, not which kind of stop was reached."
+      ],
+      "nothing_had_been_measured": true
+    },
+    {
+      "version": "1.2.0",
+      "date": "2026-09-04",
+      "kind": "minor",
+      "changes": [
+        "Recorded that the calibration split has been used, under the grid frozen before any result was computed, and that minimum_null_gap moved from 0.05 to 0.10 as a result.",
+        "Updated the baseline description for 0.5.0, which changes verdict semantics. No split, metric, seed or definition of a correct answer changed, so this is a minor amendment."
+      ],
+      "held_out_still_unevaluated": true
+    },
+    {
+      "version": "1.3.0",
+      "date": "2026-09-04",
+      "kind": "minor",
+      "changes": [
+        "Replaced 'unopened' with 'registered and not evaluated' for the held-out split, and recorded exactly what was done to those files: downloaded once, structure and checksum recorded, paneldx never run.",
+        "Marked the calibration exploratory rather than preregistered. The grid preceded the run, but it was not registered where a third party could check it and the results have been seen.",
+        "Recorded that the 0.4.0 threshold values are frozen inside the calibration grid rather than read from the running policy."
+      ],
+      "weakens_no_claim": true
+    },
+    {
+      "version": "2.0.0",
+      "date": "2026-09-04",
+      "kind": "major",
+      "reason": "Changes a primary metric, which section 9 classes as major.",
+      "changes": [
+        "The primary unsafe-acceptance rate now averages each corruption procedure within a dataset before averaging datasets and families. The previous figure was a case-weighted mixture in which partial_corruption's six levels outweighed positional_rekey's one, so it measured the shape of the corruption list as much as the tool.",
+        "Per-procedure and per-level breakdowns are now published beside every aggregate.",
+        "Recorded that no publication-profile run exists: every saved result is a development diagnostic at n_shuffles = 3.",
+        "Corrected the machine-readable metric definitions, which still described dataset-level, case-weighted aggregation after the document had moved to procedure-then-family weighting.",
+        "Corrected the inconclusive_rate definition, which described a raw share of cases while the figure reported is procedure-weighted and averaged within datasets and across families."
+      ],
+      "held_out_still_unevaluated": true,
+      "made_before_any_held_out_evaluation": true
+    }
+  ],
+  "calibration": {
+    "grid": "validation/protocol/calibration_grid.json",
+    "grid_frozen_on": "2026-09-04",
+    "results": "validation/results/calibration/v0.5.0/calibration.json",
+    "run_on": "2026-09-04",
+    "split_used": "calibration",
+    "development_or_held_out_used": false,
+    "grid_points": 81,
+    "families": 6,
+    "selected": {
+      "minimum_null_gap": 0.1
+    },
+    "left_at_developed_values": [
+      "supported_evidence_fraction",
+      "weak_evidence_fraction",
+      "minimum_entities"
+    ],
+    "selection_rule": "the lexicographic order recorded in the grid file, applied unchanged",
+    "status": "exploratory",
+    "status_note": "The grid was written before the calibration was run, but it was not registered anywhere a third party could check, and the results have since been seen. It is therefore an exploratory calibration on development-adjacent data, not a preregistration. The method is frozen prospectively for the held-out evaluation only.",
+    "baseline_defaults_frozen_in_grid": true
+  }
+}

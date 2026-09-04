@@ -78,26 +78,36 @@ def detect_counters(
     for col in df.columns:
         if col in skip or not pd.api.types.is_numeric_dtype(df[col]):
             continue
-        v = df[col].to_numpy(dtype="float64", na_value=np.nan)[order]
-        if not np.isfinite(v).any() or np.nanmin(v) < 0:
-            continue
-        step = np.diff(v)
-        valid = same_entity & np.isfinite(step)
-        if valid.sum() < policy.minimum_steps:
-            continue
-        report.n_columns_tested += 1
-        if (step[valid] != 0).mean() < 0.5:
-            continue
-        if (step[valid] < 0).mean() > policy.counter_decrease_rate:
-            continue
-
-        report.counters.append(col)
-        prev, curr = v[:-1][valid], v[1:][valid]
-        if prev.std() > 0 and curr.std() > 0:
-            report.autocorrelation[col] = float(np.corrcoef(prev, curr)[0, 1])
+        values = df[col].to_numpy(dtype="float64", na_value=np.nan)[order]
+        _score_counter(report, col, values, same_entity, policy)
 
     report.status = counter_status(report)
     return report
+
+
+def _score_counter(report, col, values, same_entity, policy) -> None:
+    """Test one column for accumulation, recording it if it qualifies.
+
+    A counter is non-negative, moves in at least half of its within-entity
+    steps, and decreases in at most `counter_decrease_rate` of them.
+    """
+    if not np.isfinite(values).any() or np.nanmin(values) < 0:
+        return
+    step = np.diff(values)
+    valid = same_entity & np.isfinite(step)
+    if valid.sum() < policy.minimum_steps:
+        return
+
+    report.n_columns_tested += 1
+    moves = (step[valid] != 0).mean()
+    decreases = (step[valid] < 0).mean()
+    if moves < 0.5 or decreases > policy.counter_decrease_rate:
+        return
+
+    report.counters.append(col)
+    prev, curr = values[:-1][valid], values[1:][valid]
+    if prev.std() > 0 and curr.std() > 0:
+        report.autocorrelation[col] = float(np.corrcoef(prev, curr)[0, 1])
 
 
 @dataclass
@@ -280,6 +290,21 @@ def _adjacent(curr, prev, step, is_datetime):
     return np.isclose(curr - prev, step, rtol=1e-9, atol=0.0)
 
 
+def _baseline_frame(df, key, time, target) -> pd.DataFrame:
+    """Entity, period and numeric target, complete rows only, in panel order."""
+    return (
+        pd.DataFrame(
+            {
+                "entity": _entity_series(df, key),
+                "time": time,
+                "y": pd.to_numeric(df[target], errors="coerce"),
+            }
+        )
+        .dropna()
+        .sort_values(["entity", "time"])
+    )
+
+
 def persistence_baseline(
     df: pd.DataFrame,
     key: str | Sequence[str],
@@ -300,17 +325,7 @@ def persistence_baseline(
         return resolved
     step, label = resolved
 
-    work = (
-        pd.DataFrame(
-            {
-                "entity": _entity_series(df, key),
-                "time": time,
-                "y": pd.to_numeric(df[target], errors="coerce"),
-            }
-        )
-        .dropna()
-        .sort_values(["entity", "time"])
-    )
+    work = _baseline_frame(df, key, time, target)
     report = BaselineReport(period_step=label)
     # Two observations of one period leave no single value to carry forward.
     duplicated = work.duplicated(["entity", "time"], keep=False)

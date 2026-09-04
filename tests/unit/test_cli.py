@@ -1,27 +1,25 @@
 import sys
 
 import pytest
-from factories import make_panel
 
 from paneldx.cli import main
+from tests.factories import make_panel
+
+WRITERS = {
+    "csv": lambda df, path: df.to_csv(path, index=False),
+    "tsv": lambda df, path: df.to_csv(path, sep="\t", index=False),
+    "json": lambda df, path: df.to_json(path),
+    "parquet": lambda df, path: df.to_parquet(path, index=False),
+    "feather": lambda df, path: df.to_feather(path),
+    "xlsx": lambda df, path: df.to_excel(path, index=False),
+}
+NEEDS = {"parquet": "pyarrow", "feather": "pyarrow", "xlsx": "openpyxl"}
 
 
 def write(df, path, fmt):
-    if fmt == "csv":
-        df.to_csv(path, index=False)
-    elif fmt == "tsv":
-        df.to_csv(path, sep="\t", index=False)
-    elif fmt == "json":
-        df.to_json(path)
-    elif fmt == "parquet":
-        pytest.importorskip("pyarrow")
-        df.to_parquet(path, index=False)
-    elif fmt == "feather":
-        pytest.importorskip("pyarrow")
-        df.to_feather(path)
-    elif fmt == "xlsx":
-        pytest.importorskip("openpyxl")
-        df.to_excel(path, index=False)
+    if fmt in NEEDS:
+        pytest.importorskip(NEEDS[fmt])
+    WRITERS[fmt](df, path)
 
 
 @pytest.mark.parametrize("fmt", ["csv", "tsv", "json", "parquet", "feather", "xlsx"])

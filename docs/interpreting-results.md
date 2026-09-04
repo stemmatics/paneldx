@@ -27,35 +27,71 @@ Common causes:
 If the listed invariants are things like a birth date or a registration
 timestamp, the key is probably fine and the table is just thin.
 
-### `NOT SUPPORTED - within-entity quantities are unsafe`
+### `INCONCLUSIVE - too little is explained to support the key`
 
-Below 15%. Every lag, difference, trajectory and grouped split derived from this
-key is unreliable.
+Below 15%. The data did not supply enough for the key to explain.
 
-Do not model on it. Run `discover_keys` and look at what comes back. If a
-candidate scores well and makes sense, rebuild the panel on it. If nothing
-scores well, the data may be repeated cross-sections rather than a panel, in
-which case within-entity analysis was never available.
+This is **not** a rejection, and reading it as one is the mistake 0.5.0 was
+written to prevent. A correct key on a panel of purely time-varying
+measurements lands here, and so does a broken one. What it tells you is that
+within-entity quantities are *unverified*, not that they are wrong.
 
-### `NOT SUPPORTED - nothing stays constant within an entity`
+What to do: run `discover_keys` and see whether anything scores better. Declare
+what you know with `invariant_cols` and `monotone_cols` — a single column that
+should not move is often enough to settle the question in either direction. If
+nothing in the table can ever support a key, the data may be repeated
+cross-sections rather than a panel, in which case within-entity analysis was
+never available.
 
-A stronger rejection. The key explains no invariants at all, and its invariance
-rate is indistinguishable from shuffled labels.
+### `INCONCLUSIVE - the key cannot be told apart from shuffled labels`
+
+The key explains no invariants at all, and its invariance rate matches what you
+get by shuffling the labels within each period.
 
 This is the signature of a key built from row position or rank. Any monotonicity
-it does show comes from the sort order, not from entities. Treat it as
-fabricated.
+it shows comes from the sort order rather than from entities. It is also what a
+panel with no stable attributes looks like under a perfectly good key, which is
+why the verdict abstains rather than rejects. Declare an invariant column to
+tell the two apart: if one exists and the key breaks it, the verdict becomes
+`fail`.
+
+### `contradicted - <column> was declared invariant but changes`
+
+The key is ruled out. You said a column cannot change within an entity, and
+under this key it does. Reported as `fail`, with reason
+`declared_invariant_broken`.
+
+### `contradicted - <column> was declared monotone but falls`
+
+As above for a declared counter. Reason `declared_monotone_broken`.
 
 ### `invalid - key repeats within a period`
 
 The key appears more than once in the same period, so it does not identify a
 single observation. Usually a missing column in a compound key, or a join that
-fanned out.
+fanned out. Reported as `fail`, with reason `duplicate_entity_period`.
 
 ### `too few entities to judge`
 
 Fewer than 20 entities with at least two observations. Not a verdict, an
 abstention.
+
+### Reason codes
+
+Every report carries a `reason` alongside its status, so a caller can branch on
+the cause without matching on wording:
+
+| Reason | Status |
+|---|---|
+| `supported` | `pass` |
+| `weak_support` | `warn` |
+| `insufficient_evidence` | `inconclusive` |
+| `duplicate_entity_period` | `fail` |
+| `declared_invariant_broken` | `fail` |
+| `declared_monotone_broken` | `fail` |
+
+The three `fail` reasons are the complete list. If a report says `fail`, one of
+them holds.
 
 ## Trap verdicts
 

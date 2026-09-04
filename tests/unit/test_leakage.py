@@ -3,9 +3,9 @@
 import numpy as np
 import pandas as pd
 import pytest
-from factories import make_panel, standardize
 
 from paneldx import target_leakage
+from tests.factories import make_panel, standardize
 
 FEATURES = ["total_visits", "total_spend", "rating"]
 

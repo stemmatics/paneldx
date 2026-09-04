@@ -1,8 +1,7 @@
 """Cumulative-counter detection."""
 
-from factories import make_panel
-
 from paneldx import detect_counters
+from tests.factories import make_panel
 
 
 def test_counters_are_found():

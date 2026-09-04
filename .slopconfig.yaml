@@ -1,0 +1,28 @@
+# Project policy for deterministic AI-quality analysis.
+# Keep this file versioned: local hooks and CI must evaluate the same rules.
+version: "2.0"
+
+advanced:
+  # The detector's default cache lives in ~/.slop-detector. Disable it so a
+  # clean CI runner and a developer machine always analyze the source itself.
+  analysis_cache_enabled: false
+
+patterns:
+  god_function:
+    # Scientific checks can be moderately involved, but functions beyond these
+    # limits require refactoring or an explicitly reviewed suppression.
+    complexity_threshold: 12
+    lines_threshold: 60
+
+  # Functions above the thresholds that have been reviewed and left as they
+  # are. Each entry is code that predates the 0.5.0 validation work; splitting
+  # them would put untested churn into a release whose point is that behaviour
+  # changed in exactly one controlled way. New violations are not suppressed.
+  god_function_suppressions:
+    - paneldx/report.py::to_html
+    - paneldx/traps.py::target_leakage
+    - paneldx/traps.py::persistence_baseline
+    - paneldx/audit.py::audit
+    - paneldx/keys.py::discover_keys
+    - paneldx/keys.py::_measure
+    - paneldx/keys.py::validate_key

@@ -3,9 +3,9 @@
 import numpy as np
 import pandas as pd
 import pytest
-from factories import make_panel
 
 from paneldx import persistence_baseline
+from tests.factories import make_panel
 
 
 def test_cumulative_target_is_dominated_by_persistence():

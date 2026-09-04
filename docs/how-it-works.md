@@ -53,19 +53,43 @@ look like they found something. Counting the share, the separation is 7% against
 
 | `evidence_frac` | Verdict |
 |-----------------|---------|
-| ≥ 0.40 | supported by the data |
-| 0.15 to 0.40 | weak, inspect the listed columns |
-| < 0.15 | not supported |
+| ≥ 0.40 | `pass` — supported by the data |
+| 0.15 to 0.40 | `warn` — weak, inspect the listed columns |
+| < 0.15 | `inconclusive` — too little support to judge |
+
+Note the last row. A low share is **not** a rejection: it means the panel did
+not supply enough for the key to explain, which is a statement about the data
+rather than about the key. Produc is the standing example — 48 named US states
+observed over 17 years, unambiguously correct, and only one of nine columns
+constant within a state.
 
 ### The invariance floor
 
-One extra rule. A key that holds **nothing** still, whose invariance rate matches
-the null, is rejected regardless of how many counters it explains.
+One extra rule. A key that holds **nothing** still, whose invariance rate
+matches the null, is `inconclusive` regardless of how many counters it explains
+— the comparison carried no information, so the share it produced cannot be
+trusted either.
 
 Counters alone cannot support a key. Ranking rows by a column that grows over
 time makes the *i*-th ranked row's value grow too, so the key inherits that
 column's monotonicity from the sort order rather than from any entity. Real
 entities always have something that persists.
+
+### Getting to `fail`
+
+`fail` means the data contradicts the key, and there are exactly three ways to
+reach it:
+
+1. **Duplicate entity-period cells** above `duplicate_cell_rate`. One entity
+   cannot hold two values in one period.
+2. **A declared invariant that changes.** Pass `invariant_cols=["birth_date"]`
+   and a key under which birth dates move is contradicted.
+3. **A declared counter that falls.** Pass `monotone_cols=["total_visits"]` and
+   a key under which a lifetime total drops is contradicted.
+
+Two and three are domain knowledge, and they are the reason the parameters
+exist. Without them the tool can only say how much the data supports the key;
+with them it can say the data rules the key out.
 
 ## Discovery
 

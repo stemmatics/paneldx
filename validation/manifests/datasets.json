@@ -1,0 +1,812 @@
+{
+  "manifest_version": "1.1.0",
+  "protocol_version": "2.0.0",
+  "updated": "2026-09-04",
+  "description": "Dataset facts for the paneldx validation protocol: where each panel comes from, what licence it carries, how its correct entity key is known, and the sha256 of the exact bytes the suite is allowed to run on. Verdicts are not recorded here; regression expectations live in tests/validation/expected_results.json.",
+  "download_directory": "tests/validation/data",
+  "roles": {
+    "development": "Used while developing the rules and thresholds. Agreement on these panels is expected and is not evidence of accuracy.",
+    "calibration": "The only split on which thresholds may be fitted. Populated at manifest version 1.1.0.",
+    "held_out": "Registered for a single evaluation after the method is frozen. Never used for tuning and never fetched by default. Their structure and checksums are recorded here; paneldx has not been run on any of them.",
+    "external": "Reserved for cross-domain evaluation from outside econometrics. Empty at manifest version 1.1.0.",
+    "case_study": "Illustrative only. Never counted in any evaluation metric."
+  },
+  "datasets": [
+    {
+      "id": "grunfeld",
+      "role": "development",
+      "access": "public",
+      "family_id": "grunfeld_investment",
+      "file": "Grunfeld.csv",
+      "sha256": "12ff1bcf9491d2349115203f3bb7212c158754051ab180a814585d8656458204",
+      "bytes": 5591,
+      "source_url": "https://vincentarelbundock.github.io/Rdatasets/csv/plm/Grunfeld.csv",
+      "source": "R package plm, dataset Grunfeld, via the Rdatasets mirror",
+      "citation": "Grunfeld, Y. (1958). The Determinants of Corporate Investment. Unpublished PhD dissertation, University of Chicago. Distributed as `Grunfeld` in the R package plm (Croissant & Millo).",
+      "license": {
+        "data_license": "NOASSERTION",
+        "upstream_package_license": "GPL-2.0-or-later",
+        "upstream_package": "plm 2.6-7 (CRAN), License: GPL (>= 2)",
+        "mirror": "Rdatasets; the repository's own code is GPL-3",
+        "data_license_note": "See license_notes.data_license.",
+        "redistribution_allowed": false,
+        "redistribution_note": "See license_notes.redistribution.",
+        "verified_on": "2026-09-04",
+        "verified_from": [
+          "https://cran.r-project.org/web/packages/plm/DESCRIPTION",
+          "https://github.com/vincentarelbundock/Rdatasets#license"
+        ],
+        "verification": "See license_notes.verification."
+      },
+      "entity_key": [
+        "firm"
+      ],
+      "time_column": "year",
+      "drop_columns": [
+        "rownames"
+      ],
+      "shape": {
+        "rows": 200,
+        "columns_after_drop": 5,
+        "entities": 10,
+        "periods": 20,
+        "period_range": "1935-1954",
+        "balanced": true
+      },
+      "correct_key_evidence": {
+        "basis": "documented",
+        "detail": "The plm reference manual documents Grunfeld as an annual panel of 10 US firms observed from 1935 to 1954, keyed by `firm`. The file matches that description exactly: 10 firm labels x 20 years, 200 rows, no duplicate firm-year pairs."
+      }
+    },
+    {
+      "id": "emplUK",
+      "role": "development",
+      "access": "public",
+      "family_id": "arellano_bond_uk_firms",
+      "file": "EmplUK.csv",
+      "sha256": "4c5b5c875cb58d50b81387ffdbfc367b678a4c2d6572c8e92a8f1fa2f2fe04a4",
+      "bytes": 50203,
+      "source_url": "https://vincentarelbundock.github.io/Rdatasets/csv/plm/EmplUK.csv",
+      "source": "R package plm, dataset EmplUK, via the Rdatasets mirror",
+      "citation": "Arellano, M., & Bond, S. (1991). Some Tests of Specification for Panel Data: Monte Carlo Evidence and an Application to Employment Equations. The Review of Economic Studies, 58(2), 277-297. doi:10.2307/2297968. Distributed as `EmplUK` in the R package plm.",
+      "license": {
+        "data_license": "NOASSERTION",
+        "upstream_package_license": "GPL-2.0-or-later",
+        "upstream_package": "plm 2.6-7 (CRAN), License: GPL (>= 2)",
+        "mirror": "Rdatasets; the repository's own code is GPL-3",
+        "data_license_note": "See license_notes.data_license.",
+        "redistribution_allowed": false,
+        "redistribution_note": "See license_notes.redistribution.",
+        "verified_on": "2026-09-04",
+        "verified_from": [
+          "https://cran.r-project.org/web/packages/plm/DESCRIPTION",
+          "https://github.com/vincentarelbundock/Rdatasets#license"
+        ],
+        "verification": "See license_notes.verification."
+      },
+      "entity_key": [
+        "firm"
+      ],
+      "time_column": "year",
+      "drop_columns": [
+        "rownames"
+      ],
+      "shape": {
+        "rows": 1031,
+        "columns_after_drop": 7,
+        "entities": 140,
+        "periods": 9,
+        "period_range": "1976-1984",
+        "balanced": false
+      },
+      "correct_key_evidence": {
+        "basis": "documented",
+        "detail": "The plm reference manual documents EmplUK as an unbalanced annual panel of 140 UK firms observed between 1976 and 1984, keyed by `firm`. The file matches: 140 firm labels across 9 years, 1031 rows, no duplicate firm-year pairs."
+      }
+    },
+    {
+      "id": "produc",
+      "role": "development",
+      "access": "public",
+      "family_id": "munnell_us_state_production",
+      "file": "Produc.csv",
+      "sha256": "c32f302e697f36e9c2c750a6e210366396ba60f24301448d11ade569a3ec483c",
+      "bytes": 63866,
+      "source_url": "https://vincentarelbundock.github.io/Rdatasets/csv/plm/Produc.csv",
+      "source": "R package plm, dataset Produc, via the Rdatasets mirror",
+      "citation": "Munnell, A. H. (1990). Why Has Productivity Growth Declined? Productivity and Public Investment. New England Economic Review, September/October, 3-22. See also Baltagi, B. H., & Pinnoi, N. (1995), Public Capital Stock and State Productivity Growth, Empirical Economics 20, 351-359. Distributed as `Produc` in the R package plm.",
+      "license": {
+        "data_license": "NOASSERTION",
+        "upstream_package_license": "GPL-2.0-or-later",
+        "upstream_package": "plm 2.6-7 (CRAN), License: GPL (>= 2)",
+        "mirror": "Rdatasets; the repository's own code is GPL-3",
+        "data_license_note": "See license_notes.data_license.",
+        "redistribution_allowed": false,
+        "redistribution_note": "See license_notes.redistribution.",
+        "verified_on": "2026-09-04",
+        "verified_from": [
+          "https://cran.r-project.org/web/packages/plm/DESCRIPTION",
+          "https://github.com/vincentarelbundock/Rdatasets#license"
+        ],
+        "verification": "See license_notes.verification."
+      },
+      "entity_key": [
+        "state"
+      ],
+      "time_column": "year",
+      "drop_columns": [
+        "rownames"
+      ],
+      "shape": {
+        "rows": 816,
+        "columns_after_drop": 11,
+        "entities": 48,
+        "periods": 17,
+        "period_range": "1970-1986",
+        "balanced": true
+      },
+      "correct_key_evidence": {
+        "basis": "documented",
+        "detail": "The plm reference manual documents Produc as a balanced annual panel of the 48 contiguous US states observed from 1970 to 1986, keyed by `state`. The file matches: 48 named states x 17 years, 816 rows, no duplicate state-year pairs. The entity column holds state names, not positions, so the key is known correct independently of anything paneldx reports."
+      }
+    },
+    {
+      "id": "gasoline",
+      "role": "development",
+      "access": "public",
+      "family_id": "baltagi_griffin_oecd_gasoline",
+      "file": "Gasoline.csv",
+      "sha256": "0e3282c26c12dd9fb814c8735857785df83cf5389871b0faa998dc1815c2ba3a",
+      "bytes": 23012,
+      "source_url": "https://vincentarelbundock.github.io/Rdatasets/csv/plm/Gasoline.csv",
+      "source": "R package plm, dataset Gasoline, via the Rdatasets mirror",
+      "citation": "Baltagi, B. H., & Griffin, J. M. (1983). Gasoline Demand in the OECD: An Application of Pooling and Testing Procedures. European Economic Review, 22(2), 117-137. doi:10.1016/0014-2921(83)90077-6. Distributed as `Gasoline` in the R package plm.",
+      "license": {
+        "data_license": "NOASSERTION",
+        "upstream_package_license": "GPL-2.0-or-later",
+        "upstream_package": "plm 2.6-7 (CRAN), License: GPL (>= 2)",
+        "mirror": "Rdatasets; the repository's own code is GPL-3",
+        "data_license_note": "See license_notes.data_license.",
+        "redistribution_allowed": false,
+        "redistribution_note": "See license_notes.redistribution.",
+        "verified_on": "2026-09-04",
+        "verified_from": [
+          "https://cran.r-project.org/web/packages/plm/DESCRIPTION",
+          "https://github.com/vincentarelbundock/Rdatasets#license"
+        ],
+        "verification": "See license_notes.verification."
+      },
+      "entity_key": [
+        "country"
+      ],
+      "time_column": "year",
+      "drop_columns": [
+        "rownames"
+      ],
+      "shape": {
+        "rows": 342,
+        "columns_after_drop": 6,
+        "entities": 18,
+        "periods": 19,
+        "period_range": "1960-1978",
+        "balanced": true
+      },
+      "correct_key_evidence": {
+        "basis": "documented",
+        "detail": "The plm reference manual documents Gasoline as a balanced annual panel of 18 OECD countries observed from 1960 to 1978, keyed by `country`. The file matches: 18 named countries x 19 years, 342 rows, no duplicate country-year pairs."
+      }
+    },
+    {
+      "id": "cigar",
+      "role": "calibration",
+      "access": "public",
+      "family_id": "baltagi_us_state_cigarettes",
+      "file": "Cigar.csv",
+      "sha256": "ca583b833774d70c7d14c42bfe23c43fcfb74c77bda326bf54509fc57002241b",
+      "bytes": 74665,
+      "source_url": "https://vincentarelbundock.github.io/Rdatasets/csv/plm/Cigar.csv",
+      "source": "R package plm, dataset Cigar, via the Rdatasets mirror",
+      "citation": "Baltagi, B. H., & Levin, D. (1992). Cigarette taxation: Raising revenues and reducing consumption. Structural Change and Economic Dynamics, 3(2), 321-335. Distributed as `Cigar` in the R package plm; source given as the online complements to Baltagi (2001, 2013).",
+      "license": {
+        "data_license": "NOASSERTION",
+        "upstream_package_license": "GPL-2.0-or-later",
+        "upstream_package": "plm 2.6-7 (CRAN), License: GPL (>= 2)",
+        "mirror": "Rdatasets; the repository's own code is GPL-3",
+        "data_license_note": "See license_notes.data_license.",
+        "redistribution_allowed": false,
+        "redistribution_note": "See license_notes.redistribution.",
+        "verified_on": "2026-09-04",
+        "verified_from": [
+          "https://cran.r-project.org/web/packages/plm/DESCRIPTION",
+          "https://github.com/vincentarelbundock/Rdatasets#license"
+        ],
+        "verification": "See license_notes.verification."
+      },
+      "entity_key": [
+        "state"
+      ],
+      "time_column": "year",
+      "drop_columns": [
+        "rownames"
+      ],
+      "shape": {
+        "rows": 1380,
+        "columns_after_drop": 9,
+        "entities": 46,
+        "periods": 30,
+        "period_range": "63-92",
+        "balanced": true
+      },
+      "correct_key_evidence": {
+        "basis": "documented",
+        "detail": "46 US state abbreviations observed annually from 1963 to 1992 (years stored as two digits). The plm reference manual documents it as a panel of 46 observational units keyed by `state`. The file matches: 46 states x 30 years, 1380 rows, no duplicate state-year pairs."
+      }
+    },
+    {
+      "id": "crime",
+      "role": "calibration",
+      "access": "public",
+      "family_id": "cornwell_trumbull_nc_crime",
+      "file": "Crime.csv",
+      "sha256": "6d58659daed16ebccf18c3cd8ff60771ac9adae82b2c1ee7609c49bbb1bb9053",
+      "bytes": 338464,
+      "source_url": "https://vincentarelbundock.github.io/Rdatasets/csv/plm/Crime.csv",
+      "source": "R package plm, dataset Crime, via the Rdatasets mirror",
+      "citation": "Cornwell, C., & Trumbull, W. N. (1994). Estimating the economic model of crime with panel data. Review of Economics and Statistics, 76(2), 360-366. See also Baltagi, B. H. (2006), Journal of Applied Econometrics 21(4). Distributed as `Crime` in the R package plm.",
+      "license": {
+        "data_license": "NOASSERTION",
+        "upstream_package_license": "GPL-2.0-or-later",
+        "upstream_package": "plm 2.6-7 (CRAN), License: GPL (>= 2)",
+        "mirror": "Rdatasets; the repository's own code is GPL-3",
+        "data_license_note": "See license_notes.data_license.",
+        "redistribution_allowed": false,
+        "redistribution_note": "See license_notes.redistribution.",
+        "verified_on": "2026-09-04",
+        "verified_from": [
+          "https://cran.r-project.org/web/packages/plm/DESCRIPTION",
+          "https://github.com/vincentarelbundock/Rdatasets#license"
+        ],
+        "verification": "See license_notes.verification."
+      },
+      "entity_key": [
+        "county"
+      ],
+      "time_column": "year",
+      "drop_columns": [
+        "rownames"
+      ],
+      "shape": {
+        "rows": 630,
+        "columns_after_drop": 44,
+        "entities": 90,
+        "periods": 7,
+        "period_range": "81-87",
+        "balanced": true
+      },
+      "correct_key_evidence": {
+        "basis": "documented",
+        "detail": "90 North Carolina counties observed annually from 1981 to 1987. The plm reference manual documents it as a panel of 90 observational units (counties) keyed by `county`. The file matches: 90 counties x 7 years, 630 rows, no duplicate county-year pairs."
+      }
+    },
+    {
+      "id": "laborsupply",
+      "role": "calibration",
+      "access": "public",
+      "family_id": "psid",
+      "file": "LaborSupply.csv",
+      "sha256": "cce2922cef1f4f3977b9ce315b35a9c3317e53092d0fc0c85680b548fd68e9a1",
+      "bytes": 161480,
+      "source_url": "https://vincentarelbundock.github.io/Rdatasets/csv/plm/LaborSupply.csv",
+      "source": "R package plm, dataset LaborSupply, via the Rdatasets mirror",
+      "citation": "Ziliak, J. P. (1997). Efficient estimation with panel data when instruments are predetermined. Journal of Business and Economic Statistics, 15(4), 419-431. Drawn from the Panel Study of Income Dynamics. Distributed as `LaborSupply` in the R package plm.",
+      "license": {
+        "data_license": "NOASSERTION",
+        "upstream_package_license": "GPL-2.0-or-later",
+        "upstream_package": "plm 2.6-7 (CRAN), License: GPL (>= 2)",
+        "mirror": "Rdatasets; the repository's own code is GPL-3",
+        "data_license_note": "See license_notes.data_license.",
+        "redistribution_allowed": false,
+        "redistribution_note": "See license_notes.redistribution.",
+        "verified_on": "2026-09-04",
+        "verified_from": [
+          "https://cran.r-project.org/web/packages/plm/DESCRIPTION",
+          "https://github.com/vincentarelbundock/Rdatasets#license"
+        ],
+        "verification": "See license_notes.verification."
+      },
+      "entity_key": [
+        "id"
+      ],
+      "time_column": "year",
+      "drop_columns": [
+        "rownames"
+      ],
+      "shape": {
+        "rows": 5320,
+        "columns_after_drop": 7,
+        "entities": 532,
+        "periods": 10,
+        "period_range": "1979-1988",
+        "balanced": true
+      },
+      "correct_key_evidence": {
+        "basis": "documented",
+        "detail": "532 individuals observed annually from 1979 to 1988. The plm reference manual documents a panel of 532 observations keyed by `id` with `year` as the period. The file matches: 532 ids x 10 years, 5320 rows, no duplicate id-year pairs."
+      }
+    },
+    {
+      "id": "parity",
+      "role": "calibration",
+      "access": "public",
+      "family_id": "coakley_fuertes_smith_parity",
+      "file": "Parity.csv",
+      "sha256": "70eef87a5e334b4e2647f4c0398f79320b4bb2adaf46dd902c5a662186be7eb2",
+      "bytes": 134059,
+      "source_url": "https://vincentarelbundock.github.io/Rdatasets/csv/plm/Parity.csv",
+      "source": "R package plm, dataset Parity, via the Rdatasets mirror",
+      "citation": "Coakley, J., Fuertes, A.-M., & Smith, R. (2006). Unobserved heterogeneity in panel time series models. Computational Statistics & Data Analysis, 50(9), 2361-2380. Distributed as `Parity` in the R package plm.",
+      "license": {
+        "data_license": "NOASSERTION",
+        "upstream_package_license": "GPL-2.0-or-later",
+        "upstream_package": "plm 2.6-7 (CRAN), License: GPL (>= 2)",
+        "mirror": "Rdatasets; the repository's own code is GPL-3",
+        "data_license_note": "See license_notes.data_license.",
+        "redistribution_allowed": false,
+        "redistribution_note": "See license_notes.redistribution.",
+        "verified_on": "2026-09-04",
+        "verified_from": [
+          "https://cran.r-project.org/web/packages/plm/DESCRIPTION",
+          "https://github.com/vincentarelbundock/Rdatasets#license"
+        ],
+        "verification": "See license_notes.verification."
+      },
+      "entity_key": [
+        "country"
+      ],
+      "time_column": "time",
+      "drop_columns": [
+        "rownames"
+      ],
+      "shape": {
+        "rows": 1768,
+        "columns_after_drop": 9,
+        "entities": 17,
+        "periods": 104,
+        "period_range": "1-104",
+        "balanced": true
+      },
+      "correct_key_evidence": {
+        "basis": "documented",
+        "detail": "17 countries observed over 104 quarters, 1973Q1 to 1998Q4, with the quarter index stored as `time`. The plm reference manual documents `country` (17 levels) and `time` as the panel index. The file matches: 17 countries x 104 quarters, 1768 rows, no duplicate pairs."
+      }
+    },
+    {
+      "id": "snmesp",
+      "role": "calibration",
+      "access": "public",
+      "family_id": "alonso_borrego_arellano_spain_firms",
+      "file": "Snmesp.csv",
+      "sha256": "84589aa8ca58662c191a1b105b648f7208d36b4d9a144e9aed2c38c3304050e3",
+      "bytes": 398182,
+      "source_url": "https://vincentarelbundock.github.io/Rdatasets/csv/plm/Snmesp.csv",
+      "source": "R package plm, dataset Snmesp, via the Rdatasets mirror",
+      "citation": "Alonso-Borrego, C., & Arellano, M. (1999). Symmetrically normalized instrumental-variable estimation using panel data. Journal of Business and Economic Statistics, 17(1), 36-49. Distributed as `Snmesp` in the R package plm.",
+      "license": {
+        "data_license": "NOASSERTION",
+        "upstream_package_license": "GPL-2.0-or-later",
+        "upstream_package": "plm 2.6-7 (CRAN), License: GPL (>= 2)",
+        "mirror": "Rdatasets; the repository's own code is GPL-3",
+        "data_license_note": "See license_notes.data_license.",
+        "redistribution_allowed": false,
+        "redistribution_note": "See license_notes.redistribution.",
+        "verified_on": "2026-09-04",
+        "verified_from": [
+          "https://cran.r-project.org/web/packages/plm/DESCRIPTION",
+          "https://github.com/vincentarelbundock/Rdatasets#license"
+        ],
+        "verification": "See license_notes.verification."
+      },
+      "entity_key": [
+        "firm"
+      ],
+      "time_column": "year",
+      "drop_columns": [
+        "rownames"
+      ],
+      "shape": {
+        "rows": 5904,
+        "columns_after_drop": 8,
+        "entities": 738,
+        "periods": 8,
+        "period_range": "1983-1990",
+        "balanced": true
+      },
+      "correct_key_evidence": {
+        "basis": "documented",
+        "detail": "738 Spanish firms observed annually from 1983 to 1990. The plm reference manual documents a panel of 738 observations keyed by `firm` with `year` as the period. The file matches: 738 firms x 8 years, 5904 rows, no duplicate firm-year pairs."
+      }
+    },
+    {
+      "id": "sumhes",
+      "role": "calibration",
+      "access": "public",
+      "family_id": "penn_world_table_mark5",
+      "file": "SumHes.csv",
+      "sha256": "c4196e8083d474bad9c63fa4ee285db1aa23e1dc848d2d88b049dbb63beba3ab",
+      "bytes": 126435,
+      "source_url": "https://vincentarelbundock.github.io/Rdatasets/csv/plm/SumHes.csv",
+      "source": "R package plm, dataset SumHes, via the Rdatasets mirror",
+      "citation": "Summers, R., & Heston, A. (1991). The Penn World Table (Mark 5): An expanded set of international comparisons, 1950-1988. The Quarterly Journal of Economics, 106(2), 327-368. doi:10.2307/2937941. Distributed as `SumHes` in the R package plm.",
+      "license": {
+        "data_license": "NOASSERTION",
+        "upstream_package_license": "GPL-2.0-or-later",
+        "upstream_package": "plm 2.6-7 (CRAN), License: GPL (>= 2)",
+        "mirror": "Rdatasets; the repository's own code is GPL-3",
+        "data_license_note": "See license_notes.data_license.",
+        "redistribution_allowed": false,
+        "redistribution_note": "See license_notes.redistribution.",
+        "verified_on": "2026-09-04",
+        "verified_from": [
+          "https://cran.r-project.org/web/packages/plm/DESCRIPTION",
+          "https://github.com/vincentarelbundock/Rdatasets#license"
+        ],
+        "verification": "See license_notes.verification."
+      },
+      "entity_key": [
+        "country"
+      ],
+      "time_column": "year",
+      "drop_columns": [
+        "rownames"
+      ],
+      "shape": {
+        "rows": 3250,
+        "columns_after_drop": 7,
+        "entities": 125,
+        "periods": 26,
+        "period_range": "1960-1985",
+        "balanced": true
+      },
+      "correct_key_evidence": {
+        "basis": "documented",
+        "detail": "125 countries observed annually from 1960 to 1985. The plm reference manual documents a panel of 125 observations keyed by `country` with `year` as the period. The file matches: 125 countries x 26 years, 3250 rows, no duplicate country-year pairs."
+      }
+    },
+    {
+      "id": "males",
+      "role": "held_out",
+      "access": "public",
+      "family_id": "nlsy_young_men",
+      "file": "Males.csv",
+      "sha256": "6c5b4e88be3d4c3d6d31fa0bc22838b2c0c8825a67a301255af388a0c77024f7",
+      "bytes": 421908,
+      "source_url": "https://vincentarelbundock.github.io/Rdatasets/csv/plm/Males.csv",
+      "source": "R package plm, dataset Males, via the Rdatasets mirror",
+      "citation": "Vella, F., & Verbeek, M. (1998). Whose wages do unions raise? A dynamic model of unionism and wage rate determination for young men. Journal of Applied Econometrics, 13, 163-183. Distributed as `Males` in the R package plm.",
+      "license": {
+        "data_license": "NOASSERTION",
+        "upstream_package_license": "GPL-2.0-or-later",
+        "upstream_package": "plm 2.6-7 (CRAN), License: GPL (>= 2)",
+        "mirror": "Rdatasets; the repository's own code is GPL-3",
+        "data_license_note": "See license_notes.data_license.",
+        "redistribution_allowed": false,
+        "redistribution_note": "See license_notes.redistribution.",
+        "verified_on": "2026-09-04",
+        "verified_from": [
+          "https://cran.r-project.org/web/packages/plm/DESCRIPTION",
+          "https://github.com/vincentarelbundock/Rdatasets#license"
+        ],
+        "verification": "See license_notes.verification."
+      },
+      "entity_key": [
+        "nr"
+      ],
+      "time_column": "year",
+      "drop_columns": [
+        "rownames"
+      ],
+      "shape": {
+        "rows": 4360,
+        "columns_after_drop": 12,
+        "entities": 545,
+        "periods": 8,
+        "period_range": "1980-1987",
+        "balanced": true
+      },
+      "correct_key_evidence": {
+        "basis": "documented",
+        "detail": "545 young men observed annually from 1980 to 1987. The plm reference manual documents a panel of 545 observations keyed by `nr` with `year` as the period. The file matches: 545 ids x 8 years, 4360 rows, no duplicate id-year pairs. Recorded from the file's structure only; paneldx has never been run on it."
+      }
+    },
+    {
+      "id": "usseatbelts",
+      "role": "held_out",
+      "access": "public",
+      "family_id": "us_traffic_fatalities",
+      "file": "USSeatBelts.csv",
+      "sha256": "97a83f4d0a11b11189bc945012ed91700ec89f06f5cbab3318802479eabcc67c",
+      "bytes": 74400,
+      "source_url": "https://vincentarelbundock.github.io/Rdatasets/csv/AER/USSeatBelts.csv",
+      "source": "R package AER, dataset USSeatBelts, via the Rdatasets mirror",
+      "citation": "Cohen, A., & Einav, L. (2003). The effects of mandatory seat belt laws on driving behavior and traffic fatalities. The Review of Economics and Statistics, 85(4), 828-843. Distributed as `USSeatBelts` in the R package AER.",
+      "license": {
+        "data_license": "NOASSERTION",
+        "upstream_package_license": "GPL-2.0-only OR GPL-3.0-only",
+        "upstream_package": "AER 1.2-17 (CRAN), License: GPL-2 | GPL-3",
+        "mirror": "Rdatasets; the repository's own code is GPL-3",
+        "data_license_note": "See license_notes.data_license.",
+        "redistribution_allowed": false,
+        "redistribution_note": "See license_notes.redistribution.",
+        "verified_on": "2026-09-04",
+        "verified_from": [
+          "https://cran.r-project.org/web/packages/AER/DESCRIPTION",
+          "https://github.com/vincentarelbundock/Rdatasets#license"
+        ],
+        "verification": "See license_notes.verification."
+      },
+      "entity_key": [
+        "state"
+      ],
+      "time_column": "year",
+      "drop_columns": [
+        "rownames"
+      ],
+      "shape": {
+        "rows": 765,
+        "columns_after_drop": 12,
+        "entities": 51,
+        "periods": 15,
+        "period_range": "1983-1997",
+        "balanced": true
+      },
+      "correct_key_evidence": {
+        "basis": "documented",
+        "detail": "50 US states plus the District of Columbia observed annually from 1983 to 1997. The AER reference manual documents a balanced panel keyed by `state` with `year` as the period. The file matches: 51 states x 15 years, 765 rows, no duplicate state-year pairs. Recorded from the file's structure only; paneldx has never been run on it."
+      }
+    },
+    {
+      "id": "municipalities",
+      "role": "held_out",
+      "access": "public",
+      "family_id": "swedish_municipalities",
+      "file": "Municipalities.csv",
+      "sha256": "54c923c38bdce7d9119281c03fb6dca213e006c7a1a1f75fb2236ea7fa066eec",
+      "bytes": 105039,
+      "source_url": "https://vincentarelbundock.github.io/Rdatasets/csv/AER/Municipalities.csv",
+      "source": "R package AER, dataset Municipalities, via the Rdatasets mirror",
+      "citation": "Dahlberg, M., & Johansson, E. (2000). An examination of the dynamic behavior of local governments using GMM bootstrapping methods. Journal of Applied Econometrics, 15, 401-416. Distributed as `Municipalities` in the R package AER.",
+      "license": {
+        "data_license": "NOASSERTION",
+        "upstream_package_license": "GPL-2.0-only OR GPL-3.0-only",
+        "upstream_package": "AER 1.2-17 (CRAN), License: GPL-2 | GPL-3",
+        "mirror": "Rdatasets; the repository's own code is GPL-3",
+        "data_license_note": "See license_notes.data_license.",
+        "redistribution_allowed": false,
+        "redistribution_note": "See license_notes.redistribution.",
+        "verified_on": "2026-09-04",
+        "verified_from": [
+          "https://cran.r-project.org/web/packages/AER/DESCRIPTION",
+          "https://github.com/vincentarelbundock/Rdatasets#license"
+        ],
+        "verification": "See license_notes.verification."
+      },
+      "entity_key": [
+        "municipality"
+      ],
+      "time_column": "year",
+      "drop_columns": [
+        "rownames"
+      ],
+      "shape": {
+        "rows": 2385,
+        "columns_after_drop": 5,
+        "entities": 265,
+        "periods": 9,
+        "period_range": "1979-1987",
+        "balanced": true
+      },
+      "correct_key_evidence": {
+        "basis": "documented",
+        "detail": "265 Swedish municipalities observed annually from 1979 to 1987. The AER reference manual documents a panel keyed by `municipality` with `year` as the period. The file matches: 265 municipalities x 9 years, 2385 rows, no duplicate pairs. Recorded from the file's structure only; paneldx has never been run on it."
+      }
+    },
+    {
+      "id": "airfare",
+      "role": "held_out",
+      "access": "public",
+      "family_id": "us_dot_airline_fares",
+      "file": "airfare.csv",
+      "sha256": "d4ba0cc4635eb39008ead593745049342fca2fc4f811a053da1512d22a8becb8",
+      "bytes": 654626,
+      "source_url": "https://vincentarelbundock.github.io/Rdatasets/csv/wooldridge/airfare.csv",
+      "source": "R package wooldridge, dataset airfare, via the Rdatasets mirror",
+      "citation": "Wooldridge, J. M. Introductory Econometrics: A Modern Approach, dataset `airfare`. Compiled from the Domestic Airline Fares Consumer Report, US Department of Transportation.",
+      "license": {
+        "data_license": "NOASSERTION",
+        "upstream_package_license": "GPL-3.0-only",
+        "upstream_package": "wooldridge 1.4-7 (CRAN), License: GPL-3",
+        "mirror": "Rdatasets; the repository's own code is GPL-3",
+        "data_license_note": "See license_notes.data_license.",
+        "redistribution_allowed": false,
+        "redistribution_note": "See license_notes.redistribution.",
+        "verified_on": "2026-09-04",
+        "verified_from": [
+          "https://cran.r-project.org/web/packages/wooldridge/DESCRIPTION",
+          "https://github.com/vincentarelbundock/Rdatasets#license"
+        ],
+        "verification": "See license_notes.verification."
+      },
+      "entity_key": [
+        "id"
+      ],
+      "time_column": "year",
+      "drop_columns": [
+        "rownames"
+      ],
+      "shape": {
+        "rows": 4596,
+        "columns_after_drop": 14,
+        "entities": 1149,
+        "periods": 4,
+        "period_range": "1997-2000",
+        "balanced": true
+      },
+      "correct_key_evidence": {
+        "basis": "documented",
+        "detail": "1149 airline routes observed annually from 1997 to 2000. The wooldridge documentation describes `id` as the route identifier and `year` as the period. The file matches: 1149 routes x 4 years, 4596 rows, no duplicate route-year pairs. Recorded from the file's structure only; paneldx has never been run on it."
+      }
+    },
+    {
+      "id": "jtrain",
+      "role": "held_out",
+      "access": "public",
+      "family_id": "michigan_training_firms",
+      "file": "jtrain.csv",
+      "sha256": "2820079b04c953a3555a3722e4b14430bc9efedfd6870715a863717de8177383",
+      "bytes": 90830,
+      "source_url": "https://vincentarelbundock.github.io/Rdatasets/csv/wooldridge/jtrain.csv",
+      "source": "R package wooldridge, dataset jtrain, via the Rdatasets mirror",
+      "citation": "Holzer, H., Block, R., Cheatham, M., & Knott, J. (1993). Are training subsidies effective? The Michigan experience. Industrial and Labor Relations Review, 46, 625-636. Distributed as `jtrain` in the R package wooldridge.",
+      "license": {
+        "data_license": "NOASSERTION",
+        "upstream_package_license": "GPL-3.0-only",
+        "upstream_package": "wooldridge 1.4-7 (CRAN), License: GPL-3",
+        "mirror": "Rdatasets; the repository's own code is GPL-3",
+        "data_license_note": "See license_notes.data_license.",
+        "redistribution_allowed": false,
+        "redistribution_note": "See license_notes.redistribution.",
+        "verified_on": "2026-09-04",
+        "verified_from": [
+          "https://cran.r-project.org/web/packages/wooldridge/DESCRIPTION",
+          "https://github.com/vincentarelbundock/Rdatasets#license"
+        ],
+        "verification": "See license_notes.verification."
+      },
+      "entity_key": [
+        "fcode"
+      ],
+      "time_column": "year",
+      "drop_columns": [
+        "rownames"
+      ],
+      "shape": {
+        "rows": 471,
+        "columns_after_drop": 30,
+        "entities": 157,
+        "periods": 3,
+        "period_range": "1987-1989",
+        "balanced": true
+      },
+      "correct_key_evidence": {
+        "basis": "documented",
+        "detail": "157 Michigan firms observed in 1987, 1988 and 1989. The wooldridge documentation describes `fcode` as the firm code and `year` as the period. The file matches: 157 firms x 3 years, 471 rows, no duplicate firm-year pairs. Recorded from the file's structure only; paneldx has never been run on it."
+      }
+    },
+    {
+      "id": "murder",
+      "role": "held_out",
+      "access": "public",
+      "family_id": "us_state_murder_rates",
+      "file": "murder.csv",
+      "sha256": "9cd23f7d502fb0fd9b2c6826aa07a794cd2ef753daedd7e728387b83f14e8dca",
+      "bytes": 12671,
+      "source_url": "https://vincentarelbundock.github.io/Rdatasets/csv/wooldridge/murder.csv",
+      "source": "R package wooldridge, dataset murder, via the Rdatasets mirror",
+      "citation": "Wooldridge, J. M. Introductory Econometrics: A Modern Approach, dataset `murder`. Compiled from the Statistical Abstract of the United States (1992, 1995); execution counts from the US Bureau of Justice Statistics, Capital Punishment Annual.",
+      "license": {
+        "data_license": "NOASSERTION",
+        "upstream_package_license": "GPL-3.0-only",
+        "upstream_package": "wooldridge 1.4-7 (CRAN), License: GPL-3",
+        "mirror": "Rdatasets; the repository's own code is GPL-3",
+        "data_license_note": "See license_notes.data_license.",
+        "redistribution_allowed": false,
+        "redistribution_note": "See license_notes.redistribution.",
+        "verified_on": "2026-09-04",
+        "verified_from": [
+          "https://cran.r-project.org/web/packages/wooldridge/DESCRIPTION",
+          "https://github.com/vincentarelbundock/Rdatasets#license"
+        ],
+        "verification": "See license_notes.verification."
+      },
+      "entity_key": [
+        "state"
+      ],
+      "time_column": "year",
+      "drop_columns": [
+        "rownames"
+      ],
+      "shape": {
+        "rows": 153,
+        "columns_after_drop": 13,
+        "entities": 51,
+        "periods": 3,
+        "period_range": "87-93",
+        "balanced": true
+      },
+      "correct_key_evidence": {
+        "basis": "documented",
+        "detail": "51 US states and the District of Columbia observed in 1987, 1990 and 1993 (years stored as two digits). The wooldridge documentation describes `state` as the postal code and `id` as an equivalent numeric identifier, with `year` as the period. The file matches: 51 states x 3 years, 153 rows, no duplicate state-year pairs. Recorded from the file's structure only; paneldx has never been run on it."
+      }
+    },
+    {
+      "id": "popnet",
+      "role": "case_study",
+      "access": "restricted",
+      "family_id": "popnet",
+      "source": "Physician-analytics workbook behind the PopNet reanalysis. Held by authorised researchers only; supplied to the scripts through the PANELDX_POPNET_DATA environment variable.",
+      "citation": "See case_studies/popnet_reanalysis/README.md. The reanalysis was carried out after the 2025 PopNet paper was published and is not a corrected PopNet result.",
+      "license": {
+        "data_license": "NOASSERTION",
+        "upstream_package_license": null,
+        "upstream_package": null,
+        "mirror": null,
+        "data_license_note": "Restricted research data. No public licence exists to review.",
+        "redistribution_allowed": false,
+        "redistribution_note": "Never fetched by any script here. The manifest schema forbids a source_url on a restricted dataset.",
+        "verified_on": "2026-09-04",
+        "verified_from": [],
+        "verification": "Access is governed by the holding researchers, not by a licence."
+      },
+      "entity_key": [
+        "Disease",
+        "Opening time"
+      ],
+      "time_column": "time",
+      "drop_columns": [],
+      "shape": null,
+      "correct_key_evidence": {
+        "basis": "unknown",
+        "detail": "The true physician identifier is not known. `Disease + Opening time` is the best-supported candidate found by search, not established ground truth, so this dataset is a case study and is excluded from every evaluation metric in the protocol."
+      }
+    }
+  ],
+  "family_id": "Datasets drawn from the same underlying source share a family_id. A family never spans two splits: two panels built from one survey would leak calibration information into a held-out result. Rates are also resampled by family rather than by dataset, which is the same thing while every family here contains exactly one dataset.",
+  "excluded_candidates": [
+    {
+      "id": "wages",
+      "considered_for": "calibration",
+      "source": "R package plm, dataset Wages (Cornwell and Rupert, PSID 1976-1982)",
+      "family_id": "psid",
+      "reason": "The distributed CSV has no entity column and no time column: the panel index is implicit in row order (595 individuals x 7 years). A key reconstructed from row position is exactly the defect paneldx exists to detect, so the correct key is not documented and the dataset cannot supply ground truth."
+    },
+    {
+      "id": "ricefarms",
+      "considered_for": "calibration",
+      "source": "R package plm, dataset RiceFarms",
+      "family_id": "indonesia_rice",
+      "reason": "The distributed CSV carries `id` but no time column, so the documented period cannot be recovered from the file."
+    },
+    {
+      "id": "fatalities",
+      "considered_for": "calibration",
+      "source": "R package AER, dataset Fatalities (Ruhm 1996)",
+      "family_id": "us_traffic_fatalities",
+      "reason": "Same family as the held-out dataset `usseatbelts`: both are US state-year traffic-fatality panels derived from FARS. Calibrating on one would leak into the other, and a family may not span two splits. The held-out slot was kept and this candidate dropped."
+    }
+  ],
+  "license_notes": {
+    "data_license": "Recorded as NOASSERTION wherever upstream does not state a licence for the data rows themselves. The Rdatasets maintainer says that licence could not be determined and believes the data free to redistribute, which is a belief rather than a grant, so the licence of the shipping package is recorded separately and not inherited.",
+    "redistribution": "No dataset is redistributed here. The data licence is unestablished and the shipping packages are GPL, which would not mix cleanly with this project's Apache-2.0 distribution. Files are fetched at validation time and verified by checksum.",
+    "verification": "verified_on and verified_from record when and where the upstream licence statements were read. This is a review of upstream claims, not an independent legal determination."
+  }
+}

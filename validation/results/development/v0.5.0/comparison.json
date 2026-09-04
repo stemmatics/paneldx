@@ -1,0 +1,101 @@
+{
+  "baseline": {
+    "environment": {
+      "paneldx_version": "0.4.0",
+      "python": "3.12.13",
+      "numpy": "2.5.2",
+      "pandas": "3.0.5",
+      "platform": "macOS-26.6.2-x86_64-i386-64bit",
+      "profile": "development",
+      "n_shuffles": 3,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "roles": [
+        "development",
+        "calibration"
+      ]
+    },
+    "measures": {
+      "documented_keys_failed": 4,
+      "documented_keys_inconclusive": 3,
+      "documented_keys": 10,
+      "correct_keys_failed": 741,
+      "correct_keys": 1827,
+      "corrupted_accepted": 219,
+      "corrupted_stopped": 1091,
+      "corrupted": 1310,
+      "contradictions_detected": 320,
+      "contradictions": 320,
+      "median_runtime_seconds": 0.0364,
+      "status_mix": {
+        "inconclusive": 846,
+        "fail": 1868,
+        "warn": 512,
+        "pass": 254
+      }
+    }
+  },
+  "current": {
+    "environment": {
+      "paneldx_version": "0.5.0",
+      "python": "3.12.13",
+      "numpy": "2.5.2",
+      "pandas": "3.0.5",
+      "platform": "macOS-26.6.2-x86_64-i386-64bit",
+      "profile": "development",
+      "n_shuffles": 3,
+      "seeds": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "roles": [
+        "development",
+        "calibration"
+      ]
+    },
+    "measures": {
+      "documented_keys_failed": 0,
+      "documented_keys_inconclusive": 7,
+      "documented_keys": 10,
+      "correct_keys_failed": 0,
+      "correct_keys": 1827,
+      "corrupted_accepted": 207,
+      "corrupted_stopped": 1103,
+      "corrupted": 1310,
+      "contradictions_detected": 320,
+      "contradictions": 320,
+      "median_runtime_seconds": 0.0375,
+      "status_mix": {
+        "inconclusive": 2159,
+        "fail": 580,
+        "warn": 487,
+        "pass": 254
+      }
+    }
+  },
+  "cases": 3480,
+  "changed": 1313,
+  "moves": {
+    "fail -> inconclusive": 1288,
+    "warn -> inconclusive": 25
+  },
+  "changed_verdicts": "comparison_changes.csv.gz"
+}

@@ -60,48 +60,15 @@ physician_id = ((serial_number - 1) % rows_per_quarter) + 1
 ```
 
 Each quarter was sorted by platform rank before this ran, so position *i* was a
-different doctor every quarter. The ID linked strangers together, and that ID
-then fed momentum features, a GRU over "trajectories", and the grouped CV splits.
+different doctor every quarter. That ID then fed momentum features, a GRU over
+"trajectories", and the grouped CV splits. Two related defects sat alongside
+it: a target reconstructible from its own features at R² 0.923, and a
+carry-forward baseline that beat the model by 2.9x once the key was fixed.
 
-`paneldx` on that dataset, given no hints:
-
-```
-key: physician_id                      key: Disease + Opening time
-  columns explained  2 of 30  (7%)       columns explained  13 of 29  (45%)
-  VERDICT  NOT SUPPORTED                 VERDICT  supported by the data
-```
-
-These checks were carried out after the PopNet paper was published in 2025.
-They were not included in the paper and are not corrected PopNet results.
-
-The search tested all one-column and two-column combinations. `Disease +
-Opening time` received the strongest support from the available data. This does
-not prove that it is the actual physician identifier, so it is treated as a
-candidate key.
-
-That was one of three defects. The other two turned up on the same dataset
-without being told anything about it:
-
-| Check | What it found |
-|---|---|
-| `detect_counters` | `Total patients` (lag-1 ρ = 0.962), `Total visits` (0.871), `Medical consultation records` (0.961). Lifetime totals that barely move, so a target built from them is autocorrelated by construction |
-| `target_leakage` | R² = **0.923** reconstructing the target from its own features, naming `inv_rank`, `log_gifts` and `log_visits`, which were three of the four components the target was averaged from |
-| `persistence_baseline` | Carry-forward MAE **0.0320** against that model's **0.0942**. Doing nothing was 2.9x better |
-
-### The defects hide each other
-
-A broken key does not only corrupt features. It disarms the check that would
-have caught it:
-
-| Key used | Persistence MAE | R² | What a researcher concludes |
-|---|---|---|---|
-| Positional key (as used) | 0.4717 | 0.191 | "carry-forward is useless, my 0.0942 is good" |
-| Candidate (`Disease + Opening time`) | **0.0320** | **0.971** | carry-forward beats the model by 2.9x |
-
-Under the positional key the naive forecast looks worthless, so nobody thinks to
-compare against it. Under the best-supported candidate key it is close to
-unbeatable. This is why `paneldx` establishes the key before it reports any
-baseline, and why running the baseline alone would not have caught it.
+The audit, the numbers and the reasoning are in
+[case_studies/popnet_reanalysis](case_studies/popnet_reanalysis/README.md).
+The checks were carried out after the PopNet paper was published in 2025. They
+were not included in the paper and are not corrected PopNet results.
 
 ---
 
@@ -125,6 +92,8 @@ from paneldx import detect_counters, target_leakage, persistence_baseline
 
 # Is the entity key supported by the data?
 print(validate_key(df, "patient_id", time_col="quarter"))
+# ...and rule it out outright when you know something about the panel
+print(validate_key(df, "patient_id", "quarter", invariant_cols=["birth_date"]))
 print(discover_keys(df, time_col="quarter")[0])  # no hints needed
 
 # Are the numbers about to fool you?
@@ -189,18 +158,47 @@ for sorting. A supported entity key should explain a larger share of the data.
 
 | `evidence_frac` | Verdict |
 |---|---|
-| ≥ 0.40 | supported by the data |
-| 0.15 to 0.40 | weak, inspect the listed columns by hand |
-| < 0.15 | not supported, within-entity quantities are unsafe |
+| ≥ 0.40 | `pass` — supported by the data |
+| 0.15 to 0.40 | `warn` — weak, inspect the listed columns by hand |
+| < 0.15 | `inconclusive` — too little support to judge |
+
+A low share is not a rejection. It says the panel gave the key little to
+explain, which happens to correct keys as readily as to broken ones: Produc, a
+clean panel of 48 named US states over 17 years, has exactly one column that is
+constant within a state.
+
+## Declaring what you know
+
+`fail` means the data **contradicts** the key. There are three routes to it:
+duplicate entity-period rows, a column you declared invariant that changes, and
+a column you declared monotone that falls. The last two are domain knowledge,
+and they are what turns "cannot tell" into a definite answer:
+
+```python
+validate_key(
+    df, "patient_id", "quarter",
+    invariant_cols=["birth_date", "enrolled_on"],   # must never change
+    monotone_cols=["total_visits"],                 # must never fall
+)
+```
+
+```bash
+paneldx audit data.csv --time quarter --key patient_id \
+  --invariant birth_date enrolled_on --monotone total_visits
+```
+
+Every report also carries a `reason`: `supported`, `weak_support`,
+`insufficient_evidence`, `duplicate_entity_period`,
+`declared_invariant_broken` or `declared_monotone_broken`.
 
 ---
 
 ## Limitations
 
 - **Near-valid keys are hard to separate from perfect ones.** The tolerances
-  exist because valid keys may also contain a small number of collisions
-  of entities can score like a clean one. Ties break toward the finer partition,
-  which mitigates but does not eliminate this.
+  exist because genuinely valid keys contain a few violations of their own, so
+  a key that merges a small number of entities can score like a clean one. Ties
+  break toward the finer partition, which mitigates but does not eliminate this.
 - **Leakage detection is linear.** A target computed from its features by some
   non-linear rule can slip past `target_leakage`. A high score is strong
   evidence; a low one is not a clearance.
@@ -208,6 +206,14 @@ for sorting. A supported entity key should explain a larger share of the data.
   search takes about 23 seconds. Pass `--key` when you already know it.
 - **A passing verdict is not a proof.** It says the data is consistent with the
   key, not that the key is correct. Domain knowledge still wins.
+- **`inconclusive` is common.** On the ten public panels in the benchmark,
+  most corrupted keys are stopped by abstention rather than by rejection.
+  Declaring an invariant or a counter is how a caller gets a definite answer.
+- **No accuracy rate exists.** Nothing has been evaluated on held-out data, and
+  the recorded benchmark runs are development diagnostics rather than validation
+  estimates. See [limitations](docs/limitations.md) for what has and has not
+  been measured, and the [validation protocol](validation/protocol/protocol.md)
+  for what would have to happen first.
 - Needs at least two periods, and enough entities to measure a rate against.
 
 ---
@@ -226,6 +232,8 @@ See the [development roadmap](ROADMAP.md) for the planned stages.
 - [How it works](docs/how-it-works.md)
 - [Interpreting results](docs/interpreting-results.md)
 - [API reference](docs/api.md)
+- [Limitations](docs/limitations.md)
+- [Validation protocol](validation/protocol/protocol.md)
 - [Development roadmap](ROADMAP.md)
 
 ## Contributing
@@ -239,7 +247,7 @@ Release notes are in [CHANGELOG.md](CHANGELOG.md).
 
 If you use `paneldx` in your research, please see [CITATION.cff](CITATION.cff).
 
-The DOI for version 0.4.0 will be added after the release is archived on
+The DOI for version 0.5.0 will be added after the release is archived on
 Zenodo. The old DOI belongs to version 0.3.1 and does not refer to the current
 code.
 

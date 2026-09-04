@@ -1,0 +1,1767 @@
+{
+  "note": "Every miss from the run, recorded rather than filtered out.",
+  "false_rejections_on_documented_keys": [],
+  "unsafe_acceptances": [
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "positional_rekey",
+      "level": 1.0,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 0,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 1,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 2,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 3,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 4,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 5,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 6,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 7,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 8,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 9,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 0,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 1,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 2,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 3,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 4,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 5,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 6,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 7,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 8,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 9,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 0,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 1,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 2,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 3,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 4,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 5,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 6,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 7,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 8,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 9,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 0,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 1,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 2,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 3,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 4,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 5,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 6,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 7,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 8,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 9,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 0,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 1,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 2,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 3,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 4,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 5,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 6,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 7,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 8,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 9,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 0,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 1,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 2,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 3,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 4,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 5,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 6,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 7,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 8,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 9,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 0,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 1,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 2,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 3,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 4,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 5,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 6,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 7,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 8,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 9,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 3,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 8,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.2,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.2,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.2,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.2,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.2,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.2,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.2,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.5,
+      "seed": 0,
+      "status": "warn"
+    }
+  ],
+  "false_rejections_when_key_correct": [],
+  "missed_contradictions": [],
+  "excluded_no_effect": [
+    {
+      "dataset_id": "grunfeld",
+      "corruption": "invariant_column_removal",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "grunfeld",
+      "corruption": "invariant_column_removal",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "grunfeld",
+      "corruption": "invariant_column_removal",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "invariant_column_removal",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "invariant_column_removal",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "invariant_column_removal",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "invariant_column_removal",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "gasoline",
+      "corruption": "invariant_column_removal",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "gasoline",
+      "corruption": "invariant_column_removal",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "gasoline",
+      "corruption": "invariant_column_removal",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "invariant_column_removal",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "invariant_column_removal",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "invariant_column_removal",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "invariant_column_removal",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "invariant_column_removal",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "invariant_column_removal",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "parity",
+      "corruption": "invariant_column_removal",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "parity",
+      "corruption": "invariant_column_removal",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "parity",
+      "corruption": "invariant_column_removal",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "invariant_column_removal",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "invariant_column_removal",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "invariant_column_removal",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "invariant_column_removal",
+      "level": 3,
+      "seed": 0
+    }
+  ],
+  "sensitivity_failures": [
+    {
+      "dataset_id": "cigar",
+      "curve": {
+        "levels": [
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.5
+        ],
+        "series": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "monotone": true,
+        "moves": false,
+        "ok": false
+      }
+    },
+    {
+      "dataset_id": "crime",
+      "curve": {
+        "levels": [
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.5
+        ],
+        "series": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "monotone": true,
+        "moves": false,
+        "ok": false
+      }
+    },
+    {
+      "dataset_id": "gasoline",
+      "curve": {
+        "levels": [
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.5
+        ],
+        "series": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "monotone": true,
+        "moves": false,
+        "ok": false
+      }
+    },
+    {
+      "dataset_id": "grunfeld",
+      "curve": {
+        "levels": [
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.5
+        ],
+        "series": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "monotone": true,
+        "moves": false,
+        "ok": false
+      }
+    },
+    {
+      "dataset_id": "parity",
+      "curve": {
+        "levels": [
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.5
+        ],
+        "series": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "monotone": true,
+        "moves": false,
+        "ok": false
+      }
+    },
+    {
+      "dataset_id": "produc",
+      "curve": {
+        "levels": [
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.5
+        ],
+        "series": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "monotone": true,
+        "moves": false,
+        "ok": false
+      }
+    },
+    {
+      "dataset_id": "snmesp",
+      "curve": {
+        "levels": [
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.5
+        ],
+        "series": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "monotone": true,
+        "moves": false,
+        "ok": false
+      }
+    }
+  ]
+}

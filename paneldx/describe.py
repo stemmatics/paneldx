@@ -9,16 +9,25 @@ from .status import FAIL, INCONCLUSIVE, PASS, PRIORITY, WARN, Status
 
 
 def key_verdict(report, policy):
+    """Wording for a key that reached the measurement stage.
+
+    A contradicted key never arrives here; `validate_key` words those where it
+    finds them, since what contradicted the key is the useful half of the
+    sentence. What is left says "could not decide" rather than "not supported".
+    """
     if report.status == PASS:
         return "supported by the data"
     if report.status == WARN:
         return "weak - inspect manually"
     if lacks_stability(report, policy):
         return (
-            "NOT SUPPORTED - nothing stays constant within an entity "
-            "(invariance matches shuffled labels)"
+            "INCONCLUSIVE - the key cannot be told apart from shuffled labels; "
+            "nothing here supports or contradicts it"
         )
-    return "NOT SUPPORTED - within-entity quantities are unsafe"
+    return (
+        f"INCONCLUSIVE - too little is explained to support the key "
+        f"({report.evidence_frac:.0%} of usable columns); this is not evidence against it"
+    )
 
 
 def leakage_verdict(status):
@@ -71,16 +80,18 @@ def _key_finding(key, discovery_blocked):
         return Finding(
             code="key_inconclusive",
             status=INCONCLUSIVE,
-            headline=f"Entity key is inconclusive ({name})",
-            detail=key.verdict,
+            headline=f"Entity key could not be judged ({name})",
+            detail=key.verdict
+            + " Treat within-entity quantities as unverified rather than as wrong.",
         )
     if key.status == FAIL:
         return Finding(
-            code="key_unsupported",
+            code="key_contradicted",
             status=FAIL,
-            headline=f"Entity key is not supported by the data ({name})",
-            detail="Lags, differences, trajectories and grouped splits built on "
-            "this key are unreliable. " + key.verdict,
+            headline=f"Entity key is contradicted by the data ({name})",
+            detail="Something in the panel is inconsistent with this key, so lags, "
+            "differences, trajectories and grouped splits built on it are unreliable. "
+            + key.verdict,
         )
     if key.status == WARN:
         return Finding(

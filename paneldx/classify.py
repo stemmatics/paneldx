@@ -2,7 +2,15 @@
 
 import numpy as np
 
-from .status import FAIL, INCONCLUSIVE, PASS, WARN
+from .status import (
+    FAIL,
+    INCONCLUSIVE,
+    INSUFFICIENT_EVIDENCE,
+    PASS,
+    SUPPORTED,
+    WARN,
+    WEAK_SUPPORT,
+)
 
 
 def lacks_stability(report, policy):
@@ -11,13 +19,22 @@ def lacks_stability(report, policy):
 
 
 def key_status(report, policy):
+    """Status and reason for a key that reached the measurement stage.
+
+    Nothing here returns `fail`: contradictions are caught earlier by the
+    structural checks. What is measured here is positive evidence, and too
+    little of it is an absence of evidence rather than evidence of absence. A
+    key indistinguishable from shuffled labels is the extreme case — the
+    comparison carried no information, so its evidence fraction cannot be
+    trusted either way.
+    """
     if lacks_stability(report, policy):
-        return FAIL
+        return INCONCLUSIVE, INSUFFICIENT_EVIDENCE
     if report.evidence_frac >= policy.supported_evidence_fraction:
-        return PASS
+        return PASS, SUPPORTED
     if report.evidence_frac >= policy.weak_evidence_fraction:
-        return WARN
-    return FAIL
+        return WARN, WEAK_SUPPORT
+    return INCONCLUSIVE, INSUFFICIENT_EVIDENCE
 
 
 def counter_status(report):
