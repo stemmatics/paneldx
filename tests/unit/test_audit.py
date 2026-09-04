@@ -1,8 +1,8 @@
 import numpy as np
 import pytest
-from factories import make_panel, standardize
 
 from paneldx import audit
+from tests.factories import make_panel, standardize
 
 
 def test_clean_panel_has_no_failures():

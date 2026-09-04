@@ -45,14 +45,12 @@ def _sheet(value: str) -> str | int:
 
 def _period_step(value: str) -> int | float | str:
     """`--period-step 3` is a numeric step; `--period-step QS` is a frequency."""
-    try:
-        return int(value)
-    except ValueError:
-        pass
-    try:
-        return float(value)
-    except ValueError:
-        return value
+    for convert in (int, float):
+        try:
+            return convert(value)
+        except ValueError:
+            continue
+    return value
 
 
 def _load(path: Path, sheet: str | int | None) -> pd.DataFrame:
@@ -81,6 +79,20 @@ def _add_audit_args(p: argparse.ArgumentParser) -> None:
     )
     p.add_argument(
         "--target", metavar="COL", help="target column, to test for leakage and persistence"
+    )
+    p.add_argument(
+        "--invariant",
+        nargs="+",
+        metavar="COL",
+        help="columns that must not change within one entity, such as a birth "
+        "date. A key that changes one is reported as contradicted.",
+    )
+    p.add_argument(
+        "--monotone",
+        nargs="+",
+        metavar="COL",
+        help="columns that must never fall within one entity, such as a lifetime "
+        "total. A key under which one falls is reported as contradicted.",
     )
     p.add_argument(
         "--html", type=Path, metavar="PATH", help="also write a standalone HTML report here"
@@ -120,12 +132,11 @@ def _add_audit_args(p: argparse.ArgumentParser) -> None:
     p.add_argument("--quiet", action="store_true", help="print findings only")
 
 
-def _run_audit(args: argparse.Namespace) -> int:
+def _read(args: argparse.Namespace) -> pd.DataFrame:
     if not args.data.exists():
         raise SystemExit(f"paneldx: no such file: {args.data}")
-
     try:
-        df = _load(args.data, args.sheet)
+        return _load(args.data, args.sheet)
     except SystemExit:
         raise
     except ImportError as exc:
@@ -136,12 +147,16 @@ def _run_audit(args: argparse.Namespace) -> int:
     except Exception as exc:
         raise SystemExit(f"paneldx: could not read {args.data.name}: {exc}") from exc
 
+
+def _audit(df: pd.DataFrame, args: argparse.Namespace):
     try:
-        result = audit(
+        return audit(
             df,
             args.time,
             key=args.key,
             target=args.target,
+            invariant_cols=args.invariant,
+            monotone_cols=args.monotone,
             max_columns=args.max_columns,
             top_k=args.top_k,
             period_step=args.period_step,
@@ -153,38 +168,39 @@ def _run_audit(args: argparse.Namespace) -> int:
         msg = exc.args[0] if exc.args else exc
         raise SystemExit(f"paneldx: {msg}") from exc
 
+
+def _render(result, args: argparse.Namespace) -> None:
     print(
         f"\n{args.data.name}: {result.n_rows:,} rows x {result.n_columns} columns, "
         f"{result.n_periods} periods of '{result.time_col}'\n"
     )
+    for finding in result.findings:
+        print(f"  [{finding.status.upper()}]  {finding.headline}")
+        print(f"          {finding.detail}\n")
 
-    for f in result.findings:
-        print(f"  [{f.status.upper()}]  {f.headline}")
-        print(f"          {f.detail}\n")
+    if args.quiet:
+        return
+    sections = [result.chosen, result.leakage, result.baseline]
+    if result.counters is not None and result.counters.counters:
+        sections.insert(1, result.counters)
+    for section in [s for s in sections if s is not None]:
+        print("-" * 62)
+        print(section)
 
-    if not args.quiet:
-        if result.chosen is not None:
-            print("-" * 62)
-            print(result.chosen)
-        if result.counters is not None and result.counters.counters:
-            print("\n" + "-" * 62)
-            print(result.counters)
-        if result.leakage is not None:
-            print("\n" + "-" * 62)
-            print(result.leakage)
-        if result.baseline is not None:
-            print("\n" + "-" * 62)
-            print(result.baseline)
 
+def _write_html(result, args: argparse.Namespace) -> None:
+    try:
+        args.html.write_text(to_html(result, title=f"paneldx: {args.data.name}"), encoding="utf-8")
+    except OSError as exc:
+        raise SystemExit(f"paneldx: could not write report: {exc}") from exc
+    print(f"\nreport written to {args.html}")
+
+
+def _run_audit(args: argparse.Namespace) -> int:
+    result = _audit(_read(args), args)
+    _render(result, args)
     if args.html:
-        try:
-            args.html.write_text(
-                to_html(result, title=f"paneldx: {args.data.name}"), encoding="utf-8"
-            )
-        except OSError as exc:
-            raise SystemExit(f"paneldx: could not write report: {exc}") from exc
-        print(f"\nreport written to {args.html}")
-
+        _write_html(result, args)
     return _EXIT[result.worst]
 
 

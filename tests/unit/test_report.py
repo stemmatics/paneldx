@@ -1,6 +1,5 @@
-from factories import make_panel
-
 from paneldx import audit, to_html
+from tests.factories import make_panel
 
 
 def test_html_is_self_contained():

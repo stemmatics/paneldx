@@ -1,0 +1,1324 @@
+{
+  "grid": {
+    "frozen_on": "2026-09-04",
+    "note": "The grid, the metrics, the seeds, the corruption levels and the selection rule were written before the calibration was run. They are recorded here rather than read from the running code so that a later change to a default cannot rewrite what this calibration compared against. This is an exploratory calibration on development-adjacent data: the results have been seen, and the method is frozen prospectively only for the held-out evaluation.",
+    "split": "calibration",
+    "datasets": [
+      "cigar",
+      "crime",
+      "laborsupply",
+      "parity",
+      "snmesp",
+      "sumhes"
+    ],
+    "development_and_held_out_are_excluded": true,
+    "seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "levels": "as declared per corruption in protocol.json",
+    "n_shuffles": 3,
+    "fixed": {
+      "invariant_violation_rate": 0.02,
+      "monotone_violation_rate": 0.05,
+      "duplicate_cell_rate": 0.01,
+      "minimum_periods_per_entity": 2,
+      "minimum_steps": 20,
+      "note": "Not in the grid: these enter the measurement rather than the decision, so varying them would change what was measured rather than how it was read."
+    },
+    "grid": {
+      "supported_evidence_fraction": [
+        0.3,
+        0.4,
+        0.5
+      ],
+      "weak_evidence_fraction": [
+        0.1,
+        0.15,
+        0.2
+      ],
+      "minimum_null_gap": [
+        0.02,
+        0.05,
+        0.1
+      ],
+      "minimum_entities": [
+        15,
+        20,
+        30
+      ]
+    },
+    "constraints": [
+      "weak_evidence_fraction < supported_evidence_fraction"
+    ],
+    "metrics": {
+      "unsafe_acceptance": "share of broken-key cases reported pass or warn, averaged within a dataset, then within a family",
+      "false_rejection": "share of correct-key cases reported fail, averaged within a dataset, then within a family",
+      "inconclusive": "share of all cases reported inconclusive, averaged within a dataset, then within a family"
+    },
+    "selection_order": [
+      "lowest unsafe acceptance",
+      "lowest false rejection",
+      "lowest inconclusive rate",
+      "fewest thresholds changed from the frozen 0.4.0 baseline above",
+      "lexicographic on the threshold values, so the choice is deterministic"
+    ],
+    "prohibited": "Any weighted score invented after seeing results. The order above is a strict lexicographic tie-break, decided in advance.",
+    "baseline_defaults": {
+      "release": "0.4.0",
+      "supported_evidence_fraction": 0.4,
+      "weak_evidence_fraction": 0.15,
+      "minimum_null_gap": 0.05,
+      "minimum_entities": 20,
+      "note": "The values the grid is measured against. Frozen here, not read from paneldx.policy, which this calibration went on to change."
+    },
+    "status": "exploratory",
+    "protocol_version_at_calibration": "1.1.0",
+    "metric_note": "The selection metric here is the case-weighted unsafe acceptance defined by protocol 1.1.0, which is what this calibration was run against. Protocol 2.0.0 later made the published metric procedure-weighted. This selection is left as it was made: recomputing it under the newer metric would be choosing a threshold after seeing which definition favours it. The two are not interchangeable and the difference is recorded rather than removed."
+  },
+  "paneldx_version": "0.5.0",
+  "protocol_version_at_calibration": "1.1.0",
+  "current_protocol_version": "2.0.0",
+  "cases_attempted": 2088,
+  "cases_measured": 2075,
+  "cases_excluded_no_effect": 13,
+  "grid_points": 81,
+  "families": 6,
+  "selected": {
+    "thresholds": {
+      "minimum_entities": 20,
+      "minimum_null_gap": 0.1,
+      "supported_evidence_fraction": 0.4,
+      "weak_evidence_fraction": 0.15
+    },
+    "unsafe_acceptance": 0.19592875318066158,
+    "false_rejection": 0.0,
+    "inconclusive": 0.5885749248334526,
+    "documented_keys_supported": 2,
+    "documented_keys_failed": 0,
+    "thresholds_changed_from_baseline": 1
+  },
+  "baseline_defaults": {
+    "minimum_entities": 20,
+    "minimum_null_gap": 0.05,
+    "supported_evidence_fraction": 0.4,
+    "weak_evidence_fraction": 0.15
+  },
+  "selected_equals_baseline": false,
+  "runners_up": [
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    }
+  ],
+  "all_points": [
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 1
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 4
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 4
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 4
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 4
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 4
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 4
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 4
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.1,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.19592875318066158,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5885749248334526,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 4
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 0
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 1
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 1
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 1
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 1
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 1
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 1
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 1
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 2
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 20,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.4,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.15
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.05,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 3
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 4
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 4
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 4
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 15,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 4
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 4
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.3,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 4
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.1
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 4
+    },
+    {
+      "thresholds": {
+        "minimum_entities": 30,
+        "minimum_null_gap": 0.02,
+        "supported_evidence_fraction": 0.5,
+        "weak_evidence_fraction": 0.2
+      },
+      "unsafe_acceptance": 0.2111959287531807,
+      "false_rejection": 0.0,
+      "inconclusive": 0.5764976301474624,
+      "documented_keys_supported": 2,
+      "documented_keys_failed": 0,
+      "thresholds_changed_from_baseline": 4
+    }
+  ]
+}

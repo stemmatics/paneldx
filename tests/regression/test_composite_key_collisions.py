@@ -1,9 +1,9 @@
 """Compound key values are grouped as they are, never joined as strings."""
 
 import pandas as pd
-from factories import make_panel
 
 from paneldx import entity_key, validate_key
+from tests.factories import make_panel
 
 
 def test_separator_and_type_collisions_stay_distinct():

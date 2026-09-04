@@ -98,6 +98,7 @@ def _key_card(rep: KeyReport, *, primary: bool) -> str:
     title = " + ".join(rep.key)
     pairs = [
         ("verdict", rep.verdict),
+        ("reason", rep.reason),
         (
             "columns explained",
             f"{rep.evidence:.0f} of {rep.n_usable_cols} ({rep.evidence_frac:.0%})",

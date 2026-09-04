@@ -2,9 +2,9 @@
 
 import pandas as pd
 import pytest
-from factories import make_panel
 
 from paneldx import detect_counters, persistence_baseline, validate_key
+from tests.factories import make_panel
 
 
 def test_duplicate_entity_periods_invalidate_the_key():

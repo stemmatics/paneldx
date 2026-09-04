@@ -1,0 +1,11 @@
+dataset_id,family_id,role,documented_key_status,false_rejection_on_documented_key,broken_key_pass,broken_key_warn,broken_key_inconclusive,broken_key_fail,broken_key_unsafe_acceptance_rate,inconclusive_rate,correct_key_false_rejections,missed_contradictions,sensitivity_ok,median_runtime_seconds,cases
+cigar,baltagi_us_state_cigarettes,calibration,fail,True,0,0,0,131,0.0,0.0,174,0,False,0.0663,348
+crime,cornwell_trumbull_nc_crime,calibration,fail,True,0,0,0,131,0.0,0.0,187,0,False,0.1033,348
+emplUK,arellano_bond_uk_firms,development,warn,False,0,53,0,78,0.30999999999999994,0.0,4,0,True,0.0277,348
+gasoline,baltagi_griffin_oecd_gasoline,development,inconclusive,False,0,0,93,38,0.0,0.8444444444444444,0,0,False,0.004,348
+grunfeld,grunfeld_investment,development,inconclusive,False,0,0,101,30,0.0,0.8666666666666667,0,0,False,0.0033,348
+laborsupply,psid,calibration,warn,False,0,80,0,51,0.4,0.0,3,0,True,0.0397,348
+parity,coakley_fuertes_smith_parity,calibration,inconclusive,False,0,0,101,30,0.0,0.85,0,0,False,0.0039,348
+produc,munnell_us_state_production,development,fail,True,0,0,0,131,0.0,0.0,185,0,False,0.053,348
+snmesp,alonso_borrego_arellano_spain_firms,calibration,fail,True,0,0,0,131,0.0,0.0,184,0,False,0.0468,348
+sumhes,penn_world_table_mark5,calibration,pass,False,72,14,0,45,0.6166666666666666,0.0,4,0,True,0.0596,348

@@ -37,4 +37,4 @@ __all__ = [
     "to_html",
     "validate_key",
 ]
-__version__ = "0.4.0"
+__version__ = "0.5.0"

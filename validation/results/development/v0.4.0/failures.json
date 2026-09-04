@@ -1,0 +1,6303 @@
+{
+  "note": "Every miss from the run, recorded rather than filtered out.",
+  "false_rejections_on_documented_keys": [
+    "cigar",
+    "crime",
+    "produc",
+    "snmesp"
+  ],
+  "unsafe_acceptances": [
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 2,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 3,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 7,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "positional_rekey",
+      "level": 1.0,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 0,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 1,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 2,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 3,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 4,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 5,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 6,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 7,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 8,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_merge",
+      "level": 0.01,
+      "seed": 9,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 0,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 1,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 2,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 3,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 4,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 5,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 6,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 7,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 8,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.01,
+      "seed": 9,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 0,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 1,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 2,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 3,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 4,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 5,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 6,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 7,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 8,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.05,
+      "seed": 9,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 0,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 1,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 2,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 3,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 4,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 5,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 6,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 7,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 8,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "entity_split",
+      "level": 0.1,
+      "seed": 9,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 0,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 1,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 2,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 3,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 4,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 5,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 6,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 7,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 8,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.01,
+      "seed": 9,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 0,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 1,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 2,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 3,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 4,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 5,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 6,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 7,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 8,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.02,
+      "seed": 9,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 0,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 1,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 2,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 3,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 4,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 5,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 6,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 7,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 8,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.05,
+      "seed": 9,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 3,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 8,
+      "status": "pass"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.1,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.2,
+      "seed": 0,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.2,
+      "seed": 1,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.2,
+      "seed": 4,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.2,
+      "seed": 5,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.2,
+      "seed": 6,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.2,
+      "seed": 8,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.2,
+      "seed": 9,
+      "status": "warn"
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "partial_corruption",
+      "level": 0.5,
+      "seed": 0,
+      "status": "warn"
+    }
+  ],
+  "false_rejections_when_key_correct": [
+    {
+      "dataset_id": "emplUK",
+      "corruption": "invariant_column_removal",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "feature_poor_panel",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "feature_poor_panel",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "feature_poor_panel",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "none",
+      "level": null,
+      "seed": null
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 1
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 2
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 3
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 4
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 5
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 6
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 7
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 8
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 9
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 1
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 2
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 3
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 4
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 5
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 6
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 7
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 8
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 9
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 1
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 2
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 3
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 4
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 5
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 6
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 7
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 8
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 9
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 1
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 2
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 3
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 4
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 5
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 6
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 7
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 8
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 9
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 1
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 2
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 3
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 4
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 5
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 6
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 7
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 8
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 9
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 1
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 2
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 3
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 4
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 5
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 6
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 7
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 8
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 9
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 1
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 2
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 3
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 4
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 5
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 6
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 7
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 8
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 9
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 1
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 2
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 3
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 4
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 5
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 6
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 7
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 8
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 9
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 1
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 2
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 3
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 4
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 5
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 6
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 7
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 8
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 9
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 1
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 2
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 3
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 4
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 5
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 6
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 7
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 8
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 9
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 1
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 2
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 3
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 4
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 5
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 6
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 7
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 8
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 9
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 1
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 2
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 3
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 4
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 5
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 6
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 7
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 8
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 9
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 1
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 2
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 3
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 4
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 5
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 6
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 7
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 8
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 9
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 1
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 2
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 3
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 4
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 5
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 6
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 7
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 8
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 9
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 1
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 2
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 3
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 4
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 5
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 6
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 7
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 8
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 9
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 1
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 2
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 3
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 4
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 5
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 6
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 7
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 8
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 9
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 1
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 2
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 3
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 4
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 5
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 6
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 7
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 8
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 9
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 1
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 2
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 3
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 4
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 5
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 6
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 7
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 8
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 9
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "invariant_column_removal",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "feature_poor_panel",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "feature_poor_panel",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "feature_poor_panel",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "none",
+      "level": null,
+      "seed": null
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 1
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 2
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 3
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 4
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 5
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 6
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 7
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 8
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 9
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 1
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 2
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 3
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 4
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 5
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 6
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 7
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 8
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 9
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 1
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 2
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 3
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 4
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 5
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 6
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 7
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 8
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 9
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 1
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 2
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 3
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 4
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 5
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 6
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 7
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 8
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 9
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 1
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 2
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 3
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 4
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 5
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 6
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 7
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 8
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 9
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 1
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 2
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 3
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 4
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 5
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 6
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 7
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 8
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 9
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 1
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 2
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 3
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 4
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 5
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 6
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 7
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 8
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 9
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 1
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 2
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 3
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 4
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 5
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 6
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 7
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 8
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 9
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 1
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 2
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 3
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 4
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 5
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 6
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 7
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 8
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 9
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 1
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 2
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 3
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 4
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 5
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 6
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 7
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 8
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 9
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 1
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 2
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 3
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 4
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 5
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 6
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 7
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 8
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 9
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 1
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 2
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 3
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 4
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 5
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 6
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 7
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 8
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 9
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 1
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 2
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 3
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 4
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 5
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 6
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 7
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 8
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 9
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 1
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 2
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 3
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 4
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 5
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 6
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 7
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 8
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 9
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 1
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 2
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 3
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 4
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 5
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 6
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 7
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 8
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 9
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 1
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 2
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 3
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 4
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 5
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 6
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 7
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 8
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 9
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 1
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 2
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 3
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 4
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 5
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 6
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 7
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 8
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 9
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "feature_poor_panel",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "feature_poor_panel",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "feature_poor_panel",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "none",
+      "level": null,
+      "seed": null
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 1
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 2
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 3
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 4
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 5
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 6
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 7
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 8
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 9
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 1
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 2
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 3
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 4
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 5
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 6
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 7
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 8
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 9
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 1
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 2
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 3
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 4
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 5
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 6
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 7
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 8
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 9
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 1
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 2
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 3
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 4
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 5
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 6
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 7
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 8
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 9
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 1
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 2
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 3
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 4
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 5
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 6
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 7
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 8
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 9
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 1
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 2
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 3
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 4
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 5
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 6
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 7
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 8
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 9
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 1
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 2
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 3
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 4
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 5
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 6
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 7
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 8
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 9
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 1
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 2
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 3
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 4
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 5
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 6
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 7
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 8
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 9
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 1
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 2
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 3
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 4
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 5
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 6
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 7
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 8
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 9
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 1
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 2
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 3
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 4
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 5
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 6
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 7
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 8
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 9
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 1
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 2
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 3
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 4
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 5
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 6
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 7
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 8
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 9
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 1
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 2
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 3
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 4
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 5
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 6
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 7
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 8
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 9
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 1
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 2
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 3
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 4
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 5
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 6
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 7
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 8
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 9
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 1
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 2
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 3
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 4
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 5
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 6
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 7
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 8
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 9
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 1
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 2
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 3
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 4
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 5
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 6
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 7
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 8
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 9
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 1
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 2
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 3
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 4
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 5
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 6
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 7
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 8
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 9
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 1
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 2
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 3
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 4
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 5
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 6
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 7
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 8
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 9
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 1
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 2
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 3
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 4
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 5
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 6
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 7
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 8
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 9
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "invariant_column_removal",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "invariant_column_removal",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "invariant_column_removal",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "feature_poor_panel",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "feature_poor_panel",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "crime",
+      "corruption": "feature_poor_panel",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "feature_poor_panel",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "feature_poor_panel",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "feature_poor_panel",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "none",
+      "level": null,
+      "seed": null
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 1
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 2
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 3
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 4
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 5
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 6
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 7
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 8
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.005,
+      "seed": 9
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 1
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 2
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 3
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 4
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 5
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 6
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 7
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 8
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "duplicate_entity_periods",
+      "level": 0.01,
+      "seed": 9
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 1
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 2
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 3
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 4
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 5
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 6
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 7
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 8
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.005,
+      "seed": 9
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 1
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 2
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 3
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 4
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 5
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 6
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 7
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 8
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.01,
+      "seed": 9
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 1
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 2
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 3
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 4
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 5
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 6
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 7
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 8
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.02,
+      "seed": 9
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 1
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 2
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 3
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 4
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 5
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 6
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 7
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 8
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.05,
+      "seed": 9
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 1
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 2
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 3
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 4
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 5
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 6
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 7
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 8
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_entity_keys",
+      "level": 0.1,
+      "seed": 9
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 1
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 2
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 3
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 4
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 5
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 6
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 7
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 8
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.005,
+      "seed": 9
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 1
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 2
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 3
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 4
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 5
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 6
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 7
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 8
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.01,
+      "seed": 9
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 1
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 2
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 3
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 4
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 5
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 6
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 7
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 8
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.02,
+      "seed": 9
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 1
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 2
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 3
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 4
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 5
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 6
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 7
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 8
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.05,
+      "seed": 9
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 1
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 2
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 3
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 4
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 5
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 6
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 7
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 8
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "missing_time_values",
+      "level": 0.1,
+      "seed": 9
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 1
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 2
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 3
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 4
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 5
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 6
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 7
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 8
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.05,
+      "seed": 9
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 1
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 2
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 3
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 4
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 5
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 6
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 7
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 8
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.1,
+      "seed": 9
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 1
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 2
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 3
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 4
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 5
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 6
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 7
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 8
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "panel_attrition",
+      "level": 0.2,
+      "seed": 9
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 1
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 2
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 3
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 4
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 5
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 6
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 7
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 8
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.05,
+      "seed": 9
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 1
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 2
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 3
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 4
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 5
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 6
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 7
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 8
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.1,
+      "seed": 9
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 1
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 2
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 3
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 4
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 5
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 6
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 7
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 8
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "period_gaps",
+      "level": 0.2,
+      "seed": 9
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "feature_poor_panel",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "feature_poor_panel",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "feature_poor_panel",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "invariant_column_removal",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "feature_poor_panel",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "feature_poor_panel",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "feature_poor_panel",
+      "level": 3,
+      "seed": 0
+    }
+  ],
+  "missed_contradictions": [],
+  "excluded_no_effect": [
+    {
+      "dataset_id": "grunfeld",
+      "corruption": "invariant_column_removal",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "grunfeld",
+      "corruption": "invariant_column_removal",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "grunfeld",
+      "corruption": "invariant_column_removal",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "invariant_column_removal",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "emplUK",
+      "corruption": "invariant_column_removal",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "invariant_column_removal",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "produc",
+      "corruption": "invariant_column_removal",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "gasoline",
+      "corruption": "invariant_column_removal",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "gasoline",
+      "corruption": "invariant_column_removal",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "gasoline",
+      "corruption": "invariant_column_removal",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "invariant_column_removal",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "invariant_column_removal",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "cigar",
+      "corruption": "invariant_column_removal",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "invariant_column_removal",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "invariant_column_removal",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "laborsupply",
+      "corruption": "invariant_column_removal",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "parity",
+      "corruption": "invariant_column_removal",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "parity",
+      "corruption": "invariant_column_removal",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "parity",
+      "corruption": "invariant_column_removal",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "invariant_column_removal",
+      "level": 1,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "invariant_column_removal",
+      "level": 2,
+      "seed": 0
+    },
+    {
+      "dataset_id": "snmesp",
+      "corruption": "invariant_column_removal",
+      "level": 3,
+      "seed": 0
+    },
+    {
+      "dataset_id": "sumhes",
+      "corruption": "invariant_column_removal",
+      "level": 3,
+      "seed": 0
+    }
+  ],
+  "sensitivity_failures": [
+    {
+      "dataset_id": "cigar",
+      "curve": {
+        "levels": [
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.5
+        ],
+        "series": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "monotone": true,
+        "moves": false,
+        "ok": false
+      }
+    },
+    {
+      "dataset_id": "crime",
+      "curve": {
+        "levels": [
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.5
+        ],
+        "series": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "monotone": true,
+        "moves": false,
+        "ok": false
+      }
+    },
+    {
+      "dataset_id": "gasoline",
+      "curve": {
+        "levels": [
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.5
+        ],
+        "series": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "monotone": true,
+        "moves": false,
+        "ok": false
+      }
+    },
+    {
+      "dataset_id": "grunfeld",
+      "curve": {
+        "levels": [
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.5
+        ],
+        "series": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "monotone": true,
+        "moves": false,
+        "ok": false
+      }
+    },
+    {
+      "dataset_id": "parity",
+      "curve": {
+        "levels": [
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.5
+        ],
+        "series": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "monotone": true,
+        "moves": false,
+        "ok": false
+      }
+    },
+    {
+      "dataset_id": "produc",
+      "curve": {
+        "levels": [
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.5
+        ],
+        "series": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "monotone": true,
+        "moves": false,
+        "ok": false
+      }
+    },
+    {
+      "dataset_id": "snmesp",
+      "curve": {
+        "levels": [
+          0.01,
+          0.02,
+          0.05,
+          0.1,
+          0.2,
+          0.5
+        ],
+        "series": [
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        "monotone": true,
+        "moves": false,
+        "ok": false
+      }
+    }
+  ]
+}

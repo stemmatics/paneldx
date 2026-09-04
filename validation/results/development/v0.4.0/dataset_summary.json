@@ -1,0 +1,2482 @@
+[
+  {
+    "dataset_id": "cigar",
+    "family_id": "baltagi_us_state_cigarettes",
+    "role": "calibration",
+    "documented_key_status": "fail",
+    "documented_key_reason": "",
+    "false_rejection_on_documented_key": true,
+    "broken_key_unsafe_acceptance": 0.0,
+    "inconclusive_rate": 0.0,
+    "broken_key": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 0,
+      "fail": 131,
+      "runs": 131,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "broken_key_by_corruption": {
+      "entity_merge": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 30,
+        "runs": 30,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "entity_split": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 30,
+        "runs": 30,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "partial_corruption": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 60,
+        "runs": 60,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "positional_rekey": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 1,
+        "runs": 1,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "within_period_shuffle": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 10,
+        "runs": 10,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      }
+    },
+    "broken_key_by_level": {
+      "positional_rekey": {
+        "1.0": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 1,
+          "runs": 1,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "within_period_shuffle": {
+        "1.0": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "entity_merge": {
+        "0.01": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "entity_split": {
+        "0.01": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "partial_corruption": {
+        "0.01": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.02": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.2": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.5": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      }
+    },
+    "correct_key_degraded": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 0,
+      "fail": 174,
+      "runs": 174,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "structural": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 0,
+      "fail": 40,
+      "runs": 40,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "false_rejections_when_key_correct": 174,
+    "unsafe_acceptances_when_key_broken": 0,
+    "missed_contradictions": 0,
+    "partial_corruption_sensitivity": {
+      "levels": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.5
+      ],
+      "series": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "monotone": true,
+      "moves": false,
+      "ok": false
+    },
+    "median_runtime_seconds": 0.06625,
+    "cases": 348
+  },
+  {
+    "dataset_id": "crime",
+    "family_id": "cornwell_trumbull_nc_crime",
+    "role": "calibration",
+    "documented_key_status": "fail",
+    "documented_key_reason": "",
+    "false_rejection_on_documented_key": true,
+    "broken_key_unsafe_acceptance": 0.0,
+    "inconclusive_rate": 0.0,
+    "broken_key": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 0,
+      "fail": 131,
+      "runs": 131,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "broken_key_by_corruption": {
+      "entity_merge": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 30,
+        "runs": 30,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "entity_split": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 30,
+        "runs": 30,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "partial_corruption": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 60,
+        "runs": 60,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "positional_rekey": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 1,
+        "runs": 1,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "within_period_shuffle": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 10,
+        "runs": 10,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      }
+    },
+    "broken_key_by_level": {
+      "positional_rekey": {
+        "1.0": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 1,
+          "runs": 1,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "within_period_shuffle": {
+        "1.0": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "entity_merge": {
+        "0.01": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "entity_split": {
+        "0.01": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "partial_corruption": {
+        "0.01": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.02": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.2": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.5": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      }
+    },
+    "correct_key_degraded": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 0,
+      "fail": 187,
+      "runs": 187,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "structural": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 0,
+      "fail": 30,
+      "runs": 30,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "false_rejections_when_key_correct": 187,
+    "unsafe_acceptances_when_key_broken": 0,
+    "missed_contradictions": 0,
+    "partial_corruption_sensitivity": {
+      "levels": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.5
+      ],
+      "series": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "monotone": true,
+      "moves": false,
+      "ok": false
+    },
+    "median_runtime_seconds": 0.1033,
+    "cases": 348
+  },
+  {
+    "dataset_id": "emplUK",
+    "family_id": "arellano_bond_uk_firms",
+    "role": "development",
+    "documented_key_status": "warn",
+    "documented_key_reason": "",
+    "false_rejection_on_documented_key": false,
+    "broken_key_unsafe_acceptance": 0.30999999999999994,
+    "inconclusive_rate": 0.0,
+    "broken_key": {
+      "pass": 0,
+      "warn": 53,
+      "inconclusive": 0,
+      "fail": 78,
+      "runs": 131,
+      "unsafe_acceptance_rate": 0.40458015267175573,
+      "safe_stop_rate": 0.5954198473282443
+    },
+    "broken_key_by_corruption": {
+      "entity_merge": {
+        "pass": 0,
+        "warn": 10,
+        "inconclusive": 0,
+        "fail": 20,
+        "runs": 30,
+        "unsafe_acceptance_rate": 0.3333333333333333,
+        "safe_stop_rate": 0.6666666666666666
+      },
+      "entity_split": {
+        "pass": 0,
+        "warn": 30,
+        "inconclusive": 0,
+        "fail": 0,
+        "runs": 30,
+        "unsafe_acceptance_rate": 1.0,
+        "safe_stop_rate": 0.0
+      },
+      "partial_corruption": {
+        "pass": 0,
+        "warn": 13,
+        "inconclusive": 0,
+        "fail": 47,
+        "runs": 60,
+        "unsafe_acceptance_rate": 0.21666666666666667,
+        "safe_stop_rate": 0.7833333333333333
+      },
+      "positional_rekey": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 1,
+        "runs": 1,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "within_period_shuffle": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 10,
+        "runs": 10,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      }
+    },
+    "broken_key_by_level": {
+      "positional_rekey": {
+        "1.0": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 1,
+          "runs": 1,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "within_period_shuffle": {
+        "1.0": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "entity_merge": {
+        "0.01": {
+          "pass": 0,
+          "warn": 10,
+          "inconclusive": 0,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 1.0,
+          "safe_stop_rate": 0.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "entity_split": {
+        "0.01": {
+          "pass": 0,
+          "warn": 10,
+          "inconclusive": 0,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 1.0,
+          "safe_stop_rate": 0.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 10,
+          "inconclusive": 0,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 1.0,
+          "safe_stop_rate": 0.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 10,
+          "inconclusive": 0,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 1.0,
+          "safe_stop_rate": 0.0
+        }
+      },
+      "partial_corruption": {
+        "0.01": {
+          "pass": 0,
+          "warn": 10,
+          "inconclusive": 0,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 1.0,
+          "safe_stop_rate": 0.0
+        },
+        "0.02": {
+          "pass": 0,
+          "warn": 3,
+          "inconclusive": 0,
+          "fail": 7,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.3,
+          "safe_stop_rate": 0.7
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.2": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.5": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      }
+    },
+    "correct_key_degraded": {
+      "pass": 0,
+      "warn": 181,
+      "inconclusive": 0,
+      "fail": 4,
+      "runs": 185,
+      "unsafe_acceptance_rate": 0.9783783783783784,
+      "safe_stop_rate": 0.021621621621621623
+    },
+    "structural": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 0,
+      "fail": 30,
+      "runs": 30,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "false_rejections_when_key_correct": 4,
+    "unsafe_acceptances_when_key_broken": 53,
+    "missed_contradictions": 0,
+    "partial_corruption_sensitivity": {
+      "levels": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.5
+      ],
+      "series": [
+        1.0,
+        0.3,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "monotone": true,
+      "moves": true,
+      "ok": true
+    },
+    "median_runtime_seconds": 0.0277,
+    "cases": 348
+  },
+  {
+    "dataset_id": "gasoline",
+    "family_id": "baltagi_griffin_oecd_gasoline",
+    "role": "development",
+    "documented_key_status": "inconclusive",
+    "documented_key_reason": "",
+    "false_rejection_on_documented_key": false,
+    "broken_key_unsafe_acceptance": 0.0,
+    "inconclusive_rate": 0.8444444444444444,
+    "broken_key": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 93,
+      "fail": 38,
+      "runs": 131,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "broken_key_by_corruption": {
+      "entity_merge": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 30,
+        "runs": 30,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "entity_split": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 22,
+        "fail": 8,
+        "runs": 30,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "partial_corruption": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 60,
+        "fail": 0,
+        "runs": 60,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "positional_rekey": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 1,
+        "fail": 0,
+        "runs": 1,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "within_period_shuffle": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 10,
+        "fail": 0,
+        "runs": 10,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      }
+    },
+    "broken_key_by_level": {
+      "positional_rekey": {
+        "1.0": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 1,
+          "fail": 0,
+          "runs": 1,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "within_period_shuffle": {
+        "1.0": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "entity_merge": {
+        "0.01": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "entity_split": {
+        "0.01": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 2,
+          "fail": 8,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "partial_corruption": {
+        "0.01": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.02": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.2": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.5": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      }
+    },
+    "correct_key_degraded": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 184,
+      "fail": 0,
+      "runs": 184,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "structural": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 0,
+      "fail": 30,
+      "runs": 30,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "false_rejections_when_key_correct": 0,
+    "unsafe_acceptances_when_key_broken": 0,
+    "missed_contradictions": 0,
+    "partial_corruption_sensitivity": {
+      "levels": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.5
+      ],
+      "series": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "monotone": true,
+      "moves": false,
+      "ok": false
+    },
+    "median_runtime_seconds": 0.004,
+    "cases": 348
+  },
+  {
+    "dataset_id": "grunfeld",
+    "family_id": "grunfeld_investment",
+    "role": "development",
+    "documented_key_status": "inconclusive",
+    "documented_key_reason": "",
+    "false_rejection_on_documented_key": false,
+    "broken_key_unsafe_acceptance": 0.0,
+    "inconclusive_rate": 0.8666666666666667,
+    "broken_key": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 101,
+      "fail": 30,
+      "runs": 131,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "broken_key_by_corruption": {
+      "entity_merge": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 30,
+        "runs": 30,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "entity_split": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 30,
+        "fail": 0,
+        "runs": 30,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "partial_corruption": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 60,
+        "fail": 0,
+        "runs": 60,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "positional_rekey": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 1,
+        "fail": 0,
+        "runs": 1,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "within_period_shuffle": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 10,
+        "fail": 0,
+        "runs": 10,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      }
+    },
+    "broken_key_by_level": {
+      "positional_rekey": {
+        "1.0": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 1,
+          "fail": 0,
+          "runs": 1,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "within_period_shuffle": {
+        "1.0": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "entity_merge": {
+        "0.01": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "entity_split": {
+        "0.01": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "partial_corruption": {
+        "0.01": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.02": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.2": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.5": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      }
+    },
+    "correct_key_degraded": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 184,
+      "fail": 0,
+      "runs": 184,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "structural": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 0,
+      "fail": 30,
+      "runs": 30,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "false_rejections_when_key_correct": 0,
+    "unsafe_acceptances_when_key_broken": 0,
+    "missed_contradictions": 0,
+    "partial_corruption_sensitivity": {
+      "levels": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.5
+      ],
+      "series": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "monotone": true,
+      "moves": false,
+      "ok": false
+    },
+    "median_runtime_seconds": 0.0033499999999999997,
+    "cases": 348
+  },
+  {
+    "dataset_id": "laborsupply",
+    "family_id": "psid",
+    "role": "calibration",
+    "documented_key_status": "warn",
+    "documented_key_reason": "",
+    "false_rejection_on_documented_key": false,
+    "broken_key_unsafe_acceptance": 0.4,
+    "inconclusive_rate": 0.0,
+    "broken_key": {
+      "pass": 0,
+      "warn": 80,
+      "inconclusive": 0,
+      "fail": 51,
+      "runs": 131,
+      "unsafe_acceptance_rate": 0.6106870229007634,
+      "safe_stop_rate": 0.3893129770992366
+    },
+    "broken_key_by_corruption": {
+      "entity_merge": {
+        "pass": 0,
+        "warn": 10,
+        "inconclusive": 0,
+        "fail": 20,
+        "runs": 30,
+        "unsafe_acceptance_rate": 0.3333333333333333,
+        "safe_stop_rate": 0.6666666666666666
+      },
+      "entity_split": {
+        "pass": 0,
+        "warn": 30,
+        "inconclusive": 0,
+        "fail": 0,
+        "runs": 30,
+        "unsafe_acceptance_rate": 1.0,
+        "safe_stop_rate": 0.0
+      },
+      "partial_corruption": {
+        "pass": 0,
+        "warn": 40,
+        "inconclusive": 0,
+        "fail": 20,
+        "runs": 60,
+        "unsafe_acceptance_rate": 0.6666666666666666,
+        "safe_stop_rate": 0.3333333333333333
+      },
+      "positional_rekey": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 1,
+        "runs": 1,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "within_period_shuffle": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 10,
+        "runs": 10,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      }
+    },
+    "broken_key_by_level": {
+      "positional_rekey": {
+        "1.0": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 1,
+          "runs": 1,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "within_period_shuffle": {
+        "1.0": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "entity_merge": {
+        "0.01": {
+          "pass": 0,
+          "warn": 10,
+          "inconclusive": 0,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 1.0,
+          "safe_stop_rate": 0.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "entity_split": {
+        "0.01": {
+          "pass": 0,
+          "warn": 10,
+          "inconclusive": 0,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 1.0,
+          "safe_stop_rate": 0.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 10,
+          "inconclusive": 0,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 1.0,
+          "safe_stop_rate": 0.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 10,
+          "inconclusive": 0,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 1.0,
+          "safe_stop_rate": 0.0
+        }
+      },
+      "partial_corruption": {
+        "0.01": {
+          "pass": 0,
+          "warn": 10,
+          "inconclusive": 0,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 1.0,
+          "safe_stop_rate": 0.0
+        },
+        "0.02": {
+          "pass": 0,
+          "warn": 10,
+          "inconclusive": 0,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 1.0,
+          "safe_stop_rate": 0.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 10,
+          "inconclusive": 0,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 1.0,
+          "safe_stop_rate": 0.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 10,
+          "inconclusive": 0,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 1.0,
+          "safe_stop_rate": 0.0
+        },
+        "0.2": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.5": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      }
+    },
+    "correct_key_degraded": {
+      "pass": 0,
+      "warn": 181,
+      "inconclusive": 0,
+      "fail": 3,
+      "runs": 184,
+      "unsafe_acceptance_rate": 0.9836956521739131,
+      "safe_stop_rate": 0.016304347826086956
+    },
+    "structural": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 0,
+      "fail": 30,
+      "runs": 30,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "false_rejections_when_key_correct": 3,
+    "unsafe_acceptances_when_key_broken": 80,
+    "missed_contradictions": 0,
+    "partial_corruption_sensitivity": {
+      "levels": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.5
+      ],
+      "series": [
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      "monotone": true,
+      "moves": true,
+      "ok": true
+    },
+    "median_runtime_seconds": 0.0397,
+    "cases": 348
+  },
+  {
+    "dataset_id": "parity",
+    "family_id": "coakley_fuertes_smith_parity",
+    "role": "calibration",
+    "documented_key_status": "inconclusive",
+    "documented_key_reason": "",
+    "false_rejection_on_documented_key": false,
+    "broken_key_unsafe_acceptance": 0.0,
+    "inconclusive_rate": 0.85,
+    "broken_key": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 101,
+      "fail": 30,
+      "runs": 131,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "broken_key_by_corruption": {
+      "entity_merge": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 30,
+        "runs": 30,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "entity_split": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 30,
+        "fail": 0,
+        "runs": 30,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "partial_corruption": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 60,
+        "fail": 0,
+        "runs": 60,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "positional_rekey": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 1,
+        "fail": 0,
+        "runs": 1,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "within_period_shuffle": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 10,
+        "fail": 0,
+        "runs": 10,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      }
+    },
+    "broken_key_by_level": {
+      "positional_rekey": {
+        "1.0": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 1,
+          "fail": 0,
+          "runs": 1,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "within_period_shuffle": {
+        "1.0": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "entity_merge": {
+        "0.01": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "entity_split": {
+        "0.01": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "partial_corruption": {
+        "0.01": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.02": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.2": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.5": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 10,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      }
+    },
+    "correct_key_degraded": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 174,
+      "fail": 0,
+      "runs": 174,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "structural": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 0,
+      "fail": 40,
+      "runs": 40,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "false_rejections_when_key_correct": 0,
+    "unsafe_acceptances_when_key_broken": 0,
+    "missed_contradictions": 0,
+    "partial_corruption_sensitivity": {
+      "levels": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.5
+      ],
+      "series": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "monotone": true,
+      "moves": false,
+      "ok": false
+    },
+    "median_runtime_seconds": 0.0039,
+    "cases": 348
+  },
+  {
+    "dataset_id": "produc",
+    "family_id": "munnell_us_state_production",
+    "role": "development",
+    "documented_key_status": "fail",
+    "documented_key_reason": "",
+    "false_rejection_on_documented_key": true,
+    "broken_key_unsafe_acceptance": 0.0,
+    "inconclusive_rate": 0.0,
+    "broken_key": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 0,
+      "fail": 131,
+      "runs": 131,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "broken_key_by_corruption": {
+      "entity_merge": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 30,
+        "runs": 30,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "entity_split": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 30,
+        "runs": 30,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "partial_corruption": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 60,
+        "runs": 60,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "positional_rekey": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 1,
+        "runs": 1,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "within_period_shuffle": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 10,
+        "runs": 10,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      }
+    },
+    "broken_key_by_level": {
+      "positional_rekey": {
+        "1.0": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 1,
+          "runs": 1,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "within_period_shuffle": {
+        "1.0": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "entity_merge": {
+        "0.01": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "entity_split": {
+        "0.01": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "partial_corruption": {
+        "0.01": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.02": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.2": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.5": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      }
+    },
+    "correct_key_degraded": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 0,
+      "fail": 185,
+      "runs": 185,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "structural": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 0,
+      "fail": 30,
+      "runs": 30,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "false_rejections_when_key_correct": 185,
+    "unsafe_acceptances_when_key_broken": 0,
+    "missed_contradictions": 0,
+    "partial_corruption_sensitivity": {
+      "levels": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.5
+      ],
+      "series": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "monotone": true,
+      "moves": false,
+      "ok": false
+    },
+    "median_runtime_seconds": 0.05305,
+    "cases": 348
+  },
+  {
+    "dataset_id": "snmesp",
+    "family_id": "alonso_borrego_arellano_spain_firms",
+    "role": "calibration",
+    "documented_key_status": "fail",
+    "documented_key_reason": "",
+    "false_rejection_on_documented_key": true,
+    "broken_key_unsafe_acceptance": 0.0,
+    "inconclusive_rate": 0.0,
+    "broken_key": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 0,
+      "fail": 131,
+      "runs": 131,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "broken_key_by_corruption": {
+      "entity_merge": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 30,
+        "runs": 30,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "entity_split": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 30,
+        "runs": 30,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "partial_corruption": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 60,
+        "runs": 60,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "positional_rekey": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 1,
+        "runs": 1,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      },
+      "within_period_shuffle": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 10,
+        "runs": 10,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      }
+    },
+    "broken_key_by_level": {
+      "positional_rekey": {
+        "1.0": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 1,
+          "runs": 1,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "within_period_shuffle": {
+        "1.0": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "entity_merge": {
+        "0.01": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "entity_split": {
+        "0.01": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "partial_corruption": {
+        "0.01": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.02": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.2": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.5": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      }
+    },
+    "correct_key_degraded": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 0,
+      "fail": 184,
+      "runs": 184,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "structural": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 0,
+      "fail": 30,
+      "runs": 30,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "false_rejections_when_key_correct": 184,
+    "unsafe_acceptances_when_key_broken": 0,
+    "missed_contradictions": 0,
+    "partial_corruption_sensitivity": {
+      "levels": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.5
+      ],
+      "series": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "monotone": true,
+      "moves": false,
+      "ok": false
+    },
+    "median_runtime_seconds": 0.0468,
+    "cases": 348
+  },
+  {
+    "dataset_id": "sumhes",
+    "family_id": "penn_world_table_mark5",
+    "role": "calibration",
+    "documented_key_status": "pass",
+    "documented_key_reason": "",
+    "false_rejection_on_documented_key": false,
+    "broken_key_unsafe_acceptance": 0.6166666666666666,
+    "inconclusive_rate": 0.0,
+    "broken_key": {
+      "pass": 72,
+      "warn": 14,
+      "inconclusive": 0,
+      "fail": 45,
+      "runs": 131,
+      "unsafe_acceptance_rate": 0.6564885496183206,
+      "safe_stop_rate": 0.3435114503816794
+    },
+    "broken_key_by_corruption": {
+      "entity_merge": {
+        "pass": 10,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 20,
+        "runs": 30,
+        "unsafe_acceptance_rate": 0.3333333333333333,
+        "safe_stop_rate": 0.6666666666666666
+      },
+      "entity_split": {
+        "pass": 30,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 0,
+        "runs": 30,
+        "unsafe_acceptance_rate": 1.0,
+        "safe_stop_rate": 0.0
+      },
+      "partial_corruption": {
+        "pass": 32,
+        "warn": 13,
+        "inconclusive": 0,
+        "fail": 15,
+        "runs": 60,
+        "unsafe_acceptance_rate": 0.75,
+        "safe_stop_rate": 0.25
+      },
+      "positional_rekey": {
+        "pass": 0,
+        "warn": 1,
+        "inconclusive": 0,
+        "fail": 0,
+        "runs": 1,
+        "unsafe_acceptance_rate": 1.0,
+        "safe_stop_rate": 0.0
+      },
+      "within_period_shuffle": {
+        "pass": 0,
+        "warn": 0,
+        "inconclusive": 0,
+        "fail": 10,
+        "runs": 10,
+        "unsafe_acceptance_rate": 0.0,
+        "safe_stop_rate": 1.0
+      }
+    },
+    "broken_key_by_level": {
+      "positional_rekey": {
+        "1.0": {
+          "pass": 0,
+          "warn": 1,
+          "inconclusive": 0,
+          "fail": 0,
+          "runs": 1,
+          "unsafe_acceptance_rate": 1.0,
+          "safe_stop_rate": 0.0
+        }
+      },
+      "within_period_shuffle": {
+        "1.0": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "entity_merge": {
+        "0.01": {
+          "pass": 10,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 1.0,
+          "safe_stop_rate": 0.0
+        },
+        "0.05": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        },
+        "0.1": {
+          "pass": 0,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 10,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.0,
+          "safe_stop_rate": 1.0
+        }
+      },
+      "entity_split": {
+        "0.01": {
+          "pass": 10,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 1.0,
+          "safe_stop_rate": 0.0
+        },
+        "0.05": {
+          "pass": 10,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 1.0,
+          "safe_stop_rate": 0.0
+        },
+        "0.1": {
+          "pass": 10,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 1.0,
+          "safe_stop_rate": 0.0
+        }
+      },
+      "partial_corruption": {
+        "0.01": {
+          "pass": 10,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 1.0,
+          "safe_stop_rate": 0.0
+        },
+        "0.02": {
+          "pass": 10,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 1.0,
+          "safe_stop_rate": 0.0
+        },
+        "0.05": {
+          "pass": 10,
+          "warn": 0,
+          "inconclusive": 0,
+          "fail": 0,
+          "runs": 10,
+          "unsafe_acceptance_rate": 1.0,
+          "safe_stop_rate": 0.0
+        },
+        "0.1": {
+          "pass": 2,
+          "warn": 5,
+          "inconclusive": 0,
+          "fail": 3,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.7,
+          "safe_stop_rate": 0.3
+        },
+        "0.2": {
+          "pass": 0,
+          "warn": 7,
+          "inconclusive": 0,
+          "fail": 3,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.7,
+          "safe_stop_rate": 0.3
+        },
+        "0.5": {
+          "pass": 0,
+          "warn": 1,
+          "inconclusive": 0,
+          "fail": 9,
+          "runs": 10,
+          "unsafe_acceptance_rate": 0.1,
+          "safe_stop_rate": 0.9
+        }
+      }
+    },
+    "correct_key_degraded": {
+      "pass": 182,
+      "warn": 0,
+      "inconclusive": 0,
+      "fail": 4,
+      "runs": 186,
+      "unsafe_acceptance_rate": 0.978494623655914,
+      "safe_stop_rate": 0.021505376344086023
+    },
+    "structural": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 0,
+      "fail": 30,
+      "runs": 30,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    },
+    "false_rejections_when_key_correct": 4,
+    "unsafe_acceptances_when_key_broken": 86,
+    "missed_contradictions": 0,
+    "partial_corruption_sensitivity": {
+      "levels": [
+        0.01,
+        0.02,
+        0.05,
+        0.1,
+        0.2,
+        0.5
+      ],
+      "series": [
+        1.0,
+        1.0,
+        1.0,
+        0.7,
+        0.7,
+        0.1
+      ],
+      "monotone": true,
+      "moves": true,
+      "ok": true
+    },
+    "median_runtime_seconds": 0.0596,
+    "cases": 348
+  }
+]

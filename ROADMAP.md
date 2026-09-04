@@ -6,24 +6,45 @@ important issue.
 
 ## Current release: 0.4.0
 
-Version 0.4.0 is the baseline release. It includes key validation and discovery,
-counter detection, leakage checks, persistence baselines and an HTML report.
+## Next release: 0.5.0
+
+Version 0.4.0 is the behavioural baseline. Version 0.5.0 changes what the
+verdicts mean: `fail` says the data contradicts the key, and a shortage of
+supporting evidence says `inconclusive`. It also adds the validation
+foundation, the dataset collection, the corruption benchmark and the first
+calibrated threshold.
 
 ## 0.4.x: validation foundation
 
-- Write and freeze the validation protocol.
-- Separate development, calibration, held-out and external datasets.
-- Record dataset sources, licences, checksums and expected key columns.
-- Add reproducible dataset preparation and corruption tests.
-- Keep regression tests separate from scientific validation results.
+Delivered in 0.5.0:
+
+- Drafted the validation protocol (`validation/protocol/protocol.md`) and its
+  machine-readable form (`validation/protocol/protocol.json`).
+- Separated development, calibration, held-out and external splits, with a
+  family rule that stops related panels straddling two of them.
+- Recorded dataset sources, citations, licences, checksums, shapes and key
+  columns for seventeen datasets (`validation/manifests/datasets.json`).
+- Kept regression expectations separate from scientific results
+  (`tests/validation/expected_results.json`).
+- Pinned the validation environment and added a single command that reports
+  whether an installed environment matches it.
+- Built the corruption benchmark: twelve reproducible corruption procedures, family-level
+  metrics, one command, results committed.
 
 ## 0.5.x: evidence and thresholds
 
-- Make `fail` mean there is evidence against a key.
-- Use `inconclusive` when the data does not provide enough evidence.
-- Allow users to declare invariant and monotone columns.
-- Calibrate thresholds only on the calibration datasets.
-- Report uncertainty, seed stability, sensitivity and ablation results.
+Delivered in 0.5.0:
+
+- `fail` means there is evidence against a key.
+- `inconclusive` when the data does not provide enough evidence.
+- Users can declare invariant and monotone columns.
+- One threshold calibrated, on the calibration split only.
+
+Still open:
+
+- Seed-stability and ablation reporting beyond the sensitivity curve.
+- A second calibrated threshold, if the calibration split grows enough to
+  support one.
 
 ## 0.6.x: key discovery validation
 

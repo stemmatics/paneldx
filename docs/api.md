@@ -34,12 +34,12 @@ Every check carries a structured `status`, one of four strings:
 |--------|---------|
 | `"pass"` | The check ran with sufficient evidence and found no issue |
 | `"warn"` | The check ran and found a non-blocking concern |
-| `"fail"` | The check ran and found a blocking structural defect |
-| `"inconclusive"` | Preconditions were not met; no conclusion is allowed, favourable or otherwise |
+| `"fail"` | The check ran and found a contradiction |
+| `"inconclusive"` | The check could not decide; no conclusion is allowed, favourable or otherwise |
 
-Overall severity orders them `fail > inconclusive > warn > pass`: a proven
-defect outranks a check that could not run, and an unmet precondition blocks
-any overall claim.
+Overall severity orders them `fail > inconclusive > warn > pass`: a
+contradiction outranks a question the data could not settle, and an unsettled
+question blocks any overall claim.
 
 ---
 
@@ -54,7 +54,7 @@ Thresholds are fields on two frozen dataclasses in `paneldx.policy`:
 
 ---
 
-## `audit(df, time_col, *, key=None, target=None, features=None, max_columns=2, top_k=3, period_step=None, allow_weak_key=False, key_policy=DEFAULT_KEY_POLICY, trap_policy=DEFAULT_TRAP_POLICY, source=None)`
+## `audit(df, time_col, *, key=None, target=None, invariant_cols=None, monotone_cols=None, features=None, max_columns=2, top_k=3, period_step=None, allow_weak_key=False, key_policy=DEFAULT_KEY_POLICY, trap_policy=DEFAULT_TRAP_POLICY, source=None)`
 
 Run every check in one pass. Validates `key` if given, otherwise searches for one
 and runs the rest under the best candidate.
@@ -100,12 +100,20 @@ identifier; headline and detail are prose and may change between releases.
 
 ---
 
-## `validate_key(df, key, time_col, *, policy=DEFAULT_KEY_POLICY, n_shuffles=3, random_state=0)`
+## `validate_key(df, key, time_col, *, invariant_cols=None, monotone_cols=None, policy=DEFAULT_KEY_POLICY, n_shuffles=3, random_state=0)`
 
 Test whether `key` identifies entities tracked across `time_col`. `key` is a
 column name or a sequence of them.
 
-Returns `KeyReport`. Raises `KeyError` for missing columns.
+`invariant_cols` names columns that cannot change within one entity;
+`monotone_cols` names columns that can never fall. Both are domain knowledge
+rather than hints, and they are the only route besides duplicate entity-period
+cells by which a key can be reported as contradicted (`fail`). Both accept a
+single column name or a sequence, and both default to none.
+
+Returns `KeyReport`. Raises `KeyError` for missing columns, and `ValueError`
+when a declared column is part of the key or the time column, or when a
+declared monotone column is not numeric.
 
 ### `KeyReport`
 
@@ -119,6 +127,9 @@ Returns `KeyReport`. Raises `KeyError` for missing columns.
 | `monotone_cols` | `list[str]` | Never decreasing, but not under the null |
 | `evidence` | `float` | Count of explained columns |
 | `evidence_frac` | `float` | **The headline.** Share of columns explained |
+| `reason` | `str` | Why the status was reached: `supported`, `weak_support`, `insufficient_evidence`, `duplicate_entity_period`, `declared_invariant_broken` or `declared_monotone_broken` |
+| `declared_violations` | `dict[str, float]` | Declared columns the key contradicts, and by how much |
+| `n_transitions` | `int` | Adjacent within-entity observations in different periods |
 | `n_usable_cols` | `int` | Denominator for `evidence_frac` |
 | `invariance_violation` | `float` | Mean rate, with `null_invariance_violation` alongside |
 | `monotonicity_violation` | `float` | Mean rate, with `null_monotonicity_violation` alongside |
@@ -129,7 +140,7 @@ Returns `KeyReport`. Raises `KeyError` for missing columns.
 
 ---
 
-## `discover_keys(df, time_col, *, max_columns=2, top_k=5, candidate_columns=None, policy=DEFAULT_KEY_POLICY, n_shuffles=2, random_state=0, rejections=None)`
+## `discover_keys(df, time_col, *, max_columns=2, top_k=5, candidate_columns=None, invariant_cols=None, monotone_cols=None, policy=DEFAULT_KEY_POLICY, n_shuffles=2, random_state=0, rejections=None)`
 
 Search column combinations for one that behaves like an entity key. Returns up to
 `top_k` `KeyReport` objects, best first.
@@ -146,7 +157,7 @@ Integer entity codes for the rows of `df` under `key`, as a `Series` aligned to
 the frame. Codes are opaque: equal code means equal key values, nothing more.
 Values are grouped as-is, never serialised to strings, so `1` and `"1"` stay
 distinct and no character in the data can merge or split two entities. Useful
-for building your own grouped operations on a validated key.
+for building your own grouped operations on a supported key.
 
 ---
 

@@ -43,9 +43,48 @@ an issue first.
 
 ## Tests
 
-Unit and regression tests use synthetic data with known results. Validation
-tests may use public datasets downloaded by
-`scripts/fetch_validation_data.py`.
+Unit and regression tests use synthetic data with known results, and run on
+every supported Python version. Validation tests use the public panels
+described in `validation/manifests/datasets.json` and downloaded by
+`python -m scripts.fetch_validation_data`, which verifies every file against a
+recorded sha256 and refuses anything else.
+
+Validation runs in its own frozen environment, separate from the `[dev]`
+extra:
+
+```bash
+python3.12 -m venv .venv-validation
+.venv-validation/bin/pip install -r validation/requirements.txt
+.venv-validation/bin/pip install --no-deps -e .
+.venv-validation/bin/python -m scripts.fetch_validation_data
+.venv-validation/bin/python -m scripts.check_validation_setup
+```
+
+`tests/validation/expected_results.json` records what paneldx reports today. It
+is a regression record, not ground truth: read `validation/protocol/protocol.md` before
+changing an entry, and never edit one to make a red test green.
+
+## The benchmark
+
+Behaviour changes are measured, not asserted:
+
+```bash
+python -m validation.harness.cases --profile smoke          # a couple of minutes
+python -m validation.harness.cases --profile development    # the full run, ~4 minutes
+python -m validation.harness.comparison                      # against the 0.4.0 baseline
+```
+
+Results land in `validation/results/` and are committed, failures included. If
+a change moves a verdict, `comparison.md` has to show which ones and why.
+
+Two rules the harness enforces, and that a patch must not weaken:
+
+- **The held-out split is never evaluated.** Its structure and checksums are
+  recorded; no profile can select it, the downloader refuses it without
+  `--include-held-out`, and the manifest check rejects a family that straddles
+  two splits.
+- **Thresholds are fitted on the calibration split only**, under a grid frozen
+  before results are seen (`validation/protocol/calibration_grid.json`).
 
 Do not add private, identifiable or restricted data to the tests. The PopNet
 workbook is not included in this repository. The case-study script accepts a

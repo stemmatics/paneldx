@@ -1,0 +1,26 @@
+# Frozen validation environment.
+#
+# Python 3.12 (see protocol.json -> environment.python; resolved and tested on
+# 3.12.13). These are exact pins, not a compatible range: a validation result
+# that cannot be reproduced from a recorded environment is an anecdote.
+#
+#     python3.12 -m venv .venv-validation
+#     .venv-validation/bin/pip install -r validation/requirements.txt -e .
+#     .venv-validation/bin/python scripts/check_validation_setup.py
+#
+# This file pins the validation suite only. It is deliberately separate from
+# the [dev] extra in pyproject.toml, which floats so the library keeps being
+# tested against current releases across the 3.9-3.13 matrix.
+
+# Runtime dependencies of paneldx
+numpy==2.5.2
+pandas==3.0.5
+python-dateutil==2.9.0.post0
+six==1.17.0
+
+# Test runner
+pytest==9.1.1
+iniconfig==2.3.0
+packaging==26.3
+pluggy==1.6.0
+Pygments==2.21.0

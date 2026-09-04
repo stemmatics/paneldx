@@ -31,6 +31,15 @@ paneldx audit data.csv --time quarter --key patient_id --target risk_score
 
 Add `--html report.html` for a self-contained page you can attach to a review.
 
+If you know something about the panel, say so. Columns that cannot change
+within an entity, and columns that can only rise, turn "could not judge" into a
+definite answer:
+
+```bash
+paneldx audit data.csv --time quarter --key patient_id \
+  --invariant birth_date enrolled_on --monotone total_visits
+```
+
 ## Reading the output
 
 Findings come out worst-first:
@@ -38,9 +47,10 @@ Findings come out worst-first:
 ```
 data.csv: 24,000 rows x 31 columns, 4 periods of 'quarter'
 
-  [FAIL]  Entity key is not supported by the data (patient_id)
-          Lags, differences, trajectories and grouped splits built on this
-          key are unreliable.
+  [INCONCLUSIVE]  Entity key could not be judged (patient_id)
+          Too little is explained to support the key (7% of usable columns);
+          this is not evidence against it. Treat within-entity quantities as
+          unverified rather than as wrong.
 
   [WARN]  4 cumulative counter(s) among the features
           Lifetime totals barely move between periods. Difference them into
@@ -49,8 +59,8 @@ data.csv: 24,000 rows x 31 columns, 4 periods of 'quarter'
 
 | Severity       | Meaning |
 |----------------|---------|
-| `FAIL`         | Something invalidates within-entity analysis. Fix before modelling. |
-| `INCONCLUSIVE` | The preconditions for a check were not met. No conclusion, favourable or otherwise. |
+| `FAIL`         | The data contradicts the key, or a check found a defect. Fix before modelling. |
+| `INCONCLUSIVE` | The data did not settle the question. No conclusion, favourable or otherwise. |
 | `WARN`         | Something needs review before modelling; it may inflate apparent performance. |
 | `PASS`         | Checked and clean. |
 

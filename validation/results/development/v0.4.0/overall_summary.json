@@ -1,0 +1,118 @@
+{
+  "datasets": 10,
+  "families": 10,
+  "cases": 3480,
+  "statistical_unit": "family, over corruption-procedure means",
+  "cases_excluded_no_effect": 23,
+  "documented_key_false_rejection": {
+    "point": 0.4,
+    "low": 0.16818032967113528,
+    "high": 0.6873262303202639,
+    "n": 10,
+    "successes": 4,
+    "method": "wilson",
+    "note": "one binary outcome per family, so Wilson applies here and nowhere else",
+    "datasets": [
+      "cigar",
+      "crime",
+      "produc",
+      "snmesp"
+    ]
+  },
+  "broken_key_unsafe_acceptance": {
+    "point": 0.13266666666666665,
+    "low": 0.0,
+    "high": 0.2776666666666666,
+    "k": 10,
+    "n_resamples": 10000,
+    "weighting": "corruption procedure, then dataset, then family",
+    "note": "Each corruption procedure contributes equally within a dataset, so the rate does not depend on how many levels a procedure declares."
+  },
+  "inconclusive_rate": {
+    "point": 0.2561111111111111,
+    "low": 0.0,
+    "high": 0.5127777777777778,
+    "k": 10,
+    "n_resamples": 10000,
+    "weighting": "corruption procedure, then dataset, then family",
+    "note": "Reported whenever an error rate is: both rates fall when the tool declines to judge, and only one of them looks like an improvement."
+  },
+  "broken_key_unsafe_acceptance_case_weighted": {
+    "rate": 0.16717557251908396,
+    "note": "Every case weighted equally, so procedures with more levels dominate. Reported for reconciliation with the raw counts, not for quoting."
+  },
+  "correct_key_degraded_status_mix": {
+    "pass": 182,
+    "warn": 362,
+    "inconclusive": 542,
+    "fail": 741,
+    "runs": 1827,
+    "unsafe_acceptance_rate": 0.2977558839627805,
+    "safe_stop_rate": 0.7022441160372195
+  },
+  "broken_key_status_mix": {
+    "pass": 72,
+    "warn": 147,
+    "inconclusive": 295,
+    "fail": 796,
+    "runs": 1310,
+    "unsafe_acceptance_rate": 0.16717557251908396,
+    "safe_stop_rate": 0.832824427480916
+  },
+  "structural_status_mix": {
+    "pass": 0,
+    "warn": 0,
+    "inconclusive": 0,
+    "fail": 320,
+    "runs": 320,
+    "unsafe_acceptance_rate": 0.0,
+    "safe_stop_rate": 1.0
+  },
+  "broken_key_by_corruption": {
+    "entity_merge": {
+      "pass": 10,
+      "warn": 20,
+      "inconclusive": 0,
+      "fail": 270,
+      "runs": 300,
+      "unsafe_acceptance_rate": 0.1,
+      "safe_stop_rate": 0.9
+    },
+    "entity_split": {
+      "pass": 30,
+      "warn": 60,
+      "inconclusive": 82,
+      "fail": 128,
+      "runs": 300,
+      "unsafe_acceptance_rate": 0.3,
+      "safe_stop_rate": 0.7
+    },
+    "partial_corruption": {
+      "pass": 32,
+      "warn": 66,
+      "inconclusive": 180,
+      "fail": 322,
+      "runs": 600,
+      "unsafe_acceptance_rate": 0.16333333333333333,
+      "safe_stop_rate": 0.8366666666666667
+    },
+    "positional_rekey": {
+      "pass": 0,
+      "warn": 1,
+      "inconclusive": 3,
+      "fail": 6,
+      "runs": 10,
+      "unsafe_acceptance_rate": 0.1,
+      "safe_stop_rate": 0.9
+    },
+    "within_period_shuffle": {
+      "pass": 0,
+      "warn": 0,
+      "inconclusive": 30,
+      "fail": 70,
+      "runs": 100,
+      "unsafe_acceptance_rate": 0.0,
+      "safe_stop_rate": 1.0
+    }
+  }
+}

@@ -25,10 +25,25 @@ jobs:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7
         with:
           python-version: "3.12"
-      - run: pip install -e ".[dev]"
+      - run: pip install -e ".[dev]" "ai-slop-detector==3.8.9"
       - run: ruff check .
       - run: ruff format --check .
+      # A small deterministic check on the god_function thresholds in
+      # .slopconfig.yaml: a new over-complex function fails the build while the
+      # reviewed ones do not. Kept alongside the detector, not instead of it.
+      - run: python -m scripts.check_complexity
+      - name: AI code-quality gate
+        run: >
+          ai-slop-detector
+          --project .
+          --no-history
+          --config .slopconfig.yaml
+          --fail-threshold 2.5
+          --no-color
 
+  # Unit and regression tests: the library's own behaviour, on synthetic data
+  # with known answers, across the supported Python range. No network, no
+  # downloaded panels, so a slow mirror can never redden a code change.
   test:
     runs-on: ubuntu-latest
     strategy:
@@ -41,9 +56,48 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: pip install -e ".[dev,excel,parquet]"
-      - run: python scripts/fetch_validation_data.py
       # fail_under lives in pyproject.toml [tool.coverage.report].
-      - run: pytest -q --cov=paneldx --cov-report=term-missing
+      - run: pytest -q tests/unit tests/regression --cov=paneldx --cov-report=term-missing
+
+  # Scientific validation: the frozen environment from validation/protocol/protocol.md,
+  # on the pinned public panels. Separate from `test` because it answers a
+  # different question and has a different failure meaning. A checksum
+  # mismatch here fails CI: the panels are pinned by sha256, and a mirror that
+  # serves different bytes is a result this protocol did not agree to.
+  validation-data:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7
+        with:
+          # Pinned by validation/protocol/protocol.json -> environment.python.
+          python-version: "3.12"
+      - name: Install the frozen validation environment
+        run: |
+          pip install -r validation/requirements.txt
+          pip install --no-deps -e .
+      - name: Download and verify the public panels
+        run: python -m scripts.fetch_validation_data
+      - name: Check the validation setup is reproducible as recorded
+        run: python -m scripts.check_validation_setup
+      - name: Run the validation suite
+        run: pytest -q tests/validation
+      # The smoke profile, not the full run: enough to prove the harness works
+      # end to end on every pull request without spending four minutes on it.
+      # The committed results in validation/results/ come from the development
+      # profile, run deliberately when behaviour changes.
+      - name: Run the corruption benchmark (smoke profile)
+        run: python -m validation.harness.cases --profile smoke --out "$RUNNER_TEMP/benchmark"
+      - name: Confirm the held-out split was excluded
+        run: |
+          python - <<'PY'
+          import json, os, pathlib
+          run = json.loads((pathlib.Path(os.environ["RUNNER_TEMP"]) / "benchmark" / "run.json").read_text())
+          assert run["held_out_excluded"], "the run recorded no held-out exclusions"
+          for dataset in run["datasets"]:
+              assert dataset not in run["held_out_excluded"], dataset
+          print(f"held out, registered and not evaluated: {', '.join(run['held_out_excluded'])}")
+          PY
 
   typecheck:
     runs-on: ubuntu-latest
@@ -58,7 +112,9 @@ jobs:
       # mypy and pandas-stubs are in [dev] now, so this job is reproducible
       # locally instead of pulling whatever released most recently.
       - run: pip install -e ".[dev]"
-      - run: mypy paneldx
+      # Plain `mypy`: the files it checks are configured in pyproject.toml, and
+      # they include scripts/ and validation/ as well as the package.
+      - run: mypy
 
   build:
     runs-on: ubuntu-latest
@@ -95,7 +151,8 @@ jobs:
       - name: Show what is actually installed
         run: pip list | grep -E "numpy|pandas"
       # Validation data is not fetched here: these tests are about the
-      # dependency floor, and the public panels are covered by `test`.
+      # dependency floor, and the public panels are covered by
+      # `validation-data`.
       - run: pytest -q tests/unit tests/regression
 
   # Dependency security. audit_dependencies.py narrows the audit to the

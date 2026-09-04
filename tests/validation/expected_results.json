@@ -1,0 +1,35 @@
+{
+  "schema_version": "1.0.0",
+  "recorded_on": "2026-09-04",
+  "paneldx_version": "0.5.0",
+  "what_this_is": "Regression expectations. Each entry records what paneldx reports today on the documented key of a public panel, so that an unintended change in behaviour fails a test instead of passing unnoticed.",
+  "what_this_is_not": "Scientific truth. An entry saying `inconclusive` does not mean the key is wrong or right; it means the data did not decide. Where paneldx and the documented key disagree, the documented key is the one supported by evidence (see validation/manifests/datasets.json) and the paneldx status is the thing under suspicion. No accuracy rate is claimed from these numbers; the panels listed here are development data.",
+  "how_to_change_this_file": "Only alongside a deliberate, reviewed change in behaviour, with the reason recorded in CHANGELOG.md. Editing an expectation to make a red test go green is how a regression becomes a feature.",
+  "results": {
+    "grunfeld": {
+      "status": "inconclusive",
+      "n_entities": 10,
+      "agrees_with_correct_key": null,
+      "note": "10 firms, below the 20-entity minimum, so no verdict is issued. Many classic econometrics panels are this small."
+    },
+    "emplUK": {
+      "status": "warn",
+      "n_entities": 140,
+      "agrees_with_correct_key": true,
+      "note": "Only `sector` is invariant within a firm, 1 of 5 usable columns, which scores between the weak and supported thresholds."
+    },
+    "produc": {
+      "status": "inconclusive",
+      "n_entities": 48,
+      "agrees_with_correct_key": null,
+      "note": "Was `fail` under 0.4.0 and is the false rejection 0.5.0 was written to remove. Only `region` is invariant within a state, 1 of 9 usable columns, which is below the weak threshold. Under 0.5.0 a low evidence share is an absence of evidence rather than evidence against, so the verdict is `inconclusive`. It is deliberately not forced to `pass`: nothing in the panel supports the key either."
+    },
+    "gasoline": {
+      "status": "inconclusive",
+      "n_entities": 18,
+      "agrees_with_correct_key": null,
+      "note": "18 countries, below the 20-entity minimum, so no verdict is issued."
+    }
+  },
+  "baseline_comparison": "validation/results/development/v0.4.0/ holds the same benchmark run under 0.4.0. The only development-panel verdict that changed is produc, fail -> inconclusive."
+}

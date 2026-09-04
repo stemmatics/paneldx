@@ -62,6 +62,8 @@ def audit(
     *,
     key: str | Sequence[str] | None = None,
     target: str | None = None,
+    invariant_cols: Sequence[str] | None = None,
+    monotone_cols: Sequence[str] | None = None,
     features: Sequence[str] | None = None,
     max_columns: int = 2,
     top_k: int = 3,
@@ -75,6 +77,11 @@ def audit(
 
     When omitted, the entity key is discovered from the data. Use `features`
     to restrict leakage screening and `period_step` to define temporal adjacency.
+
+    `invariant_cols` and `monotone_cols` declare domain knowledge about the
+    panel: columns that must not change within an entity, and columns that must
+    never fall. They are the only route besides duplicate entity-period cells
+    by which a key can be reported as contradicted.
     """
     if time_col not in df.columns:
         raise KeyError(f"time column {time_col!r} not in frame")
@@ -91,7 +98,16 @@ def audit(
 
     min_rows = key_policy.minimum_entities * key_policy.minimum_periods_per_entity
     if key is not None:
-        result.key_reports = [validate_key(df, key, time_col, policy=key_policy)]
+        result.key_reports = [
+            validate_key(
+                df,
+                key,
+                time_col,
+                invariant_cols=invariant_cols,
+                monotone_cols=monotone_cols,
+                policy=key_policy,
+            )
+        ]
     elif result.n_periods < 2:
         result.discovery_blocked = (
             f"{result.n_periods} period(s) of {time_col!r}; at least 2 are "
@@ -109,6 +125,8 @@ def audit(
             time_col,
             max_columns=max_columns,
             top_k=top_k,
+            invariant_cols=invariant_cols,
+            monotone_cols=monotone_cols,
             policy=key_policy,
             rejections=result.rejected_candidates,
         )

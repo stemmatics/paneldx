@@ -1,0 +1,25 @@
+{
+  "paneldx_version": "0.5.0",
+  "python": "3.12.13",
+  "numpy": "2.5.2",
+  "pandas": "3.0.5",
+  "platform": "macOS-26.6.2-x86_64-i386-64bit",
+  "profile": "development",
+  "n_shuffles": 3,
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "roles": [
+    "development",
+    "calibration"
+  ]
+}
