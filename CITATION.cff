@@ -9,7 +9,7 @@ authors:
 repository-code: "https://github.com/stemmatics/paneldx"
 url: "https://github.com/stemmatics/paneldx"
 license: Apache-2.0
-version: 0.5.0
+version: 0.5.1
 date-released: 2026-09-05
 abstract: >-
   paneldx checks whether rows in a panel dataset are linked to the same entity

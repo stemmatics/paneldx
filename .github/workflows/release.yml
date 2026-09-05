@@ -25,12 +25,29 @@ jobs:
           fi
           echo "$GITHUB_REF_NAME is on main."
 
+  # The tag exists by now, so this is the one check that cannot run earlier:
+  # every pinned README URL is a 404 until the tag is pushed. The tree-level
+  # link check and the version agreement both run in CI, before merge.
+  metadata:
+    needs: guard
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1  # v7
+      - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97  # v7
+        with:
+          python-version: "3.12"
+      - run: pip install -e .
+      - name: Tag, package, citation and Zenodo metadata must agree
+        run: python -m scripts.check_release_metadata --tag "$GITHUB_REF_NAME"
+      - name: Pinned README links must resolve at the tag
+        run: python -m scripts.check_readme_links --remote
+
   # The whole of CI, not a subset of it. Calling the workflow instead of
   # copying its steps is what keeps release parity true as CI changes: lint,
   # typecheck, the 3.9/3.11/3.13 matrix with coverage, the clean-wheel build,
   # the dependency floor and the security audit all run here.
   ci:
-    needs: guard
+    needs: metadata
     uses: ./.github/workflows/ci.yml
     permissions:
       contents: read
@@ -66,7 +83,8 @@ jobs:
         with:
           subject-path: dist/*
 
-      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02  # v4
+      # v6 is the first release on the node24 runner; node20 is deprecated.
+      - uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f  # v6
         with:
           name: dist
           path: dist/
@@ -78,7 +96,9 @@ jobs:
     permissions:
       id-token: write
     steps:
-      - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093  # v4
+      # v7 is the first release on the node24 runner. Upload and download
+      # majors have to move together: v4+ artifacts need a v4+ downloader.
+      - uses: actions/download-artifact@37930b1c2abaa49bbe596cd826c3c89aef350131  # v7
         with:
           name: dist
           path: dist/
