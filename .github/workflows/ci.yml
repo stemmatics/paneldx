@@ -32,6 +32,10 @@ jobs:
       # .slopconfig.yaml: a new over-complex function fails the build while the
       # reviewed ones do not. Kept alongside the detector, not instead of it.
       - run: python -m scripts.check_complexity
+      # README links must survive leaving GitHub: PyPI renders the README
+      # standalone and a released description cannot be edited afterwards.
+      - run: python -m scripts.check_readme_links
+      - run: python -m scripts.check_release_metadata
       - name: AI code-quality gate
         run: >
           ai-slop-detector

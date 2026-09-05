@@ -6,6 +6,35 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.5.1] - 2026-09-05
+
+Maintenance only. No diagnostic behaviour, threshold or verdict changes, and no
+scientific results were regenerated.
+
+### Fixed
+
+- README documentation links are absolute GitHub URLs pinned to the release
+  tag. They were relative, which works on GitHub but not on PyPI, where the
+  README is rendered standalone and a relative target resolves against the
+  project page. The 0.5.0 page keeps its broken links: PyPI does not allow a
+  released description to be edited.
+
+### Changed
+
+- Releases are archived on Zenodo, and the README carries the concept DOI
+  badge, [10.5281/zenodo.22086706](https://doi.org/10.5281/zenodo.22086706),
+  which resolves to the most recent archived release.
+
+### Added
+
+- `scripts/check_readme_links.py`, run in CI, which fails on a relative README
+  link, a repository URL not pinned to the current release tag, a pinned target
+  missing from the working tree, a non-https link or an empty target. Live
+  badge URLs are allowed through deliberately.
+- `scripts/check_release_metadata.py`, which checks that the package version,
+  the README tag, `CITATION.cff` and `.zenodo.json` agree, and optionally that
+  they match a given tag.
+
 ## [0.5.0] - 2026-09-05
 
 ### Changed
@@ -111,6 +140,7 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 - Clarified that the PopNet findings were produced after the 2025 paper.
 - Added documentation about thresholds, limitations and known false results.
 
-[Unreleased]: https://github.com/stemmatics/paneldx/compare/v0.5.0...HEAD
+[Unreleased]: https://github.com/stemmatics/paneldx/compare/v0.5.1...HEAD
+[0.5.1]: https://github.com/stemmatics/paneldx/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/stemmatics/paneldx/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/stemmatics/paneldx/releases/tag/v0.4.0
