@@ -6,6 +6,23 @@ adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
+## [0.5.2] - 2026-09-05
+
+Maintenance only. No diagnostic behaviour, threshold or verdict changes, and no
+scientific results were regenerated.
+
+### Fixed
+
+- Replaced the old Zenodo concept DOI in the README with
+  [10.5281/zenodo.22339487](https://doi.org/10.5281/zenodo.22339487), the
+  concept DOI created for the current repository's archive family.
+
+### Changed
+
+- Updated the pinned `actions/attest-build-provenance` revision to v2.4.0,
+  which uses the current GitHub Actions runtime.
+- Added the concept DOI to `CITATION.cff` and to the release metadata check.
+
 ## [0.5.1] - 2026-09-05
 
 Maintenance only. No diagnostic behaviour, threshold or verdict changes, and no
@@ -21,9 +38,8 @@ scientific results were regenerated.
 
 ### Changed
 
-- Releases are archived on Zenodo, and the README carries the concept DOI
-  badge, [10.5281/zenodo.22086706](https://doi.org/10.5281/zenodo.22086706),
-  which resolves to the most recent archived release.
+- Added a Zenodo concept DOI badge. The repaired repository integration later
+  created a new archive family; 0.5.2 records its concept DOI.
 
 ### Added
 
@@ -140,7 +156,8 @@ scientific results were regenerated.
 - Clarified that the PopNet findings were produced after the 2025 paper.
 - Added documentation about thresholds, limitations and known false results.
 
-[Unreleased]: https://github.com/stemmatics/paneldx/compare/v0.5.1...HEAD
+[Unreleased]: https://github.com/stemmatics/paneldx/compare/v0.5.2...HEAD
+[0.5.2]: https://github.com/stemmatics/paneldx/compare/v0.5.1...v0.5.2
 [0.5.1]: https://github.com/stemmatics/paneldx/compare/v0.5.0...v0.5.1
 [0.5.0]: https://github.com/stemmatics/paneldx/compare/v0.4.0...v0.5.0
 [0.4.0]: https://github.com/stemmatics/paneldx/releases/tag/v0.4.0

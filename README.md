@@ -3,8 +3,8 @@
 [![CI](https://github.com/stemmatics/paneldx/actions/workflows/ci.yml/badge.svg)](https://github.com/stemmatics/paneldx/actions/workflows/ci.yml)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/downloads/)
 [![PyPI](https://img.shields.io/pypi/v/paneldx)](https://pypi.org/project/paneldx/)
-[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-green)](https://github.com/stemmatics/paneldx/blob/v0.5.1/LICENSE)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22086706.svg)](https://doi.org/10.5281/zenodo.22086706)
+[![License: Apache 2.0](https://img.shields.io/badge/license-Apache%202.0-green)](https://github.com/stemmatics/paneldx/blob/v0.5.2/LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22339487.svg)](https://doi.org/10.5281/zenodo.22339487)
 
 **Check that your longitudinal dataset is what it claims to be, before you model it.**
 
@@ -67,7 +67,7 @@ it: a target reconstructible from its own features at R² 0.923, and a
 carry-forward baseline that beat the model by 2.9x once the key was fixed.
 
 The audit, the numbers and the reasoning are in
-[case_studies/popnet_reanalysis](https://github.com/stemmatics/paneldx/blob/v0.5.1/case_studies/popnet_reanalysis/README.md).
+[case_studies/popnet_reanalysis](https://github.com/stemmatics/paneldx/blob/v0.5.2/case_studies/popnet_reanalysis/README.md).
 The checks were carried out after the PopNet paper was published in 2025. They
 were not included in the paper and are not corrected PopNet results.
 
@@ -212,8 +212,8 @@ Every report also carries a `reason`: `supported`, `weak_support`,
   Declaring an invariant or a counter is how a caller gets a definite answer.
 - **No accuracy rate exists.** Nothing has been evaluated on held-out data, and
   the recorded benchmark runs are development diagnostics rather than validation
-  estimates. See [limitations](https://github.com/stemmatics/paneldx/blob/v0.5.1/docs/limitations.md) for what has and has not
-  been measured, and the [validation protocol](https://github.com/stemmatics/paneldx/blob/v0.5.1/validation/protocol/protocol.md)
+  estimates. See [limitations](https://github.com/stemmatics/paneldx/blob/v0.5.2/docs/limitations.md) for what has and has not
+  been measured, and the [validation protocol](https://github.com/stemmatics/paneldx/blob/v0.5.2/validation/protocol/protocol.md)
   for what would have to happen first.
 - Needs at least two periods, and enough entities to measure a rate against.
 
@@ -223,36 +223,36 @@ Every report also carries a `reason`: `supported`, `weak_support`,
 
 The next work will focus on reproducible validation, clearer evidence rules,
 key-discovery testing and an independently evaluated publication candidate.
-See the [development roadmap](https://github.com/stemmatics/paneldx/blob/v0.5.1/ROADMAP.md) for the planned stages.
+See the [development roadmap](https://github.com/stemmatics/paneldx/blob/v0.5.2/ROADMAP.md) for the planned stages.
 
 ---
 
 ## Documentation
 
-- [Getting started](https://github.com/stemmatics/paneldx/blob/v0.5.1/docs/getting-started.md)
-- [How it works](https://github.com/stemmatics/paneldx/blob/v0.5.1/docs/how-it-works.md)
-- [Interpreting results](https://github.com/stemmatics/paneldx/blob/v0.5.1/docs/interpreting-results.md)
-- [API reference](https://github.com/stemmatics/paneldx/blob/v0.5.1/docs/api.md)
-- [Limitations](https://github.com/stemmatics/paneldx/blob/v0.5.1/docs/limitations.md)
-- [Validation protocol](https://github.com/stemmatics/paneldx/blob/v0.5.1/validation/protocol/protocol.md)
-- [Development roadmap](https://github.com/stemmatics/paneldx/blob/v0.5.1/ROADMAP.md)
+- [Getting started](https://github.com/stemmatics/paneldx/blob/v0.5.2/docs/getting-started.md)
+- [How it works](https://github.com/stemmatics/paneldx/blob/v0.5.2/docs/how-it-works.md)
+- [Interpreting results](https://github.com/stemmatics/paneldx/blob/v0.5.2/docs/interpreting-results.md)
+- [API reference](https://github.com/stemmatics/paneldx/blob/v0.5.2/docs/api.md)
+- [Limitations](https://github.com/stemmatics/paneldx/blob/v0.5.2/docs/limitations.md)
+- [Validation protocol](https://github.com/stemmatics/paneldx/blob/v0.5.2/validation/protocol/protocol.md)
+- [Development roadmap](https://github.com/stemmatics/paneldx/blob/v0.5.2/ROADMAP.md)
 
 ## Contributing
 
-See [CONTRIBUTING.md](https://github.com/stemmatics/paneldx/blob/v0.5.1/CONTRIBUTING.md). False positives are bugs: if `paneldx`
+See [CONTRIBUTING.md](https://github.com/stemmatics/paneldx/blob/v0.5.2/CONTRIBUTING.md). False positives are bugs: if `paneldx`
 rejects a key you know is correct, that is worth an issue.
 
-Release notes are in [CHANGELOG.md](https://github.com/stemmatics/paneldx/blob/v0.5.1/CHANGELOG.md).
+Release notes are in [CHANGELOG.md](https://github.com/stemmatics/paneldx/blob/v0.5.2/CHANGELOG.md).
 
 ## Citation
 
-If you use `paneldx` in your research, please see [CITATION.cff](https://github.com/stemmatics/paneldx/blob/v0.5.1/CITATION.cff).
+If you use `paneldx` in your research, please see [CITATION.cff](https://github.com/stemmatics/paneldx/blob/v0.5.2/CITATION.cff).
 
 Releases are archived on Zenodo. The badge above is the **concept DOI**,
-[10.5281/zenodo.22086706](https://doi.org/10.5281/zenodo.22086706), which always
+[10.5281/zenodo.22339487](https://doi.org/10.5281/zenodo.22339487), which always
 resolves to the most recent archived release. Each release also receives its own
 version DOI; cite that one when the exact version matters.
 
 ## License
 
-Apache License 2.0. See [LICENSE](https://github.com/stemmatics/paneldx/blob/v0.5.1/LICENSE) and [NOTICE](https://github.com/stemmatics/paneldx/blob/v0.5.1/NOTICE).
+Apache License 2.0. See [LICENSE](https://github.com/stemmatics/paneldx/blob/v0.5.2/LICENSE) and [NOTICE](https://github.com/stemmatics/paneldx/blob/v0.5.2/NOTICE).

@@ -45,6 +45,18 @@ def test_a_different_tag_is_reported():
     assert any("the tag is v9.9.9" in problem for problem in problems)
 
 
+def test_a_missing_concept_doi_is_reported(tmp_path):
+    readme_path = readme(tmp_path, "10.5281/zenodo.22339487\n")
+    citation_path = tmp_path / "CITATION.cff"
+    citation_path.write_text("version: 0.5.2\n")
+
+    problems = metadata.concept_doi_problems(readme_path, citation_path)
+
+    assert problems == [
+        "CITATION.cff does not contain the current concept DOI 10.5281/zenodo.22339487"
+    ]
+
+
 # --------------------------------------------------------------------------
 # what the link check rejects
 # --------------------------------------------------------------------------
@@ -230,4 +242,4 @@ def test_the_shipped_readme_has_pinned_urls_to_verify():
     assert len(urls) == 17
     assert len(set(urls)) == 13
     assert all("/blob/v" in url for url in urls)
-    assert "https://github.com/stemmatics/paneldx/blob/v0.5.1/LICENSE" in urls
+    assert "https://github.com/stemmatics/paneldx/blob/v0.5.2/LICENSE" in urls
