@@ -4,7 +4,7 @@ This roadmap shows the planned direction of `paneldx`. Version numbers are
 checkpoints, not fixed deadlines. Plans may change when testing finds a more
 important issue.
 
-## Current release: 0.5.1
+## Current release: 0.5.2
 
 ## Next release: 0.6.0
 
@@ -57,6 +57,14 @@ Still open:
 
 The 0.5.0 PyPI page keeps its broken links: a released description cannot be
 edited. Only a later release can carry the fix.
+
+## 0.5.2: maintenance
+
+- Correct the Zenodo concept DOI after the repaired GitHub integration created
+  a new archive family.
+- Record the concept DOI in `CITATION.cff` and check it before release.
+- Refresh the remaining release action that used the old GitHub Actions runtime.
+- No diagnostic behaviour or scientific thresholds change in this release.
 
 ## 0.6.x: broader diagnostics and validation
 

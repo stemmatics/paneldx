@@ -9,8 +9,12 @@ authors:
 repository-code: "https://github.com/stemmatics/paneldx"
 url: "https://github.com/stemmatics/paneldx"
 license: Apache-2.0
-version: 0.5.1
+version: 0.5.2
 date-released: 2026-09-05
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.22339487
+    description: Concept DOI for all releases
 abstract: >-
   paneldx checks whether rows in a panel dataset are linked to the same entity
   over time. It compares patterns found under a candidate entity key with

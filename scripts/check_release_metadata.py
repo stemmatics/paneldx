@@ -1,7 +1,7 @@
 """Check that everything naming the release version agrees.
 
     python -m scripts.check_release_metadata
-    python -m scripts.check_release_metadata --tag v0.5.1
+    python -m scripts.check_release_metadata --tag v0.5.2
 
 Five places carry the version: the package, the README's pinned links,
 CITATION.cff, .zenodo.json and the changelog. A release where they disagree
@@ -29,6 +29,7 @@ README = ROOT / "README.md"
 CITATION = ROOT / "CITATION.cff"
 ZENODO = ROOT / ".zenodo.json"
 CHANGELOG = ROOT / "CHANGELOG.md"
+CONCEPT_DOI = "10.5281/zenodo.22339487"
 
 
 def readme_tags(readme: Path = README) -> set[str]:
@@ -50,6 +51,14 @@ def changelog_versions(path: Path = CHANGELOG) -> list[str]:
     return re.findall(r"^## \[(\d+\.\d+\.\d+)\]", path.read_text(), re.M)
 
 
+def concept_doi_problems(readme: Path = README, citation: Path = CITATION) -> list[str]:
+    problems = []
+    for name, path in (("README", readme), ("CITATION.cff", citation)):
+        if CONCEPT_DOI not in path.read_text():
+            problems.append(f"{name} does not contain the current concept DOI {CONCEPT_DOI}")
+    return problems
+
+
 def check(tag: str | None = None) -> list[str]:
     version = paneldx.__version__
     problems = []
@@ -67,6 +76,8 @@ def check(tag: str | None = None) -> list[str]:
         newest = released[0] if released else "nothing"
         problems.append(f"CHANGELOG's newest release is {newest}, but the package is {version}")
 
+    problems.extend(concept_doi_problems())
+
     if tag is not None and tag != f"v{version}":
         problems.append(f"the tag is {tag}, but the package is {version}")
     return problems
@@ -74,7 +85,7 @@ def check(tag: str | None = None) -> list[str]:
 
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
-    parser.add_argument("--tag", help="the tag being released, for example v0.5.1")
+    parser.add_argument("--tag", help="the tag being released, for example v0.5.2")
     args = parser.parse_args(argv)
 
     problems = check(args.tag)
