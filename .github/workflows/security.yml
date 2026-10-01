@@ -45,7 +45,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Scan history for verified secrets
-        uses: trufflesecurity/trufflehog@bc2cd3e45e3aa4a6c627bd0c424580f86dde1855  # v3.90.10
+        uses: trufflesecurity/trufflehog@4dd8831c5f12599465d4d45c3c447b4018a34c85  # v3.97.9
         with:
           extra_args: --results=verified,unknown
 
